@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : top.vhf
--- /___/   /\     Timestamp : 02/01/2020 19:38:46
+-- /___/   /\     Timestamp : 02/02/2020 16:58:14
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/basictfr/top.vhf" -w "E:/Senior Design/Code/basictfr/top.sch"
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/SeniorDesign/basictfr/top.vhf" -w "E:/Senior Design/Code/SeniorDesign/basictfr/top.sch"
 --Design Name: top
 --Device: spartan6
 --Purpose:

@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt)
+Release 14.7 Map P.20131013 (nt64)
 Xilinx Mapping Report File for Design 'top'
 
 Design Information
@@ -10,7 +10,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sun Feb 02 11:59:44 2020
+Mapped Date    : Sun Feb 02 16:58:32 2020
 
 Design Summary
 --------------
@@ -54,9 +54,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                1.00
 
-Peak Memory Usage:  293 MB
-Total REAL time to MAP completion:  9 secs 
-Total CPU time to MAP completion:   6 secs 
+Peak Memory Usage:  369 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   5 secs 
 
 Table of Contents
 -----------------
