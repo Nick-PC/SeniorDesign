@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym piso16 {E:/Senior Design/Code/basictfr/piso16.sch} {E:/Senior Design/Code/basictfr/piso16.sym} 

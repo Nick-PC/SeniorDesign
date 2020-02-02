@@ -1,0 +1,47 @@
+select figure at 495 521 8 -branches -sn=1
+add autowire 848 928 944 928 8 -sn=1
+add instance buf 944 960 R0 -sn=1
+add iomarker 848 928 0 Input Unknown -sn=1
+BeginGroup
+add wire 1168 928 1200 928 -sn=1
+add iomarker 1200 928 0 Output Unknown -sn=1
+EndGroup
+select figure at 922 939 8 -branches -sn=1
+select figure at 917 932 8 -branches -sn=1
+select figure at 917 932 8 -branches -all -sn=1
+set attr NA|XLXN_1|Name value button -sn=1
+select figure at 1133 932 8 -branches -sn=1
+select figure at 1133 932 8 -branches -sn=1
+select figure at 1316 799 8 -branches -sn=1
+select figure at 1130 924 8 -branches -sn=1
+select figure at 1130 924 8 -branches -all -sn=1
+select figure at 1173 929 8 -branches -sn=1
+select figure at 1180 929 8 -branches -sn=1
+select figure at 1180 929 8 -branches -all -sn=1
+set attr NA|XLXN_2|Name value send -sn=1
+select figure at 801 1035 8 -branches -sn=1
+select figure at 1534 1095 8 -branches -sn=1
+select all in 296 733 1534 1095 -branches -enclosed -sn=1
+BeginGroup
+ADD WIRE 848 1056 944 1056 -sn=1
+ADD INSTANCE buf 944 1088 R0 -sn=1
+ADD WIRE 1168 1056 1200 1056 -sn=1
+PASTE NAME BRANCH AT 848 1056 button -NoDuplicateNetNames -sn=1
+PASTE NAME INSTANCE AT 1056 1056 XLXI_1 -NoDuplicateNetNames -sn=1
+PASTE NAME BRANCH AT 1168 1056 send -NoDuplicateNetNames -sn=1
+ADD IOMARKER 848 1056 8 Input R180 28 -sn=1
+ADD IOMARKER 1200 1056 8 Output R0 28 -sn=1
+EndGroup
+select figure at 909 1070 8 -branches -sn=1
+select figure at 917 1065 8 -branches -sn=1
+select figure at 934 1055 8 -branches -sn=1
+select figure at 934 1055 8 -branches -all -sn=1
+set attr NA|XLXN_3|Name value receive -sn=1
+select figure at 1123 1050 8 -branches -sn=1
+select figure at 1123 1050 8 -branches -all -sn=1
+select figure at 1183 1060 8 -branches -sn=1
+select figure at 1183 1060 8 -branches -all -sn=1
+set attr NA|XLXN_4|Name value display -sn=1
+select figure at 1620 1753 8 -branches -sn=1
+select figure at 1220 1693 8 -branches -sn=1
+select figure at 1087 1401 8 -branches -sn=1

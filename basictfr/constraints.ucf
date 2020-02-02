@@ -1,0 +1,12 @@
+#NET "CLK"  LOC = "T9"  ;
+
+#NET "BLU"  LOC = "R11"  ;
+#NET "GRN"  LOC = "T12"  ;
+#NET "RED"  LOC = "R12"  ;
+#NET "HS"  LOC = "R9"  ;
+#NET "VS"  LOC = "T10"  ;
+
+NET "display"  LOC = "U16"	; #Display LED
+NET "button"	LOC = "B8"	; #Middle Button
+NET "send"		LOC = "V12"	; #JA2
+NET "receive"	LOC = "L3"	; #JB4
