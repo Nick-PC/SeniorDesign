@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (nt64)
+Release 14.7 Trace  (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-E:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
--n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf constraints.ucf
+E:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf constraints.ucf
 
 Design file:              top.ncd
 Physical constraint file: top.pcf
@@ -31,23 +31,71 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-button         |send           |    9.285|
-receive        |display        |    8.801|
----------------+---------------+---------+
+Setup/Hold to clock button
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+in_data<0>  |   -0.694(F)|      FAST  |    2.290(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
+in_data<1>  |   -0.783(F)|      FAST  |    2.276(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
+in_data<2>  |   -1.008(F)|      FAST  |    2.608(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
+in_data<3>  |   -0.775(F)|      FAST  |    2.309(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
+in_data<4>  |   -0.930(F)|      FAST  |    2.554(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
+in_data<5>  |   -0.834(F)|      FAST  |    2.422(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
+in_data<6>  |   -0.869(F)|      FAST  |    2.482(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
+in_data<7>  |   -0.615(F)|      FAST  |    2.103(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+rc1         |    2.062(R)|      SLOW  |   -1.224(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED<0>      |         8.863(R)|      SLOW  |         5.369(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
+LED<1>      |         8.665(R)|      SLOW  |         5.180(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
+LED<2>      |         8.480(R)|      SLOW  |         5.074(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
+LED<3>      |         8.484(R)|      SLOW  |         5.078(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
+LED<4>      |         7.851(R)|      SLOW  |         4.599(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
+LED<5>      |         7.807(R)|      SLOW  |         4.588(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
+LED<6>      |         7.463(R)|      SLOW  |         4.399(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
+LED<7>      |         7.465(R)|      SLOW  |         4.401(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
+send        |         9.299(R)|      SLOW  |         5.141(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock button
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+button         |         |         |    1.862|    1.862|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+button         |    4.543|    4.543|         |         |
+clk            |    2.601|         |         |         |
+---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Feb 02 16:58:52 2020 
+Analysis completed Tue Feb 04 23:42:52 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 220 MB
+Peak Memory Usage: 168 MB
 
 
 

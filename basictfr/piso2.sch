@@ -14,22 +14,20 @@
         <signal name="data(0)" />
         <signal name="data(1:0)" />
         <signal name="XLXN_19" />
-        <signal name="XLXN_20" />
         <signal name="XLXN_21" />
         <signal name="XLXN_22" />
-        <signal name="XLXN_23" />
         <signal name="XLXN_24" />
         <signal name="data(1)" />
-        <signal name="XLXN_26" />
-        <signal name="XLXN_27" />
+        <signal name="SM" />
         <signal name="clk" />
-        <signal name="SO" />
         <signal name="SI" />
+        <signal name="SO" />
         <port polarity="Input" name="shift" />
         <port polarity="Input" name="data(1:0)" />
+        <port polarity="Output" name="SM" />
         <port polarity="Input" name="clk" />
-        <port polarity="Output" name="SO" />
         <port polarity="Input" name="SI" />
+        <port polarity="Output" name="SO" />
         <blockdef name="and2">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-64" y2="-64" x1="0" />
@@ -80,9 +78,9 @@
             <blockpin signalname="XLXN_2" name="O" />
         </block>
         <block symbolname="fd" name="XLXI_3">
-            <blockpin name="C" />
+            <blockpin signalname="clk" name="C" />
             <blockpin signalname="XLXN_6" name="D" />
-            <blockpin signalname="XLXN_27" name="Q" />
+            <blockpin signalname="SM" name="Q" />
         </block>
         <block symbolname="or2" name="XLXI_4">
             <blockpin signalname="XLXN_2" name="I0" />
@@ -104,7 +102,7 @@
             <blockpin signalname="XLXN_19" name="O" />
         </block>
         <block symbolname="and2" name="XLXI_13">
-            <blockpin signalname="XLXN_27" name="I0" />
+            <blockpin signalname="SM" name="I0" />
             <blockpin signalname="shift" name="I1" />
             <blockpin signalname="XLXN_21" name="O" />
         </block>
@@ -141,8 +139,7 @@
             <wire x2="688" y1="896" y2="896" x1="672" />
         </branch>
         <branch name="data(1:0)">
-            <wire x2="656" y1="640" y2="640" x1="432" />
-            <wire x2="672" y1="640" y2="640" x1="656" />
+            <wire x2="672" y1="640" y2="640" x1="432" />
             <wire x2="2048" y1="640" y2="640" x1="672" />
             <wire x2="2096" y1="640" y2="640" x1="2048" />
         </branch>
@@ -190,20 +187,20 @@
         <branch name="data(1)">
             <wire x2="2048" y1="736" y2="896" x1="2048" />
         </branch>
-        <branch name="XLXN_27">
+        <branch name="SM">
             <wire x2="1696" y1="960" y2="960" x1="1680" />
             <wire x2="1696" y1="960" y2="1120" x1="1696" />
             <wire x2="2048" y1="1120" y2="1120" x1="1696" />
+            <wire x2="1696" y1="768" y2="960" x1="1696" />
+            <wire x2="3072" y1="768" y2="768" x1="1696" />
         </branch>
         <branch name="clk">
-            <wire x2="2640" y1="1616" y2="1616" x1="400" />
+            <wire x2="1296" y1="1616" y2="1616" x1="400" />
+            <wire x2="2640" y1="1616" y2="1616" x1="1296" />
+            <wire x2="1296" y1="1088" y2="1616" x1="1296" />
             <wire x2="2656" y1="1088" y2="1088" x1="2640" />
             <wire x2="2640" y1="1088" y2="1616" x1="2640" />
         </branch>
-        <branch name="SO">
-            <wire x2="3072" y1="960" y2="960" x1="3040" />
-        </branch>
-        <iomarker fontsize="28" x="3072" y="960" name="SO" orien="R0" />
         <branch name="SI">
             <wire x2="688" y1="1120" y2="1120" x1="656" />
         </branch>
@@ -211,5 +208,10 @@
         <iomarker fontsize="28" x="400" y="1472" name="shift" orien="R180" />
         <iomarker fontsize="28" x="400" y="1616" name="clk" orien="R180" />
         <iomarker fontsize="28" x="432" y="640" name="data(1:0)" orien="R180" />
+        <iomarker fontsize="28" x="3072" y="960" name="SO" orien="R0" />
+        <branch name="SO">
+            <wire x2="3072" y1="960" y2="960" x1="3040" />
+        </branch>
+        <iomarker fontsize="28" x="3072" y="768" name="SM" orien="R0" />
     </sheet>
 </drawing>

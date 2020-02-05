@@ -1,16 +1,16 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: top.prj
 
@@ -105,7 +105,64 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\piso2.vhf" into library work
+Parsing entity <piso2>.
+Parsing architecture <BEHAVIORAL> of entity <piso2>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\sipo16.vhf" into library work
+Parsing entity <sipo16>.
+Parsing architecture <BEHAVIORAL> of entity <sipo16>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\piso16.vhf" into library work
+Parsing entity <piso2_MUSER_piso16>.
+Parsing architecture <BEHAVIORAL> of entity <piso2_muser_piso16>.
+Parsing entity <piso16>.
+Parsing architecture <BEHAVIORAL> of entity <piso16>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\counter.vhd" into library work
+Parsing entity <counter>.
+Parsing architecture <Behavioral> of entity <counter>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\buf8.vhf" into library work
+Parsing entity <buf8>.
+Parsing architecture <BEHAVIORAL> of entity <buf8>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\sender.vhf" into library work
+Parsing entity <XOR8_HXILINX_sender>.
+Parsing architecture <XOR8_HXILINX_sender_V> of entity <xor8_hxilinx_sender>.
+Parsing entity <OR8_HXILINX_sender>.
+Parsing architecture <OR8_HXILINX_sender_V> of entity <or8_hxilinx_sender>.
+Parsing entity <FJKC_HXILINX_sender>.
+Parsing architecture <Behavioral> of entity <fjkc_hxilinx_sender>.
+Parsing entity <piso2_MUSER_sender>.
+Parsing architecture <BEHAVIORAL> of entity <piso2_muser_sender>.
+Parsing entity <piso16_MUSER_sender>.
+Parsing architecture <BEHAVIORAL> of entity <piso16_muser_sender>.
+Parsing entity <sender>.
+Parsing architecture <BEHAVIORAL> of entity <sender>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\receiver.vhf" into library work
+Parsing entity <buf8_MUSER_receiver>.
+Parsing architecture <BEHAVIORAL> of entity <buf8_muser_receiver>.
+Parsing entity <sipo16_MUSER_receiver>.
+Parsing architecture <BEHAVIORAL> of entity <sipo16_muser_receiver>.
+Parsing entity <receiver>.
+Parsing architecture <BEHAVIORAL> of entity <receiver>.
 Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf" into library work
+Parsing entity <LD8CE_HXILINX_top>.
+Parsing architecture <Behavioral> of entity <ld8ce_hxilinx_top>.
+Parsing entity <XOR8_HXILINX_top>.
+Parsing architecture <XOR8_HXILINX_top_V> of entity <xor8_hxilinx_top>.
+Parsing entity <OR8_HXILINX_top>.
+Parsing architecture <OR8_HXILINX_top_V> of entity <or8_hxilinx_top>.
+Parsing entity <FJKC_HXILINX_top>.
+Parsing architecture <Behavioral> of entity <fjkc_hxilinx_top>.
+Parsing entity <buf8_MUSER_top>.
+Parsing architecture <BEHAVIORAL> of entity <buf8_muser_top>.
+Parsing entity <sipo16_MUSER_top>.
+Parsing architecture <BEHAVIORAL> of entity <sipo16_muser_top>.
+Parsing entity <receiver_MUSER_top>.
+Parsing architecture <BEHAVIORAL> of entity <receiver_muser_top>.
+Parsing entity <piso2_MUSER_top>.
+Parsing architecture <BEHAVIORAL> of entity <piso2_muser_top>.
+Parsing entity <piso16_MUSER_top>.
+Parsing architecture <BEHAVIORAL> of entity <piso16_muser_top>.
+Parsing entity <sender_MUSER_top>.
+Parsing architecture <BEHAVIORAL> of entity <sender_muser_top>.
 Parsing entity <top>.
 Parsing architecture <BEHAVIORAL> of entity <top>.
 
@@ -115,20 +172,142 @@ Parsing architecture <BEHAVIORAL> of entity <top>.
 
 Elaborating entity <top> (architecture <BEHAVIORAL>) from library <work>.
 
+Elaborating entity <sender_MUSER_top> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <XOR8_HXILINX_top> (architecture <XOR8_HXILINX_top_V>) from library <work>.
+
+Elaborating entity <piso16_MUSER_top> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <piso2_MUSER_top> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <counter> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "E:\Senior Design\Code\SeniorDesign\basictfr\counter.vhd" Line 49: cnt should be on the sensitivity list of the process
+
+Elaborating entity <FJKC_HXILINX_top> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <OR8_HXILINX_top> (architecture <OR8_HXILINX_top_V>) from library <work>.
+
+Elaborating entity <receiver_MUSER_top> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <sipo16_MUSER_top> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <buf8_MUSER_top> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <LD8CE_HXILINX_top> (architecture <Behavioral>) from library <work>.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <top>.
     Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+    Set property "HU_SET = XLXI_106_4" for instance <XLXI_106>.
+INFO:Xst:3210 - "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf" line 968: Output port <rec_data> of the instance <XLXI_94> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <top> synthesized.
 
+Synthesizing Unit <sender_MUSER_top>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+    Set property "HU_SET = XLXI_18_0" for instance <XLXI_18>.
+    Set property "HU_SET = XLXI_80_1" for instance <XLXI_80>.
+    Set property "HU_SET = XLXI_83_2" for instance <XLXI_83>.
+    Set property "HU_SET = XLXI_84_3" for instance <XLXI_84>.
+    Summary:
+	no macro.
+Unit <sender_MUSER_top> synthesized.
+
+Synthesizing Unit <XOR8_HXILINX_top>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+    Summary:
+Unit <XOR8_HXILINX_top> synthesized.
+
+Synthesizing Unit <piso16_MUSER_top>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+    Summary:
+	no macro.
+Unit <piso16_MUSER_top> synthesized.
+
+Synthesizing Unit <piso2_MUSER_top>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+    Summary:
+	no macro.
+Unit <piso2_MUSER_top> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\counter.vhd".
+    Found 17-bit register for signal <cnt>.
+    Found 17-bit adder for signal <cnt[16]_GND_12_o_add_0_OUT> created at line 47.
+WARNING:Xst:737 - Found 1-bit latch for signal <count>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Latch(s).
+Unit <counter> synthesized.
+
+Synthesizing Unit <FJKC_HXILINX_top>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+        INIT = '0'
+    Found 1-bit register for signal <q_tmp>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <FJKC_HXILINX_top> synthesized.
+
+Synthesizing Unit <OR8_HXILINX_top>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+    Summary:
+	no macro.
+Unit <OR8_HXILINX_top> synthesized.
+
+Synthesizing Unit <receiver_MUSER_top>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+    Summary:
+	no macro.
+Unit <receiver_MUSER_top> synthesized.
+
+Synthesizing Unit <sipo16_MUSER_top>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+    Summary:
+	no macro.
+Unit <sipo16_MUSER_top> synthesized.
+
+Synthesizing Unit <buf8_MUSER_top>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+    Summary:
+	no macro.
+Unit <buf8_MUSER_top> synthesized.
+
+Synthesizing Unit <LD8CE_HXILINX_top>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\top.vhf".
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   8 Latch(s).
+Unit <LD8CE_HXILINX_top> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 17-bit adder                                          : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 17-bit register                                       : 1
+# Latches                                              : 9
+ 1-bit latch                                           : 9
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
+
 =========================================================================
 
 =========================================================================
@@ -136,17 +315,73 @@ Found no macro
 =========================================================================
 
 
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <counter> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Counters                                             : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    XLXI_74/count in unit <sender_MUSER_top>
+
 
 Optimizing unit <top> ...
+
+Optimizing unit <LD8CE_HXILINX_top> ...
+
+Optimizing unit <piso16_MUSER_top> ...
+
+Optimizing unit <piso2_MUSER_top> ...
+
+Optimizing unit <sipo16_MUSER_top> ...
+
+Optimizing unit <buf8_MUSER_top> ...
+
+Optimizing unit <sender_MUSER_top> ...
+
+Optimizing unit <FJKC_HXILINX_top> ...
+
+Optimizing unit <XOR8_HXILINX_top> ...
+
+Optimizing unit <OR8_HXILINX_top> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -157,7 +392,10 @@ Final Macro Processing ...
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 50
+ Flip-Flops                                            : 50
+
 =========================================================================
 
 =========================================================================
@@ -179,11 +417,35 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2
-#      BUF                         : 2
-# IO Buffers                       : 4
-#      IBUF                        : 2
-#      OBUF                        : 2
+# BELS                             : 157
+#      AND2                        : 33
+#      AND2B1                      : 2
+#      AND5B2                      : 1
+#      BUF                         : 22
+#      GND                         : 1
+#      INV                         : 18
+#      LUT1                        : 16
+#      LUT2                        : 2
+#      LUT3                        : 5
+#      LUT6                        : 6
+#      MUXCY                       : 16
+#      OR2                         : 17
+#      VCC                         : 1
+#      XORCY                       : 17
+# FlipFlops/Latches                : 59
+#      FD                          : 16
+#      FDC                         : 17
+#      FDCE                        : 1
+#      FDR                         : 16
+#      LD                          : 1
+#      LDCE                        : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 22
+#      IBUF                        : 11
+#      OBUF                        : 11
+# Logical                          : 1
+#      NOR2                        : 1
 
 Device utilization summary:
 ---------------------------
@@ -192,19 +454,23 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:              59  out of  18224     0%  
+ Number of Slice LUTs:                   47  out of   9112     0%  
+    Number used as Logic:                47  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:     85
+   Number with an unused Flip Flop:      26  out of     85    30%  
+   Number with an unused LUT:            38  out of     85    44%  
+   Number of fully used LUT-FF pairs:    21  out of     85    24%  
+   Number of unique control sets:         6
 
 IO Utilization: 
- Number of IOs:                           4
- Number of bonded IOBs:                   4  out of    232     1%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    232     9%  
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -224,7 +490,19 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+--------------------------------------------------+--------------------------------------+-------+
+Clock Signal                                      | Clock buffer(FF name)                | Load  |
+--------------------------------------------------+--------------------------------------+-------+
+button                                            | IBUF+BUFG                            | 8     |
+clk                                               | IBUF+BUFG                            | 18    |
+XLXI_93/XLXI_74/count                             | NONE(XLXI_93/XLXI_21/XLXI_17/XLXI_15)| 16    |
+XLXI_94/XLXN_29(XLXI_94/XLXI_100:O)               | NONE(*)(XLXI_94/XLXI_94/XLXI_34)     | 16    |
+XLXI_93/XLXI_74/count_G(XLXI_93/XLXI_74/count_G:O)| NONE(*)(XLXI_93/XLXI_74/count)       | 1     |
+--------------------------------------------------+--------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -234,50 +512,264 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: 5.519ns
+   Minimum period: 3.459ns (Maximum Frequency: 289.105MHz)
+   Minimum input arrival time before clock: 3.904ns
+   Maximum output required time after clock: 5.484ns
+   Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2 / 2
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.075ns (frequency: 482.019MHz)
+  Total number of paths / destination ports: 154 / 18
 -------------------------------------------------------------------------
-Delay:               5.519ns (Levels of Logic = 3)
-  Source:            receive (PAD)
-  Destination:       display (PAD)
+Delay:               2.075ns (Levels of Logic = 1)
+  Source:            XLXI_93/XLXI_80/q_tmp (FF)
+  Destination:       XLXI_93/XLXI_80/q_tmp (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
 
-  Data Path: receive to display
+  Data Path: XLXI_93/XLXI_80/q_tmp to XLXI_93/XLXI_80/q_tmp
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  receive_IBUF (receive_IBUF)
-     BUF:I->O              1   0.568   0.579  XLXI_3 (display_OBUF)
-     OBUF:I->O                 2.571          display_OBUF (display)
+     FDCE:C->Q            34   0.447   1.321  q_tmp (q_tmp)
+     LUT3:I2->O            1   0.205   0.000  Mmux_q_tmp_q_tmp_MUX_6_o11 (q_tmp_q_tmp_MUX_6_o)
+     FDCE:D                    0.102          q_tmp
     ----------------------------------------
-    Total                      5.519ns (4.361ns logic, 1.158ns route)
-                                       (79.0% logic, 21.0% route)
+    Total                      2.075ns (0.754ns logic, 1.321ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_93/XLXI_74/count'
+  Clock period: 3.459ns (frequency: 289.105MHz)
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Delay:               3.459ns (Levels of Logic = 2)
+  Source:            XLXI_93/XLXI_21/XLXI_17/XLXI_3 (FF)
+  Destination:       XLXI_93/XLXI_21/XLXI_17/XLXI_15 (FF)
+  Source Clock:      XLXI_93/XLXI_74/count rising
+  Destination Clock: XLXI_93/XLXI_74/count rising
+
+  Data Path: XLXI_93/XLXI_21/XLXI_17/XLXI_3 to XLXI_93/XLXI_21/XLXI_17/XLXI_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.981  XLXI_93/XLXI_21/XLXI_17/XLXI_3 (XLXI_93/data_out<8>)
+     AND2:I0->O            1   0.203   0.944  XLXI_93/XLXI_21/XLXI_17/XLXI_13 (XLXI_93/XLXI_21/XLXI_17/XLXN_21)
+     OR2:I0->O             1   0.203   0.579  XLXI_93/XLXI_21/XLXI_17/XLXI_11 (XLXI_93/XLXI_21/XLXI_17/XLXN_24)
+     FD:D                      0.102          XLXI_93/XLXI_21/XLXI_17/XLXI_15
+    ----------------------------------------
+    Total                      3.459ns (0.955ns logic, 2.504ns route)
+                                       (27.6% logic, 72.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_94/XLXN_29'
+  Clock period: 1.165ns (frequency: 858.185MHz)
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Delay:               1.165ns (Levels of Logic = 0)
+  Source:            XLXI_94/XLXI_94/XLXI_33 (FF)
+  Destination:       XLXI_94/XLXI_94/XLXI_34 (FF)
+  Source Clock:      XLXI_94/XLXN_29 rising
+  Destination Clock: XLXI_94/XLXN_29 rising
+
+  Data Path: XLXI_94/XLXI_94/XLXI_33 to XLXI_94/XLXI_94/XLXI_34
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  XLXI_94/XLXI_94/XLXI_33 (XLXI_94/rec_data_DUMMY<14>)
+     FDR:D                     0.102          XLXI_94/XLXI_94/XLXI_34
+    ----------------------------------------
+    Total                      1.165ns (0.549ns logic, 0.616ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'button'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              3.904ns (Levels of Logic = 3)
+  Source:            button (PAD)
+  Destination:       XLXI_106/Q_6 (LATCH)
+  Destination Clock: button falling
+
+  Data Path: button to XLXI_106/Q_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   1.222   1.247  button_IBUF (button_IBUF)
+     AND2B1:I0->O          8   0.203   0.802  XLXI_107 (XLXN_236)
+     begin scope: 'XLXI_106:CLR'
+     LDCE:CLR                  0.430          Q_6
+    ----------------------------------------
+    Total                      3.904ns (1.855ns logic, 2.049ns route)
+                                       (47.5% logic, 52.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.313ns (Levels of Logic = 3)
+  Source:            button (PAD)
+  Destination:       XLXI_93/XLXI_80/q_tmp (FF)
+  Destination Clock: clk rising
+
+  Data Path: button to XLXI_93/XLXI_80/q_tmp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   1.222   0.987  button_IBUF (button_IBUF)
+     begin scope: 'XLXI_93/XLXI_80:J'
+     LUT2:I0->O            1   0.203   0.579  _n0009_inv1 (_n0009_inv)
+     FDCE:CE                   0.322          q_tmp
+    ----------------------------------------
+    Total                      3.313ns (1.747ns logic, 1.566ns route)
+                                       (52.7% logic, 47.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_94/XLXN_29'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              3.087ns (Levels of Logic = 2)
+  Source:            rc1 (PAD)
+  Destination:       XLXI_94/XLXI_94/XLXI_1 (FF)
+  Destination Clock: XLXI_94/XLXN_29 rising
+
+  Data Path: rc1 to XLXI_94/XLXI_94/XLXI_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.981  rc1_IBUF (rc1_IBUF)
+     OR2:I0->O             1   0.203   0.579  XLXI_94/XLXI_89 (XLXI_94/XLXN_8)
+     FDR:D                     0.102          XLXI_94/XLXI_94/XLXI_1
+    ----------------------------------------
+    Total                      3.087ns (1.527ns logic, 1.560ns route)
+                                       (49.5% logic, 50.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_94/XLXN_29'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.781ns (Levels of Logic = 2)
+  Source:            XLXI_94/XLXI_94/XLXI_29 (FF)
+  Destination:       LED<7> (PAD)
+  Source Clock:      XLXI_94/XLXN_29 rising
+
+  Data Path: XLXI_94/XLXI_94/XLXI_29 to LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  XLXI_94/XLXI_94/XLXI_29 (XLXI_94/rec_data_DUMMY<10>)
+     BUF:I->O              1   0.568   0.579  XLXI_94/XLXI_101/XLXI_2 (LED_7_OBUF)
+     OBUF:I->O                 2.571          LED_7_OBUF (LED<7>)
+    ----------------------------------------
+    Total                      4.781ns (3.586ns logic, 1.195ns route)
+                                       (75.0% logic, 25.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.484ns (Levels of Logic = 3)
+  Source:            XLXI_93/XLXI_80/q_tmp (FF)
+  Destination:       send (PAD)
+  Source Clock:      clk rising
+
+  Data Path: XLXI_93/XLXI_80/q_tmp to send
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            34   0.447   1.685  q_tmp (q_tmp)
+     end scope: 'XLXI_93/XLXI_80:Q'
+     AND2:I0->O            1   0.203   0.579  XLXI_93/XLXI_90 (send_OBUF)
+     OBUF:I->O                 2.571          send_OBUF (send)
+    ----------------------------------------
+    Total                      5.484ns (3.221ns logic, 2.263ns route)
+                                       (58.7% logic, 41.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_93/XLXI_74/count'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.781ns (Levels of Logic = 2)
+  Source:            XLXI_93/XLXI_21/XLXI_16/XLXI_15 (FF)
+  Destination:       send (PAD)
+  Source Clock:      XLXI_93/XLXI_74/count rising
+
+  Data Path: XLXI_93/XLXI_21/XLXI_16/XLXI_15 to send
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.961  XLXI_93/XLXI_21/XLXI_16/XLXI_15 (XLXI_93/data_out<15>)
+     AND2:I1->O            1   0.223   0.579  XLXI_93/XLXI_90 (send_OBUF)
+     OBUF:I->O                 2.571          send_OBUF (send)
+    ----------------------------------------
+    Total                      4.781ns (3.241ns logic, 1.540ns route)
+                                       (67.8% logic, 32.2% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock XLXI_93/XLXI_74/count
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+XLXI_93/XLXI_74/count|    3.459|         |         |         |
+button               |         |    6.526|         |         |
+clk                  |    5.309|         |         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_93/XLXI_74/count_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.650|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_94/XLXN_29
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_94/XLXN_29|    1.165|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock button
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+XLXI_93/XLXI_74/count|         |         |    5.911|         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+XLXI_93/XLXI_74/count  |    5.218|         |         |         |
+XLXI_93/XLXI_74/count_G|         |    2.248|         |         |
+clk                    |    2.075|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.44 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.61 secs
  
 --> 
 
-Total memory usage is 304100 kilobytes
+Total memory usage is 253144 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

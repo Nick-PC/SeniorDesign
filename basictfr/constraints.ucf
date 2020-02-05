@@ -1,21 +1,30 @@
-NET "CLK"  LOC = "T9"  ;
+NET "clk"  LOC = "V10"	;
+#NET clock_display	LOC = V16;
 
-#NET "BLU"  LOC = "R11"  ;
-#NET "GRN"  LOC = "T12"  ;
-#NET "RED"  LOC = "R12"  ;
-#NET "HS"  LOC = "R9"  ;
-#NET "VS"  LOC = "T10"  ;
+#NET display 	LOC = U16	|	IOSTANDARD = LVCMOS33; #Display LED
+NET button		LOC = B8		|	IOSTANDARD = LVCMOS33 | CLOCK_DEDICATED_ROUTE = FALSE; #Middle Button
+#NET send			LOC = V11	|	IOSTANDARD = LVCMOS33; #JA10 (wireless)
+NET send			LOC = V12	|	IOSTANDARD = LVCMOS33; #JA2 (wired)
+#NET rc2			LOC = C12	|	IOSTANDARD = LVCMOS33; #JD8 (wireless)
+#NET rc1			LOC = D12	|	IOSTANDARD = LVCMOS33; #JD7 (wireless)
+NET rc1			LOC = L3	|	IOSTANDARD = LVCMOS33; #JB4 (wired)
+NET rcGND		LOC = F12	|	IOSTANDARD = LVCMOS33; #JD9
+NET snVCC		LOC = U11	|	IOSTANDARD = LVCMOS33; #JA9
 
-NET "display"  LOC = "U16"	; #Display LED
-NET "button"	LOC = "B8"	; #Middle Button
-NET "send"		LOC = "V12"	; #JA2
-NET "receive"	LOC = "L3"	; #JB4
+NET in_data<0>	LOC = T10	|	IOSTANDARD = LVCMOS33; #SW0
+NET in_data<1>	LOC = T9		|	IOSTANDARD = LVCMOS33; #SW1
+NET in_data<2>	LOC = V9		|	IOSTANDARD = LVCMOS33; #SW2
+NET in_data<3>	LOC = M8		|	IOSTANDARD = LVCMOS33; #SW3
+NET in_data<4>	LOC = N8		|	IOSTANDARD = LVCMOS33; #SW4
+NET in_data<5>	LOC = U8		|	IOSTANDARD = LVCMOS33; #SW5
+NET in_data<6>	LOC = V8		|	IOSTANDARD = LVCMOS33; #SW6
+NET in_data<7>	LOC = T5		|	IOSTANDARD = LVCMOS33; #SW7
 
-NET "databit0"	LOC = "T10"	; #SW0
-NET "databit1"	LOC = "T9"	; #SW1
-NET "databit2"	LOC = "V9"	; #SW2
-NET "databit3"	LOC = "M8"	; #SW3
-NET "databit4"	LOC = "N8"	; #SW4
-NET "databit5"	LOC = "U8"	; #SW5
-NET "databit6"	LOC = "V8"	; #SW6
-NET "databit7"	LOC = "T5"	; #SW7
+NET LED<0>	LOC = U16		|	IOSTANDARD = LVCMOS33; #LED0
+NET LED<1>	LOC = V16		|	IOSTANDARD = LVCMOS33; #LED1
+NET LED<2>	LOC = U15		|	IOSTANDARD = LVCMOS33; #LED2
+NET LED<3>	LOC = V15		|	IOSTANDARD = LVCMOS33; #LED3
+NET LED<4>	LOC = M11		|	IOSTANDARD = LVCMOS33; #LED4
+NET LED<5>	LOC = N11		|	IOSTANDARD = LVCMOS33; #LED5
+NET LED<6>	LOC = R11		|	IOSTANDARD = LVCMOS33; #LED6
+NET LED<7>	LOC = T11		|	IOSTANDARD = LVCMOS33; #LED7
