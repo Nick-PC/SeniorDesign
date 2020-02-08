@@ -14,30 +14,17 @@
         <signal name="parallel_out(4)" />
         <signal name="parallel_out(5)" />
         <signal name="parallel_out(6)" />
-        <signal name="XLXN_30" />
-        <signal name="XLXN_31" />
-        <signal name="XLXN_32" />
-        <signal name="XLXN_33" />
         <signal name="parallel_out(10)" />
-        <signal name="XLXN_35" />
-        <signal name="XLXN_36" />
-        <signal name="XLXN_37" />
-        <signal name="XLXN_38" />
-        <signal name="XLXN_39" />
         <signal name="parallel_out(7)" />
         <signal name="clk" />
         <signal name="serial_in" />
-        <signal name="XLXN_43" />
-        <signal name="XLXN_44" />
-        <signal name="XLXN_45" />
         <signal name="parallel_out(9)" />
         <signal name="parallel_out(8)" />
         <signal name="parallel_out(11)" />
         <signal name="parallel_out(12)" />
         <signal name="parallel_out(13)" />
         <signal name="parallel_out(14)" />
-        <signal name="parallel_out(15)">
-        </signal>
+        <signal name="parallel_out(15)" />
         <signal name="parallel_out(15:0)" />
         <port polarity="Input" name="reset" />
         <port polarity="Input" name="clk" />
@@ -156,8 +143,7 @@
         <branch name="parallel_out(0)">
             <wire x2="496" y1="528" y2="528" x1="480" />
             <wire x2="512" y1="528" y2="528" x1="496" />
-            <wire x2="496" y1="336" y2="368" x1="496" />
-            <wire x2="496" y1="368" y2="528" x1="496" />
+            <wire x2="496" y1="336" y2="528" x1="496" />
         </branch>
         <instance x="512" y="784" name="XLXI_2" orien="R0" />
         <branch name="reset">
@@ -178,8 +164,11 @@
             <wire x2="2224" y1="1264" y2="1264" x1="1808" />
             <wire x2="2640" y1="1264" y2="1264" x1="2224" />
             <wire x2="3056" y1="1264" y2="1264" x1="2640" />
-            <wire x2="96" y1="1264" y2="1344" x1="96" />
+            <wire x2="144" y1="1264" y2="1296" x1="144" />
+            <wire x2="224" y1="1296" y2="1296" x1="144" />
+            <wire x2="224" y1="1296" y2="1344" x1="224" />
             <wire x2="144" y1="1248" y2="1264" x1="144" />
+            <wire x2="224" y1="1344" y2="1344" x1="160" />
             <wire x2="512" y1="752" y2="768" x1="512" />
             <wire x2="560" y1="1248" y2="1264" x1="560" />
             <wire x2="928" y1="752" y2="768" x1="928" />
@@ -199,8 +188,7 @@
         <branch name="parallel_out(1)">
             <wire x2="912" y1="528" y2="528" x1="896" />
             <wire x2="928" y1="528" y2="528" x1="912" />
-            <wire x2="912" y1="336" y2="368" x1="912" />
-            <wire x2="912" y1="368" y2="528" x1="912" />
+            <wire x2="912" y1="336" y2="528" x1="912" />
         </branch>
         <instance x="928" y="784" name="XLXI_3" orien="R0" />
         <branch name="parallel_out(2)">
@@ -212,29 +200,25 @@
         <branch name="parallel_out(3)">
             <wire x2="1744" y1="528" y2="528" x1="1728" />
             <wire x2="1760" y1="528" y2="528" x1="1744" />
-            <wire x2="1744" y1="336" y2="368" x1="1744" />
-            <wire x2="1744" y1="368" y2="528" x1="1744" />
+            <wire x2="1744" y1="336" y2="528" x1="1744" />
         </branch>
         <instance x="1760" y="784" name="XLXI_9" orien="R0" />
         <branch name="parallel_out(4)">
             <wire x2="2160" y1="528" y2="528" x1="2144" />
             <wire x2="2176" y1="528" y2="528" x1="2160" />
-            <wire x2="2160" y1="336" y2="368" x1="2160" />
-            <wire x2="2160" y1="368" y2="528" x1="2160" />
+            <wire x2="2160" y1="336" y2="528" x1="2160" />
         </branch>
         <instance x="2176" y="784" name="XLXI_10" orien="R0" />
         <branch name="parallel_out(5)">
             <wire x2="2576" y1="528" y2="528" x1="2560" />
             <wire x2="2592" y1="528" y2="528" x1="2576" />
-            <wire x2="2576" y1="336" y2="368" x1="2576" />
-            <wire x2="2576" y1="368" y2="528" x1="2576" />
+            <wire x2="2576" y1="336" y2="528" x1="2576" />
         </branch>
         <instance x="2592" y="784" name="XLXI_11" orien="R0" />
         <branch name="parallel_out(6)">
             <wire x2="2992" y1="528" y2="528" x1="2976" />
             <wire x2="3008" y1="528" y2="528" x1="2992" />
-            <wire x2="2992" y1="336" y2="368" x1="2992" />
-            <wire x2="2992" y1="368" y2="528" x1="2992" />
+            <wire x2="2992" y1="336" y2="528" x1="2992" />
         </branch>
         <instance x="3008" y="784" name="XLXI_26" orien="R0" />
         <instance x="560" y="1280" name="XLXI_27" orien="R0" />
@@ -384,7 +368,7 @@
             <wire x2="3456" y1="336" y2="1024" x1="3456" />
         </branch>
         <branch name="parallel_out(15:0)">
-            <wire x2="432" y1="240" y2="240" x1="368" />
+            <wire x2="432" y1="240" y2="240" x1="384" />
             <wire x2="448" y1="240" y2="240" x1="432" />
             <wire x2="496" y1="240" y2="240" x1="448" />
             <wire x2="864" y1="240" y2="240" x1="496" />
@@ -419,7 +403,7 @@
         <bustap x2="2992" y1="240" y2="336" x1="2992" />
         <bustap x2="3408" y1="240" y2="336" x1="3408" />
         <bustap x2="3456" y1="240" y2="336" x1="3456" />
-        <iomarker fontsize="28" x="368" y="240" name="parallel_out(15:0)" orien="R180" />
-        <iomarker fontsize="28" x="96" y="1344" name="reset" orien="R90" />
+        <iomarker fontsize="28" x="384" y="240" name="parallel_out(15:0)" orien="R180" />
+        <iomarker fontsize="28" x="160" y="1344" name="reset" orien="R180" />
     </sheet>
 </drawing>

@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sipo16.vhf
--- /___/   /\     Timestamp : 02/04/2020 23:16:54
+-- /___/   /\     Timestamp : 02/07/2020 19:23:37
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

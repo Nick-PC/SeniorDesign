@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : top.vhf
--- /___/   /\     Timestamp : 02/04/2020 23:42:12
+-- /___/   /\     Timestamp : 02/07/2020 20:37:53
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -18,6 +18,41 @@
 --    This vhdl netlist is translated from an ECS schematic. It can be 
 --    synthesized and simulated, but it should not be modified. 
 --
+----- CELL FD8CE_HXILINX_top -----
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity FD8CE_HXILINX_top is
+port (
+    Q   : out STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
+
+    C   : in STD_LOGIC;
+    CE  : in STD_LOGIC;
+    CLR : in STD_LOGIC;
+    D   : in STD_LOGIC_VECTOR(7 downto 0)
+    );
+end FD8CE_HXILINX_top;
+
+architecture Behavioral of FD8CE_HXILINX_top is
+
+begin
+
+process(C, CLR)
+begin
+  if (CLR='1') then
+    Q <= (others => '0');
+  elsif (C'event and C = '1') then
+    if (CE='1') then 
+      Q <= D;
+    end if;
+  end if;
+end process;
+
+
+end Behavioral;
+
 ----- CELL LD8CE_HXILINX_top -----
 
 
@@ -50,6 +85,39 @@ end process;
 
 end Behavioral;
 
+----- CELL NOR16_HXILINX_top -----
+  
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity NOR16_HXILINX_top is
+  
+port(
+    O  : out std_logic;
+
+    I0  : in std_logic;
+    I1  : in std_logic;
+    I2  : in std_logic;
+    I3  : in std_logic;
+    I4  : in std_logic;
+    I5  : in std_logic;
+    I6  : in std_logic;
+    I7  : in std_logic;
+    I8  : in std_logic;
+    I9  : in std_logic;
+    I10 : in std_logic;
+    I11 : in std_logic;
+    I12 : in std_logic;
+    I13 : in std_logic;
+    I14 : in std_logic;
+    I15 : in std_logic
+  );
+end NOR16_HXILINX_top;
+
+architecture NOR16_HXILINX_top_V of NOR16_HXILINX_top is
+begin
+  O <= not (I0 or I1 or I2 or I3 or I4 or I5 or I6 or I7 or I8 or I9 or I10 or I11 or I12 or I13 or I14 or I15);
+end NOR16_HXILINX_top_V;
 ----- CELL XOR8_HXILINX_top -----
   
 library IEEE;
@@ -75,135 +143,6 @@ architecture XOR8_HXILINX_top_V of XOR8_HXILINX_top is
 begin
   O <= I0 xor I1 xor I2 xor I3 xor I4 xor I5 xor I6 xor I7;
 end XOR8_HXILINX_top_V;
------ CELL OR8_HXILINX_top -----
-  
-library IEEE;
-use IEEE.STD_LOGIC_1164.all;
-
-entity OR8_HXILINX_top is
-  
-port(
-    O  : out std_logic;
-
-    I0  : in std_logic;
-    I1  : in std_logic;
-    I2  : in std_logic;
-    I3  : in std_logic;
-    I4  : in std_logic;
-    I5  : in std_logic;
-    I6  : in std_logic;
-    I7  : in std_logic
-  );
-end OR8_HXILINX_top;
-
-architecture OR8_HXILINX_top_V of OR8_HXILINX_top is
-begin
-  O <= (I0 or I1 or I2 or I3 or I4 or I5 or I6 or I7);
-end OR8_HXILINX_top_V;
------ CELL FJKC_HXILINX_top -----
-
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
-entity FJKC_HXILINX_top is
-generic(
-    INIT : bit := '0'
-    );
-
-  port (
-    Q   : out STD_LOGIC := '0';
-    C   : in STD_LOGIC;
-    CLR : in STD_LOGIC;
-    J   : in STD_LOGIC;
-    K   : in STD_LOGIC
-    );
-end FJKC_HXILINX_top;
-
-architecture Behavioral of FJKC_HXILINX_top is
-signal q_tmp : std_logic := TO_X01(INIT);
-
-begin
-
-process(C, CLR)
-begin
-  if (CLR='1') then
-    q_tmp <= '0';
-  elsif (C'event and C = '1') then
-    if(J='0') then
-      if(K='1') then
-      q_tmp <= '0';
-    end if;
-    else
-      if(K='0') then
-      q_tmp <= '1';
-      else
-      q_tmp <= not q_tmp;
-      end if;
-    end if;
-  end if;  
-end process;
-
-Q <= q_tmp;
-
-end Behavioral;
-
-
-library ieee;
-use ieee.std_logic_1164.ALL;
-use ieee.numeric_std.ALL;
-library UNISIM;
-use UNISIM.Vcomponents.ALL;
-
-entity buf8_MUSER_top is
-   port ( inputs  : in    std_logic_vector (7 downto 0); 
-          outputs : out   std_logic_vector (7 downto 0));
-end buf8_MUSER_top;
-
-architecture BEHAVIORAL of buf8_MUSER_top is
-   attribute BOX_TYPE   : string ;
-   component BUF
-      port ( I : in    std_logic; 
-             O : out   std_logic);
-   end component;
-   attribute BOX_TYPE of BUF : component is "BLACK_BOX";
-   
-begin
-   XLXI_2 : BUF
-      port map (I=>inputs(7),
-                O=>outputs(7));
-   
-   XLXI_3 : BUF
-      port map (I=>inputs(6),
-                O=>outputs(6));
-   
-   XLXI_4 : BUF
-      port map (I=>inputs(5),
-                O=>outputs(5));
-   
-   XLXI_5 : BUF
-      port map (I=>inputs(4),
-                O=>outputs(4));
-   
-   XLXI_6 : BUF
-      port map (I=>inputs(3),
-                O=>outputs(3));
-   
-   XLXI_7 : BUF
-      port map (I=>inputs(2),
-                O=>outputs(2));
-   
-   XLXI_8 : BUF
-      port map (I=>inputs(1),
-                O=>outputs(1));
-   
-   XLXI_9 : BUF
-      port map (I=>inputs(0),
-                O=>outputs(0));
-   
-end BEHAVIORAL;
-
-
 
 library ieee;
 use ieee.std_logic_1164.ALL;
@@ -341,16 +280,18 @@ entity receiver_MUSER_top is
    port ( clk      : in    std_logic; 
           rc1      : in    std_logic; 
           rc2      : in    std_logic; 
+          reset    : in    std_logic; 
           LEDS     : out   std_logic_vector (7 downto 0); 
           rec_data : out   std_logic_vector (15 downto 0));
 end receiver_MUSER_top;
 
 architecture BEHAVIORAL of receiver_MUSER_top is
    attribute BOX_TYPE   : string ;
-   signal XLXN_8         : std_logic;
-   signal XLXN_11        : std_logic;
+   attribute HU_SET     : string ;
    signal XLXN_28        : std_logic;
-   signal XLXN_29        : std_logic;
+   signal XLXN_72        : std_logic;
+   signal XLXN_78        : std_logic;
+   signal XLXN_84        : std_logic;
    signal rec_data_DUMMY : std_logic_vector (15 downto 0);
    component OR2
       port ( I0 : in    std_logic; 
@@ -366,11 +307,6 @@ architecture BEHAVIORAL of receiver_MUSER_top is
              parallel_out : out   std_logic_vector (15 downto 0));
    end component;
    
-   component GND
-      port ( G : out   std_logic);
-   end component;
-   attribute BOX_TYPE of GND : component is "BLACK_BOX";
-   
    component AND5B2
       port ( I0 : in    std_logic; 
              I1 : in    std_logic; 
@@ -381,33 +317,41 @@ architecture BEHAVIORAL of receiver_MUSER_top is
    end component;
    attribute BOX_TYPE of AND5B2 : component is "BLACK_BOX";
    
-   component AND2B1
+   component FD8CE_HXILINX_top
+      port ( C   : in    std_logic; 
+             CE  : in    std_logic; 
+             CLR : in    std_logic; 
+             D   : in    std_logic_vector (7 downto 0); 
+             Q   : out   std_logic_vector (7 downto 0));
+   end component;
+   
+   component OR2B1
       port ( I0 : in    std_logic; 
              I1 : in    std_logic; 
              O  : out   std_logic);
    end component;
-   attribute BOX_TYPE of AND2B1 : component is "BLACK_BOX";
+   attribute BOX_TYPE of OR2B1 : component is "BLACK_BOX";
    
-   component buf8_MUSER_top
-      port ( inputs  : in    std_logic_vector (7 downto 0); 
-             outputs : out   std_logic_vector (7 downto 0));
+   component AND2
+      port ( I0 : in    std_logic; 
+             I1 : in    std_logic; 
+             O  : out   std_logic);
    end component;
+   attribute BOX_TYPE of AND2 : component is "BLACK_BOX";
    
+   attribute HU_SET of XLXI_102 : label is "XLXI_102_7";
 begin
    rec_data(15 downto 0) <= rec_data_DUMMY(15 downto 0);
    XLXI_89 : OR2
       port map (I0=>rc2,
                 I1=>rc1,
-                O=>XLXN_8);
+                O=>XLXN_78);
    
    XLXI_94 : sipo16_MUSER_top
-      port map (clk=>XLXN_29,
-                reset=>XLXN_11,
-                serial_in=>XLXN_8,
+      port map (clk=>XLXN_84,
+                reset=>reset,
+                serial_in=>XLXN_78,
                 parallel_out(15 downto 0)=>rec_data_DUMMY(15 downto 0));
-   
-   XLXI_95 : GND
-      port map (G=>XLXN_11);
    
    XLXI_99 : AND5B2
       port map (I0=>rec_data_DUMMY(14),
@@ -417,14 +361,22 @@ begin
                 I4=>rec_data_DUMMY(11),
                 O=>XLXN_28);
    
-   XLXI_100 : AND2B1
-      port map (I0=>XLXN_28,
-                I1=>clk,
-                O=>XLXN_29);
+   XLXI_102 : FD8CE_HXILINX_top
+      port map (C=>clk,
+                CE=>XLXN_28,
+                CLR=>reset,
+                D(7 downto 0)=>rec_data_DUMMY(10 downto 3),
+                Q(7 downto 0)=>LEDS(7 downto 0));
    
-   XLXI_101 : buf8_MUSER_top
-      port map (inputs(7 downto 0)=>rec_data_DUMMY(10 downto 3),
-                outputs(7 downto 0)=>LEDS(7 downto 0));
+   XLXI_103 : OR2B1
+      port map (I0=>XLXN_28,
+                I1=>reset,
+                O=>XLXN_72);
+   
+   XLXI_109 : AND2
+      port map (I0=>clk,
+                I1=>XLXN_72,
+                O=>XLXN_84);
    
 end BEHAVIORAL;
 
@@ -659,15 +611,19 @@ end sender_MUSER_top;
 architecture BEHAVIORAL of sender_MUSER_top is
    attribute BOX_TYPE   : string ;
    attribute HU_SET     : string ;
-   signal data             : std_logic_vector (15 downto 0);
-   signal data_out         : std_logic_vector (15 downto 0);
-   signal XLXN_89          : std_logic;
-   signal XLXN_93          : std_logic;
-   signal XLXN_160         : std_logic;
-   signal XLXN_172         : std_logic;
-   signal XLXN_203         : std_logic;
-   signal XLXN_204         : std_logic;
-   signal data_clear_DUMMY : std_logic;
+   signal data                  : std_logic_vector (15 downto 0);
+   signal data_out              : std_logic_vector (15 downto 0);
+   signal XLXN_89               : std_logic;
+   signal XLXN_93               : std_logic;
+   signal XLXN_260              : std_logic;
+   signal XLXI_18_I0_openSignal : std_logic;
+   signal XLXI_18_I1_openSignal : std_logic;
+   signal XLXI_18_I2_openSignal : std_logic;
+   signal XLXI_18_I3_openSignal : std_logic;
+   signal XLXI_18_I4_openSignal : std_logic;
+   signal XLXI_18_I5_openSignal : std_logic;
+   signal XLXI_18_I6_openSignal : std_logic;
+   signal XLXI_18_I7_openSignal : std_logic;
    component BUF
       port ( I : in    std_logic; 
              O : out   std_logic);
@@ -683,12 +639,6 @@ architecture BEHAVIORAL of sender_MUSER_top is
       port ( G : out   std_logic);
    end component;
    attribute BOX_TYPE of GND : component is "BLACK_BOX";
-   
-   component INV
-      port ( I : in    std_logic; 
-             O : out   std_logic);
-   end component;
-   attribute BOX_TYPE of INV : component is "BLACK_BOX";
    
    component XOR8_HXILINX_top
       port ( I0 : in    std_logic; 
@@ -709,52 +659,35 @@ architecture BEHAVIORAL of sender_MUSER_top is
              data_out : out   std_logic_vector (15 downto 0));
    end component;
    
-   component counter
-      port ( clock : in    std_logic; 
-             clear : in    std_logic; 
-             count : out   std_logic);
+   component NOR16_HXILINX_top
+      port ( I0  : in    std_logic; 
+             I1  : in    std_logic; 
+             I10 : in    std_logic; 
+             I11 : in    std_logic; 
+             I12 : in    std_logic; 
+             I13 : in    std_logic; 
+             I14 : in    std_logic; 
+             I15 : in    std_logic; 
+             I2  : in    std_logic; 
+             I3  : in    std_logic; 
+             I4  : in    std_logic; 
+             I5  : in    std_logic; 
+             I6  : in    std_logic; 
+             I7  : in    std_logic; 
+             I8  : in    std_logic; 
+             I9  : in    std_logic; 
+             O   : out   std_logic);
    end component;
    
-   component FJKC_HXILINX_top
-      port ( C   : in    std_logic; 
-             CLR : in    std_logic; 
-             J   : in    std_logic; 
-             K   : in    std_logic; 
-             Q   : out   std_logic);
+   component INV
+      port ( I : in    std_logic; 
+             O : out   std_logic);
    end component;
+   attribute BOX_TYPE of INV : component is "BLACK_BOX";
    
-   component OR8_HXILINX_top
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             I2 : in    std_logic; 
-             I3 : in    std_logic; 
-             I4 : in    std_logic; 
-             I5 : in    std_logic; 
-             I6 : in    std_logic; 
-             I7 : in    std_logic; 
-             O  : out   std_logic);
-   end component;
-   
-   component NOR2
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             O  : out   std_logic);
-   end component;
-   attribute BOX_TYPE of NOR2 : component is "BLACK_BOX";
-   
-   component AND2
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             O  : out   std_logic);
-   end component;
-   attribute BOX_TYPE of AND2 : component is "BLACK_BOX";
-   
-   attribute HU_SET of XLXI_18 : label is "XLXI_18_0";
-   attribute HU_SET of XLXI_80 : label is "XLXI_80_1";
-   attribute HU_SET of XLXI_83 : label is "XLXI_83_2";
-   attribute HU_SET of XLXI_84 : label is "XLXI_84_3";
+   attribute HU_SET of XLXI_18 : label is "XLXI_18_8";
+   attribute HU_SET of XLXI_104 : label is "XLXI_104_9";
 begin
-   data_clear <= data_clear_DUMMY;
    XLXI_1 : BUF
       port map (I=>in_data(0),
                 O=>data(3));
@@ -793,25 +726,21 @@ begin
    XLXI_15 : GND
       port map (G=>XLXN_93);
    
-   XLXI_17 : INV
-      port map (I=>data(1),
-                O=>data(0));
-   
    XLXI_18 : XOR8_HXILINX_top
-      port map (I0=>in_data(7),
-                I1=>in_data(6),
-                I2=>in_data(5),
-                I3=>in_data(4),
-                I4=>in_data(3),
-                I5=>in_data(2),
-                I6=>in_data(1),
-                I7=>in_data(0),
-                O=>data(1));
+      port map (I0=>XLXI_18_I0_openSignal,
+                I1=>XLXI_18_I1_openSignal,
+                I2=>XLXI_18_I2_openSignal,
+                I3=>XLXI_18_I3_openSignal,
+                I4=>XLXI_18_I4_openSignal,
+                I5=>XLXI_18_I5_openSignal,
+                I6=>XLXI_18_I6_openSignal,
+                I7=>XLXI_18_I7_openSignal,
+                O=>open);
    
    XLXI_21 : piso16_MUSER_top
-      port map (clk=>XLXN_160,
+      port map (clk=>clk,
                 data(15 downto 0)=>data(15 downto 0),
-                shift=>XLXN_172,
+                shift=>XLXN_260,
                 data_out(15 downto 0)=>data_out(15 downto 0));
    
    XLXI_57 : BUF
@@ -838,30 +767,14 @@ begin
       port map (I=>data(1),
                 O=>data(2));
    
-   XLXI_74 : counter
-      port map (clear=>XLXN_160,
-                clock=>clk,
-                count=>XLXN_160);
+   XLXI_91 : BUF
+      port map (I=>data(1),
+                O=>data(0));
    
-   XLXI_80 : FJKC_HXILINX_top
-      port map (C=>clk,
-                CLR=>data_clear_DUMMY,
-                J=>send_enable,
-                K=>data_clear_DUMMY,
-                Q=>XLXN_172);
+   XLXI_93 : GND
+      port map (G=>data(1));
    
-   XLXI_83 : OR8_HXILINX_top
-      port map (I0=>data_out(7),
-                I1=>data_out(6),
-                I2=>data_out(5),
-                I3=>data_out(4),
-                I4=>data_out(3),
-                I5=>data_out(2),
-                I6=>data_out(1),
-                I7=>data_out(0),
-                O=>XLXN_203);
-   
-   XLXI_84 : OR8_HXILINX_top
+   XLXI_104 : NOR16_HXILINX_top
       port map (I0=>data_out(15),
                 I1=>data_out(14),
                 I2=>data_out(13),
@@ -870,17 +783,23 @@ begin
                 I5=>data_out(10),
                 I6=>data_out(9),
                 I7=>data_out(8),
-                O=>XLXN_204);
+                I8=>data_out(7),
+                I9=>data_out(6),
+                I10=>data_out(5),
+                I11=>data_out(4),
+                I12=>data_out(3),
+                I13=>data_out(2),
+                I14=>data_out(1),
+                I15=>data_out(0),
+                O=>data_clear);
    
-   XLXI_86 : NOR2
-      port map (I0=>XLXN_204,
-                I1=>XLXN_203,
-                O=>data_clear_DUMMY);
-   
-   XLXI_90 : AND2
-      port map (I0=>XLXN_172,
-                I1=>data_out(15),
+   XLXI_105 : BUF
+      port map (I=>data_out(15),
                 O=>send_data);
+   
+   XLXI_106 : INV
+      port map (I=>send_enable,
+                O=>XLXN_260);
    
 end BEHAVIORAL;
 
@@ -893,14 +812,15 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity top is
-   port ( button  : in    std_logic; 
-          clk     : in    std_logic; 
-          in_data : in    std_logic_vector (7 downto 0); 
-          rc1     : in    std_logic; 
-          LED     : out   std_logic_vector (7 downto 0); 
-          rcGND   : out   std_logic; 
-          send    : out   std_logic; 
-          snVCC   : out   std_logic);
+   port ( button_m : in    std_logic; 
+          button_r : in    std_logic; 
+          clk      : in    std_logic; 
+          in_data  : in    std_logic_vector (7 downto 0); 
+          rc1      : in    std_logic; 
+          LED      : out   std_logic_vector (7 downto 0); 
+          rcGND    : out   std_logic; 
+          send     : out   std_logic; 
+          snVCC    : out   std_logic);
 end top;
 
 architecture BEHAVIORAL of top is
@@ -909,6 +829,13 @@ architecture BEHAVIORAL of top is
    signal XLXN_234 : std_logic_vector (7 downto 0);
    signal XLXN_236 : std_logic;
    signal XLXN_238 : std_logic;
+   signal XLXN_275 : std_logic;
+   component counter
+      port ( clock : in    std_logic; 
+             clear : in    std_logic; 
+             count : out   std_logic);
+   end component;
+   
    component VCC
       port ( P : out   std_logic);
    end component;
@@ -927,14 +854,6 @@ architecture BEHAVIORAL of top is
              data_clear  : out   std_logic);
    end component;
    
-   component receiver_MUSER_top
-      port ( rc1      : in    std_logic; 
-             rc2      : in    std_logic; 
-             clk      : in    std_logic; 
-             rec_data : out   std_logic_vector (15 downto 0); 
-             LEDS     : out   std_logic_vector (7 downto 0));
-   end component;
-   
    component LD8CE_HXILINX_top
       port ( CLR : in    std_logic; 
              D   : in    std_logic_vector (7 downto 0); 
@@ -950,8 +869,22 @@ architecture BEHAVIORAL of top is
    end component;
    attribute BOX_TYPE of AND2B1 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_106 : label is "XLXI_106_4";
+   component receiver_MUSER_top
+      port ( rc1      : in    std_logic; 
+             rc2      : in    std_logic; 
+             clk      : in    std_logic; 
+             rec_data : out   std_logic_vector (15 downto 0); 
+             LEDS     : out   std_logic_vector (7 downto 0); 
+             reset    : in    std_logic);
+   end component;
+   
+   attribute HU_SET of XLXI_106 : label is "XLXI_106_10";
 begin
+   XLXI_74 : counter
+      port map (clear=>XLXN_275,
+                clock=>clk,
+                count=>XLXN_275);
+   
    XLXI_87 : VCC
       port map (P=>snVCC);
    
@@ -959,30 +892,31 @@ begin
       port map (G=>rcGND);
    
    XLXI_93 : sender_MUSER_top
-      port map (clk=>clk,
+      port map (clk=>XLXN_275,
                 in_data(7 downto 0)=>XLXN_234(7 downto 0),
-                send_enable=>button,
+                send_enable=>button_m,
                 data_clear=>XLXN_238,
                 send_data=>send);
-   
-   XLXI_94 : receiver_MUSER_top
-      port map (clk=>clk,
-                rc1=>rc1,
-                rc2=>rc1,
-                LEDS(7 downto 0)=>LED(7 downto 0),
-                rec_data=>open);
    
    XLXI_106 : LD8CE_HXILINX_top
       port map (CLR=>XLXN_236,
                 D(7 downto 0)=>in_data(7 downto 0),
-                G=>button,
-                GE=>button,
+                G=>button_m,
+                GE=>button_m,
                 Q(7 downto 0)=>XLXN_234(7 downto 0));
    
    XLXI_107 : AND2B1
-      port map (I0=>button,
+      port map (I0=>button_m,
                 I1=>XLXN_238,
                 O=>XLXN_236);
+   
+   XLXI_110 : receiver_MUSER_top
+      port map (clk=>XLXN_275,
+                rc1=>rc1,
+                rc2=>rc1,
+                reset=>button_r,
+                LEDS(7 downto 0)=>LED(7 downto 0),
+                rec_data=>open);
    
 end BEHAVIORAL;
 

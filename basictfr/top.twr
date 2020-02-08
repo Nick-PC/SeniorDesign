@@ -31,51 +31,43 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock button
+Setup/Hold to clock button_m
 ------------+------------+------------+------------+------------+------------------+--------+
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-in_data<0>  |   -0.694(F)|      FAST  |    2.290(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
-in_data<1>  |   -0.783(F)|      FAST  |    2.276(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
-in_data<2>  |   -1.008(F)|      FAST  |    2.608(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
-in_data<3>  |   -0.775(F)|      FAST  |    2.309(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
-in_data<4>  |   -0.930(F)|      FAST  |    2.554(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
-in_data<5>  |   -0.834(F)|      FAST  |    2.422(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
-in_data<6>  |   -0.869(F)|      FAST  |    2.482(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
-in_data<7>  |   -0.615(F)|      FAST  |    2.103(F)|      SLOW  |button_IBUF_BUFG  |   0.000|
+in_data<0>  |   -0.701(F)|      FAST  |    2.332(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
+in_data<1>  |   -0.920(F)|      FAST  |    2.502(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
+in_data<2>  |   -0.943(F)|      FAST  |    2.540(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
+in_data<3>  |   -0.795(F)|      FAST  |    2.351(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
+in_data<4>  |   -0.750(F)|      FAST  |    2.268(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
+in_data<5>  |   -0.370(F)|      FAST  |    1.902(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
+in_data<6>  |   -0.998(F)|      FAST  |    2.610(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
+in_data<7>  |   -0.605(F)|      FAST  |    2.085(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
-Setup/Hold to clock clk
+Setup/Hold to clock button_r
 ------------+------------+------------+------------+------------+------------------+--------+
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-rc1         |    2.062(R)|      SLOW  |   -1.224(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
+rc1         |   -1.301(R)|      FAST  |    3.026(R)|      SLOW  |XLXI_110/XLXN_84  |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
-Clock clk to Pad
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
-Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-LED<0>      |         8.863(R)|      SLOW  |         5.369(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
-LED<1>      |         8.665(R)|      SLOW  |         5.180(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
-LED<2>      |         8.480(R)|      SLOW  |         5.074(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
-LED<3>      |         8.484(R)|      SLOW  |         5.078(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
-LED<4>      |         7.851(R)|      SLOW  |         4.599(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
-LED<5>      |         7.807(R)|      SLOW  |         4.588(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
-LED<6>      |         7.463(R)|      SLOW  |         4.399(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
-LED<7>      |         7.465(R)|      SLOW  |         4.401(R)|      FAST  |XLXI_94/XLXN_29   |   0.000|
-send        |         9.299(R)|      SLOW  |         5.141(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-
-Clock to Setup on destination clock button
+Clock to Setup on destination clock button_m
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-button         |         |         |    1.862|    1.862|
+button_m       |         |         |    2.131|    2.131|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock button_r
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+button_r       |    2.186|    0.490|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -83,19 +75,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-button         |    4.543|    4.543|         |         |
-clk            |    2.601|         |         |         |
+clk            |    1.861|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Feb 04 23:42:52 2020 
+Analysis completed Fri Feb 07 20:38:35 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 168 MB
+Peak Memory Usage: 174 MB
 
 
 

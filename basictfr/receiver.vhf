@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : receiver.vhf
--- /___/   /\     Timestamp : 02/04/2020 23:16:55
+-- /___/   /\     Timestamp : 02/07/2020 20:37:51
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -18,61 +18,40 @@
 --    This vhdl netlist is translated from an ECS schematic. It can be 
 --    synthesized and simulated, but it should not be modified. 
 --
+----- CELL FD8CE_HXILINX_receiver -----
 
-library ieee;
-use ieee.std_logic_1164.ALL;
-use ieee.numeric_std.ALL;
-library UNISIM;
-use UNISIM.Vcomponents.ALL;
 
-entity buf8_MUSER_receiver is
-   port ( inputs  : in    std_logic_vector (7 downto 0); 
-          outputs : out   std_logic_vector (7 downto 0));
-end buf8_MUSER_receiver;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 
-architecture BEHAVIORAL of buf8_MUSER_receiver is
-   attribute BOX_TYPE   : string ;
-   component BUF
-      port ( I : in    std_logic; 
-             O : out   std_logic);
-   end component;
-   attribute BOX_TYPE of BUF : component is "BLACK_BOX";
-   
+entity FD8CE_HXILINX_receiver is
+port (
+    Q   : out STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
+
+    C   : in STD_LOGIC;
+    CE  : in STD_LOGIC;
+    CLR : in STD_LOGIC;
+    D   : in STD_LOGIC_VECTOR(7 downto 0)
+    );
+end FD8CE_HXILINX_receiver;
+
+architecture Behavioral of FD8CE_HXILINX_receiver is
+
 begin
-   XLXI_2 : BUF
-      port map (I=>inputs(7),
-                O=>outputs(7));
-   
-   XLXI_3 : BUF
-      port map (I=>inputs(6),
-                O=>outputs(6));
-   
-   XLXI_4 : BUF
-      port map (I=>inputs(5),
-                O=>outputs(5));
-   
-   XLXI_5 : BUF
-      port map (I=>inputs(4),
-                O=>outputs(4));
-   
-   XLXI_6 : BUF
-      port map (I=>inputs(3),
-                O=>outputs(3));
-   
-   XLXI_7 : BUF
-      port map (I=>inputs(2),
-                O=>outputs(2));
-   
-   XLXI_8 : BUF
-      port map (I=>inputs(1),
-                O=>outputs(1));
-   
-   XLXI_9 : BUF
-      port map (I=>inputs(0),
-                O=>outputs(0));
-   
-end BEHAVIORAL;
 
+process(C, CLR)
+begin
+  if (CLR='1') then
+    Q <= (others => '0');
+  elsif (C'event and C = '1') then
+    if (CE='1') then 
+      Q <= D;
+    end if;
+  end if;
+end process;
+
+
+end Behavioral;
 
 
 library ieee;
@@ -211,16 +190,18 @@ entity receiver is
    port ( clk      : in    std_logic; 
           rc1      : in    std_logic; 
           rc2      : in    std_logic; 
+          reset    : in    std_logic; 
           LEDS     : out   std_logic_vector (7 downto 0); 
           rec_data : out   std_logic_vector (15 downto 0));
 end receiver;
 
 architecture BEHAVIORAL of receiver is
    attribute BOX_TYPE   : string ;
-   signal XLXN_8         : std_logic;
-   signal XLXN_11        : std_logic;
+   attribute HU_SET     : string ;
    signal XLXN_28        : std_logic;
-   signal XLXN_29        : std_logic;
+   signal XLXN_72        : std_logic;
+   signal XLXN_78        : std_logic;
+   signal XLXN_84        : std_logic;
    signal rec_data_DUMMY : std_logic_vector (15 downto 0);
    component OR2
       port ( I0 : in    std_logic; 
@@ -236,11 +217,6 @@ architecture BEHAVIORAL of receiver is
              parallel_out : out   std_logic_vector (15 downto 0));
    end component;
    
-   component GND
-      port ( G : out   std_logic);
-   end component;
-   attribute BOX_TYPE of GND : component is "BLACK_BOX";
-   
    component AND5B2
       port ( I0 : in    std_logic; 
              I1 : in    std_logic; 
@@ -251,33 +227,41 @@ architecture BEHAVIORAL of receiver is
    end component;
    attribute BOX_TYPE of AND5B2 : component is "BLACK_BOX";
    
-   component AND2B1
+   component FD8CE_HXILINX_receiver
+      port ( C   : in    std_logic; 
+             CE  : in    std_logic; 
+             CLR : in    std_logic; 
+             D   : in    std_logic_vector (7 downto 0); 
+             Q   : out   std_logic_vector (7 downto 0));
+   end component;
+   
+   component OR2B1
       port ( I0 : in    std_logic; 
              I1 : in    std_logic; 
              O  : out   std_logic);
    end component;
-   attribute BOX_TYPE of AND2B1 : component is "BLACK_BOX";
+   attribute BOX_TYPE of OR2B1 : component is "BLACK_BOX";
    
-   component buf8_MUSER_receiver
-      port ( inputs  : in    std_logic_vector (7 downto 0); 
-             outputs : out   std_logic_vector (7 downto 0));
+   component AND2
+      port ( I0 : in    std_logic; 
+             I1 : in    std_logic; 
+             O  : out   std_logic);
    end component;
+   attribute BOX_TYPE of AND2 : component is "BLACK_BOX";
    
+   attribute HU_SET of XLXI_102 : label is "XLXI_102_0";
 begin
    rec_data(15 downto 0) <= rec_data_DUMMY(15 downto 0);
    XLXI_89 : OR2
       port map (I0=>rc2,
                 I1=>rc1,
-                O=>XLXN_8);
+                O=>XLXN_78);
    
    XLXI_94 : sipo16_MUSER_receiver
-      port map (clk=>XLXN_29,
-                reset=>XLXN_11,
-                serial_in=>XLXN_8,
+      port map (clk=>XLXN_84,
+                reset=>reset,
+                serial_in=>XLXN_78,
                 parallel_out(15 downto 0)=>rec_data_DUMMY(15 downto 0));
-   
-   XLXI_95 : GND
-      port map (G=>XLXN_11);
    
    XLXI_99 : AND5B2
       port map (I0=>rec_data_DUMMY(14),
@@ -287,14 +271,22 @@ begin
                 I4=>rec_data_DUMMY(11),
                 O=>XLXN_28);
    
-   XLXI_100 : AND2B1
-      port map (I0=>XLXN_28,
-                I1=>clk,
-                O=>XLXN_29);
+   XLXI_102 : FD8CE_HXILINX_receiver
+      port map (C=>clk,
+                CE=>XLXN_28,
+                CLR=>reset,
+                D(7 downto 0)=>rec_data_DUMMY(10 downto 3),
+                Q(7 downto 0)=>LEDS(7 downto 0));
    
-   XLXI_101 : buf8_MUSER_receiver
-      port map (inputs(7 downto 0)=>rec_data_DUMMY(10 downto 3),
-                outputs(7 downto 0)=>LEDS(7 downto 0));
+   XLXI_103 : OR2B1
+      port map (I0=>XLXN_28,
+                I1=>reset,
+                O=>XLXN_72);
+   
+   XLXI_109 : AND2
+      port map (I0=>clk,
+                I1=>XLXN_72,
+                O=>XLXN_84);
    
 end BEHAVIORAL;
 
