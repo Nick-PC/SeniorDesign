@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : receiver.vhf
--- /___/   /\     Timestamp : 02/07/2020 20:37:51
+-- /___/   /\     Timestamp : 02/13/2020 19:11:13
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/SeniorDesign/basictfr/receiver.vhf" -w "E:/Senior Design/Code/SeniorDesign/basictfr/receiver.sch"
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/h702417680/Documents/SeniorDesign/basictfr/receiver.vhf -w C:/Users/h702417680/Documents/SeniorDesign/basictfr/receiver.sch
 --Design Name: receiver
 --Device: spartan6
 --Purpose:
@@ -189,7 +189,6 @@ use UNISIM.Vcomponents.ALL;
 entity receiver is
    port ( clk      : in    std_logic; 
           rc1      : in    std_logic; 
-          rc2      : in    std_logic; 
           reset    : in    std_logic; 
           LEDS     : out   std_logic_vector (7 downto 0); 
           rec_data : out   std_logic_vector (15 downto 0));
@@ -200,16 +199,8 @@ architecture BEHAVIORAL of receiver is
    attribute HU_SET     : string ;
    signal XLXN_28        : std_logic;
    signal XLXN_72        : std_logic;
-   signal XLXN_78        : std_logic;
    signal XLXN_84        : std_logic;
    signal rec_data_DUMMY : std_logic_vector (15 downto 0);
-   component OR2
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             O  : out   std_logic);
-   end component;
-   attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
-   
    component sipo16_MUSER_receiver
       port ( reset        : in    std_logic; 
              clk          : in    std_logic; 
@@ -252,15 +243,10 @@ architecture BEHAVIORAL of receiver is
    attribute HU_SET of XLXI_102 : label is "XLXI_102_0";
 begin
    rec_data(15 downto 0) <= rec_data_DUMMY(15 downto 0);
-   XLXI_89 : OR2
-      port map (I0=>rc2,
-                I1=>rc1,
-                O=>XLXN_78);
-   
    XLXI_94 : sipo16_MUSER_receiver
       port map (clk=>XLXN_84,
                 reset=>reset,
-                serial_in=>XLXN_78,
+                serial_in=>rc1,
                 parallel_out(15 downto 0)=>rec_data_DUMMY(15 downto 0));
    
    XLXI_99 : AND5B2

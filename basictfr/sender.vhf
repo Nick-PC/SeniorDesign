@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sender.vhf
--- /___/   /\     Timestamp : 02/07/2020 20:37:51
+-- /___/   /\     Timestamp : 02/13/2020 18:59:28
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/SeniorDesign/basictfr/sender.vhf" -w "E:/Senior Design/Code/SeniorDesign/basictfr/sender.sch"
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/h702417680/Documents/SeniorDesign/basictfr/sender.vhf -w C:/Users/h702417680/Documents/SeniorDesign/basictfr/sender.sch
 --Design Name: sender
 --Device: spartan6
 --Purpose:
@@ -380,8 +380,8 @@ architecture BEHAVIORAL of sender is
    end component;
    attribute BOX_TYPE of INV : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_18 : label is "XLXI_18_1";
-   attribute HU_SET of XLXI_104 : label is "XLXI_104_2";
+   attribute HU_SET of XLXI_18 : label is "XLXI_18_8";
+   attribute HU_SET of XLXI_104 : label is "XLXI_104_9";
 begin
    XLXI_1 : BUF
       port map (I=>in_data(0),

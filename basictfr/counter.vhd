@@ -36,17 +36,17 @@ entity counter is
 end counter;
 
 architecture Behavioral of counter is
-	Signal cnt: STD_LOGIC_VECTOR (16 downto 0);
+	Signal cnt: STD_LOGIC_VECTOR (17 downto 0);
 begin
 	process(clock,clear)
 		begin
 			if clear='1' then
-				cnt(16 downto 0) <= "00000000000000000";
+				cnt(17 downto 0) <= "000000000000000000";
 				count <= '0';
 			elsif (clock'event and clock='1') then
 				cnt <= cnt + 1;
 			end if;
-			if cnt="11000011010100000" then
+			if cnt="001100001101010000" then
 				count <= '1';
 			end if;
 	end process;

@@ -10,7 +10,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Feb 07 20:38:11 2020
+Mapped Date    : Thu Feb 13 21:30:00 2020
 
 Mapping design into LUTs...
 Running directed packing...
@@ -19,25 +19,55 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 4 secs 
-Total CPU  time at the beginning of Placer: 4 secs 
+Total REAL time at the beginning of Placer: 2 secs 
+Total CPU  time at the beginning of Placer: 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:4a086752) REAL time: 5 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:686d91bb) REAL time: 3 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:4a086752) REAL time: 5 secs 
+INFO:Place:834 - Only a subset of IOs are locked. Out of 25 IOs, 22 are locked
+   and 3 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+WARNING:Place:1206 - This design contains a global buffer instance,
+   <XLXI_113/q_tmp_BUFG>, driving the net, <slowclk_OBUF>, that is driving the
+   following (first 30) non-clock load pins off chip.
+   < PIN: slowclk.O; >
+   This design practice, in Spartan-6, can lead to an unroutable situation due
+   to limitations in the global routing. If the design does route there may be
+   excessive delay or skew on this net. It is recommended to use a Clock
+   Forwarding technique to create a reliable and repeatable low skew solution:
+   instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to
+   Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to
+   .C1. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was
+   applied on COMP.PIN <XLXI_113/q_tmp_BUFG.O> allowing your design to continue.
+   This constraint disables all clock placer rules related to the specified
+   COMP.PIN.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance, <XLXI_113/q_tmp_BUFG>, driving the net,
+   <slowclk_OBUF>, that is driving the following (first 30) non-clock load pins.
+   < PIN: XLXI_112/XLXI_109.A4; >
+   < PIN: slowclk.O; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
+   <XLXI_113/q_tmp_BUFG.O> allowing your design to continue. This constraint
+   disables all clock placer rules related to the specified COMP.PIN.
+Phase 2.7  Design Feasibility Check (Checksum:686d91bb) REAL time: 3 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:4a086752) REAL time: 5 secs 
+Phase 3.31  Local Placement Optimization (Checksum:686d91bb) REAL time: 3 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
-.
+......
 WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
    that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
    IOB component <button_m> is placed at site <B8>. The corresponding BUFG
-   component <button_m_IBUF_BUFG> is placed at site <BUFGMUX_X3Y7>. There is
+   component <button_m_IBUF_BUFG> is placed at site <BUFGMUX_X3Y14>. There is
    only a select set of IOBs that can use the fast path to the Clocker buffer,
    and they are not being used. You may want to analyze why this problem exists
    and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE
@@ -47,42 +77,43 @@ WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
    lead to very poor timing results. It is recommended that this error condition
    be corrected in the design.
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:35eee591) REAL time: 5 secs 
+(Checksum:a6983929) REAL time: 3 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:35eee591) REAL time: 5 secs 
+Phase 5.36  Local Placement Optimization (Checksum:a6983929) REAL time: 3 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:35eee591) REAL time: 5 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:a6983929) REAL time: 3 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:35eee591) REAL time: 6 secs 
+
+Phase 7.3  Local Placement Optimization (Checksum:bedda791) REAL time: 3 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:35eee591) REAL time: 6 secs 
+Phase 8.5  Local Placement Optimization (Checksum:bedda791) REAL time: 3 secs 
 
 Phase 9.8  Global Placement
-...
-...
-Phase 9.8  Global Placement (Checksum:9d77c640) REAL time: 6 secs 
+..
+..
+Phase 9.8  Global Placement (Checksum:ba718c23) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:9d77c640) REAL time: 6 secs 
+Phase 10.5  Local Placement Optimization (Checksum:ba718c23) REAL time: 3 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:dcecd8d8) REAL time: 6 secs 
+Phase 11.18  Placement Optimization (Checksum:c08808f6) REAL time: 3 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:dcecd8d8) REAL time: 6 secs 
+Phase 12.5  Local Placement Optimization (Checksum:c08808f6) REAL time: 3 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:dcecd8d8) REAL time: 6 secs 
+Phase 13.34  Placement Validation (Checksum:c08808f6) REAL time: 3 secs 
 
-Total REAL time to Placer completion: 6 secs 
-Total CPU  time to Placer completion: 6 secs 
+Total REAL time to Placer completion: 3 secs 
+Total CPU  time to Placer completion: 3 secs 
 Running post-placement packing...
 Writing output files...
-WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_110/XLXN_84 is sourced
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_112/XLXN_84 is sourced
    by a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_74/count_G is sourced
@@ -94,35 +125,35 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    3
+Number of warnings:    5
 Slice Logic Utilization:
-  Number of Slice Registers:                    63 out of  18,224    1%
-    Number used as Flip Flops:                  54
+  Number of Slice Registers:                    65 out of  18,224    1%
+    Number used as Flip Flops:                  56
     Number used as Latches:                      9
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         44 out of   9,112    1%
-    Number used as logic:                       39 out of   9,112    1%
-      Number using O6 output only:              22
-      Number using O5 output only:              15
+  Number of Slice LUTs:                         47 out of   9,112    1%
+    Number used as logic:                       41 out of   9,112    1%
+      Number using O6 output only:              23
+      Number using O5 output only:              16
       Number using O5 and O6:                    2
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
-    Number used exclusively as route-thrus:      5
-      Number with same-slice register load:      4
+    Number used exclusively as route-thrus:      6
+      Number with same-slice register load:      5
       Number with same-slice carry load:         1
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    22 out of   2,278    1%
+  Number of occupied Slices:                    23 out of   2,278    1%
   Number of MUXCYs used:                        20 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:           67
-    Number with an unused Flip Flop:             8 out of      67   11%
-    Number with an unused LUT:                  23 out of      67   34%
-    Number of fully used LUT-FF pairs:          36 out of      67   53%
-    Number of unique control sets:               6
+  Number of LUT Flip Flop pairs used:           65
+    Number with an unused Flip Flop:             7 out of      65   10%
+    Number with an unused LUT:                  18 out of      65   27%
+    Number of fully used LUT-FF pairs:          40 out of      65   61%
+    Number of unique control sets:               7
     Number of slice register sites lost
-      to control set restrictions:              17 out of  18,224    1%
+      to control set restrictions:              23 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -131,8 +162,9 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        23 out of     232    9%
-    Number of LOCed IOBs:                       23 out of      23  100%
+  Number of bonded IOBs:                        25 out of     232   10%
+    Number of LOCed IOBs:                       22 out of      25   88%
+    IOB Latches:                                 1
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -145,7 +177,9 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
-  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   1 out of     248    1%
+    Number used as OLOGIC2s:                     1
+    Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
@@ -159,11 +193,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.40
+Average Fanout of Non-Clock Nets:                2.17
 
-Peak Memory Usage:  289 MB
-Total REAL time to MAP completion:  6 secs 
-Total CPU time to MAP completion:   6 secs 
+Peak Memory Usage:  288 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   3 secs 
 
 Mapping completed.
 See MAP report file "top_map.mrp" for details.

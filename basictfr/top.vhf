@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : top.vhf
--- /___/   /\     Timestamp : 02/07/2020 20:37:53
+-- /___/   /\     Timestamp : 02/13/2020 21:21:16
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/SeniorDesign/basictfr/top.vhf" -w "E:/Senior Design/Code/SeniorDesign/basictfr/top.sch"
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/h702417680/Documents/SeniorDesign/basictfr/top.vhf -w C:/Users/h702417680/Documents/SeniorDesign/basictfr/top.sch
 --Design Name: top
 --Device: spartan6
 --Purpose:
@@ -118,6 +118,44 @@ architecture NOR16_HXILINX_top_V of NOR16_HXILINX_top is
 begin
   O <= not (I0 or I1 or I2 or I3 or I4 or I5 or I6 or I7 or I8 or I9 or I10 or I11 or I12 or I13 or I14 or I15);
 end NOR16_HXILINX_top_V;
+----- CELL FTC_HXILINX_top -----
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity FTC_HXILINX_top is
+generic(
+    INIT : bit := '0'
+    );
+
+  port (
+    Q   : out STD_LOGIC := '0';
+    C   : in STD_LOGIC;
+    CLR : in STD_LOGIC;
+    T   : in STD_LOGIC
+    );
+end FTC_HXILINX_top;
+
+architecture Behavioral of FTC_HXILINX_top is
+signal q_tmp : std_logic := TO_X01(INIT);
+begin
+
+process(C, CLR)
+begin
+  if (CLR='1') then
+    q_tmp <= '0';
+  elsif (C'event and C = '1') then
+    if(T='1') then
+      q_tmp <= not q_tmp;
+    end if;
+  end if;  
+end process;
+
+Q <= q_tmp;
+
+end Behavioral;
+
 ----- CELL XOR8_HXILINX_top -----
   
 library IEEE;
@@ -279,7 +317,6 @@ use UNISIM.Vcomponents.ALL;
 entity receiver_MUSER_top is
    port ( clk      : in    std_logic; 
           rc1      : in    std_logic; 
-          rc2      : in    std_logic; 
           reset    : in    std_logic; 
           LEDS     : out   std_logic_vector (7 downto 0); 
           rec_data : out   std_logic_vector (15 downto 0));
@@ -290,16 +327,8 @@ architecture BEHAVIORAL of receiver_MUSER_top is
    attribute HU_SET     : string ;
    signal XLXN_28        : std_logic;
    signal XLXN_72        : std_logic;
-   signal XLXN_78        : std_logic;
    signal XLXN_84        : std_logic;
    signal rec_data_DUMMY : std_logic_vector (15 downto 0);
-   component OR2
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             O  : out   std_logic);
-   end component;
-   attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
-   
    component sipo16_MUSER_top
       port ( reset        : in    std_logic; 
              clk          : in    std_logic; 
@@ -339,18 +368,13 @@ architecture BEHAVIORAL of receiver_MUSER_top is
    end component;
    attribute BOX_TYPE of AND2 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_102 : label is "XLXI_102_7";
+   attribute HU_SET of XLXI_102 : label is "XLXI_102_0";
 begin
    rec_data(15 downto 0) <= rec_data_DUMMY(15 downto 0);
-   XLXI_89 : OR2
-      port map (I0=>rc2,
-                I1=>rc1,
-                O=>XLXN_78);
-   
    XLXI_94 : sipo16_MUSER_top
       port map (clk=>XLXN_84,
                 reset=>reset,
-                serial_in=>XLXN_78,
+                serial_in=>rc1,
                 parallel_out(15 downto 0)=>rec_data_DUMMY(15 downto 0));
    
    XLXI_99 : AND5B2
@@ -685,8 +709,8 @@ architecture BEHAVIORAL of sender_MUSER_top is
    end component;
    attribute BOX_TYPE of INV : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_18 : label is "XLXI_18_8";
-   attribute HU_SET of XLXI_104 : label is "XLXI_104_9";
+   attribute HU_SET of XLXI_18 : label is "XLXI_18_1";
+   attribute HU_SET of XLXI_104 : label is "XLXI_104_2";
 begin
    XLXI_1 : BUF
       port map (I=>in_data(0),
@@ -812,24 +836,29 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity top is
-   port ( button_m : in    std_logic; 
-          button_r : in    std_logic; 
-          clk      : in    std_logic; 
-          in_data  : in    std_logic_vector (7 downto 0); 
-          rc1      : in    std_logic; 
-          LED      : out   std_logic_vector (7 downto 0); 
-          rcGND    : out   std_logic; 
-          send     : out   std_logic; 
-          snVCC    : out   std_logic);
+   port ( button_m  : in    std_logic; 
+          button_r  : in    std_logic; 
+          clk       : in    std_logic; 
+          in_data   : in    std_logic_vector (7 downto 0); 
+          rc1       : in    std_logic; 
+          LED       : out   std_logic_vector (7 downto 0); 
+          rcGND     : out   std_logic; 
+          send      : out   std_logic; 
+          slowclk   : out   std_logic; 
+          slowcount : out   std_logic; 
+          snVCC     : out   std_logic);
 end top;
 
 architecture BEHAVIORAL of top is
    attribute BOX_TYPE   : string ;
    attribute HU_SET     : string ;
-   signal XLXN_234 : std_logic_vector (7 downto 0);
-   signal XLXN_236 : std_logic;
-   signal XLXN_238 : std_logic;
-   signal XLXN_275 : std_logic;
+   signal XLXN_234        : std_logic_vector (7 downto 0);
+   signal XLXN_236        : std_logic;
+   signal XLXN_238        : std_logic;
+   signal XLXN_283        : std_logic;
+   signal XLXN_284        : std_logic;
+   signal slowcount_DUMMY : std_logic;
+   signal slowclk_DUMMY   : std_logic;
    component counter
       port ( clock : in    std_logic; 
              clear : in    std_logic; 
@@ -870,20 +899,29 @@ architecture BEHAVIORAL of top is
    attribute BOX_TYPE of AND2B1 : component is "BLACK_BOX";
    
    component receiver_MUSER_top
-      port ( rc1      : in    std_logic; 
-             rc2      : in    std_logic; 
+      port ( reset    : in    std_logic; 
              clk      : in    std_logic; 
+             rc1      : in    std_logic; 
              rec_data : out   std_logic_vector (15 downto 0); 
-             LEDS     : out   std_logic_vector (7 downto 0); 
-             reset    : in    std_logic);
+             LEDS     : out   std_logic_vector (7 downto 0));
    end component;
    
-   attribute HU_SET of XLXI_106 : label is "XLXI_106_10";
+   component FTC_HXILINX_top
+      port ( C   : in    std_logic; 
+             CLR : in    std_logic; 
+             T   : in    std_logic; 
+             Q   : out   std_logic);
+   end component;
+   
+   attribute HU_SET of XLXI_106 : label is "XLXI_106_3";
+   attribute HU_SET of XLXI_113 : label is "XLXI_113_4";
 begin
+   slowclk <= slowclk_DUMMY;
+   slowcount <= slowcount_DUMMY;
    XLXI_74 : counter
-      port map (clear=>XLXN_275,
+      port map (clear=>slowcount_DUMMY,
                 clock=>clk,
-                count=>XLXN_275);
+                count=>slowcount_DUMMY);
    
    XLXI_87 : VCC
       port map (P=>snVCC);
@@ -892,7 +930,7 @@ begin
       port map (G=>rcGND);
    
    XLXI_93 : sender_MUSER_top
-      port map (clk=>XLXN_275,
+      port map (clk=>slowclk_DUMMY,
                 in_data(7 downto 0)=>XLXN_234(7 downto 0),
                 send_enable=>button_m,
                 data_clear=>XLXN_238,
@@ -910,13 +948,24 @@ begin
                 I1=>XLXN_238,
                 O=>XLXN_236);
    
-   XLXI_110 : receiver_MUSER_top
-      port map (clk=>XLXN_275,
+   XLXI_112 : receiver_MUSER_top
+      port map (clk=>slowclk_DUMMY,
                 rc1=>rc1,
-                rc2=>rc1,
                 reset=>button_r,
                 LEDS(7 downto 0)=>LED(7 downto 0),
                 rec_data=>open);
+   
+   XLXI_113 : FTC_HXILINX_top
+      port map (C=>slowcount_DUMMY,
+                CLR=>XLXN_284,
+                T=>XLXN_283,
+                Q=>slowclk_DUMMY);
+   
+   XLXI_115 : VCC
+      port map (P=>XLXN_283);
+   
+   XLXI_116 : GND
+      port map (G=>XLXN_284);
    
 end BEHAVIORAL;
 
