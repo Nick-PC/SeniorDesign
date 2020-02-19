@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : receiver.vhf
--- /___/   /\     Timestamp : 02/13/2020 19:11:13
+-- /___/   /\     Timestamp : 02/18/2020 17:56:21
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/h702417680/Documents/SeniorDesign/basictfr/receiver.vhf -w C:/Users/h702417680/Documents/SeniorDesign/basictfr/receiver.sch
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/h702417680/Downloads/SeniorDesign/basictfr/receiver.vhf -w C:/Users/h702417680/Downloads/SeniorDesign/basictfr/receiver.sch
 --Design Name: receiver
 --Device: spartan6
 --Purpose:
@@ -240,7 +240,7 @@ architecture BEHAVIORAL of receiver is
    end component;
    attribute BOX_TYPE of AND2 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_102 : label is "XLXI_102_0";
+   attribute HU_SET of XLXI_102 : label is "XLXI_102_10";
 begin
    rec_data(15 downto 0) <= rec_data_DUMMY(15 downto 0);
    XLXI_94 : sipo16_MUSER_receiver

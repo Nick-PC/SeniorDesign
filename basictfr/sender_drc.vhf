@@ -6,12 +6,12 @@
 -- /___/  \  /    Vendor: Xilinx 
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
---  /   /         Filename : sender.vhf
--- /___/   /\     Timestamp : 02/18/2020 23:39:39
+--  /   /         Filename : sender_drc.vhf
+-- /___/   /\     Timestamp : 02/18/2020 23:20:38
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/h702417680/Downloads/SeniorDesign/basictfr/sender.vhf -w C:/Users/h702417680/Downloads/SeniorDesign/basictfr/sender.sch
+--Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\sch2hdl.exe -intstyle ise -family spartan6 -flat -suppress -vhdl sender_drc.vhf -w C:/Users/h702417680/Downloads/SeniorDesign/basictfr/sender.sch
 --Design Name: sender
 --Device: spartan6
 --Purpose:
@@ -281,7 +281,6 @@ architecture BEHAVIORAL of piso16_22_MUSER_sender is
    attribute BOX_TYPE   : string ;
    signal data_out    : std_logic_vector (15 downto 0);
    signal in0         : std_logic_vector (1 downto 0);
-   signal XLXN_5      : std_logic;
    signal out22_DUMMY : std_logic_vector (21 downto 0);
    component piso2_MUSER_sender
       port ( shift : in    std_logic; 
@@ -372,7 +371,7 @@ begin
       port map (clk=>clk,
                 data(1 downto 0)=>in0(1 downto 0),
                 shift=>shift,
-                SI=>XLXN_5,
+                SI=>out22_DUMMY(5),
                 SM=>out22_DUMMY(0),
                 SO=>out22_DUMMY(1));
    
@@ -407,7 +406,7 @@ begin
                 outputs(7 downto 0)=>out22_DUMMY(13 downto 6));
    
    XLXI_48 : GND
-      port map (G=>XLXN_5);
+      port map (G=>out22_DUMMY(5));
    
 end BEHAVIORAL;
 
@@ -437,6 +436,7 @@ architecture BEHAVIORAL of sender is
    signal XLXN_260    : std_logic;
    signal XLXN_273    : std_logic;
    signal XLXN_274    : std_logic;
+   signal XLXN_290    : std_logic;
    signal XLXN_307    : std_logic;
    component BUF
       port ( I : in    std_logic; 
@@ -567,7 +567,7 @@ begin
                 I5=>in_data(2),
                 I6=>in_data(1),
                 I7=>in_data(0),
-                O=>data(2));
+                O=>XLXN_290);
    
    XLXI_57 : BUF
       port map (I=>XLXN_89,
@@ -588,6 +588,10 @@ begin
    XLXI_61 : BUF
       port map (I=>XLXN_89,
                 O=>data(15));
+   
+   XLXI_73 : BUF
+      port map (I=>XLXN_290,
+                O=>data(2));
    
    XLXI_104 : NOR16_HXILINX_sender
       port map (I0=>data_out(15),

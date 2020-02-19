@@ -2,7 +2,7 @@ NET "clk"  LOC = "V10"	;
 #NET clock_display	LOC = V16;
 
 #NET display 	LOC = U16	|	IOSTANDARD = LVCMOS33; #Display LED
-NET button_m	LOC = B8		|	IOSTANDARD = LVCMOS33 | CLOCK_DEDICATED_ROUTE = FALSE; #Middle Button
+#NET button_m	LOC = B8		|	IOSTANDARD = LVCMOS33 | CLOCK_DEDICATED_ROUTE = FALSE; #Middle Button
 NET button_r	LOC = D9		|	IOSTANDARD = LVCMOS33 | CLOCK_DEDICATED_ROUTE = FALSE; #Middle Button
 NET send			LOC = P11	|	IOSTANDARD = LVCMOS33; #JA4 (wired)
 NET rc1			LOC = L3		|	IOSTANDARD = LVCMOS33; #JB4 (wired)

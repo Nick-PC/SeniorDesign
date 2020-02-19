@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : buf8.vhf
--- /___/   /\     Timestamp : 02/04/2020 23:16:54
+-- /___/   /\     Timestamp : 02/18/2020 22:19:33
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/SeniorDesign/basictfr/buf8.vhf" -w "E:/Senior Design/Code/SeniorDesign/basictfr/buf8.sch"
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/h702417680/Downloads/SeniorDesign/basictfr/buf8.vhf -w C:/Users/h702417680/Downloads/SeniorDesign/basictfr/buf8.sch
 --Design Name: buf8
 --Device: spartan6
 --Purpose:

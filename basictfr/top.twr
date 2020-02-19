@@ -31,43 +31,20 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock button_m
-------------+------------+------------+------------+------------+------------------+--------+
-            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
-Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
-------------+------------+------------+------------+------------+------------------+--------+
-in_data<0>  |   -0.570(F)|      FAST  |    2.135(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
-in_data<1>  |   -0.789(F)|      FAST  |    2.305(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
-in_data<2>  |   -0.812(F)|      FAST  |    2.343(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
-in_data<3>  |   -0.664(F)|      FAST  |    2.154(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
-in_data<4>  |   -0.619(F)|      FAST  |    2.071(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
-in_data<5>  |   -0.239(F)|      FAST  |    1.705(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
-in_data<6>  |   -0.867(F)|      FAST  |    2.413(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
-in_data<7>  |   -0.474(F)|      FAST  |    1.888(F)|      SLOW  |button_m_IBUF_BUFG|   0.000|
-------------+------------+------------+------------+------------+------------------+--------+
-
 Setup/Hold to clock button_r
 ------------+------------+------------+------------+------------+------------------+--------+
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-rc1         |   -1.538(R)|      FAST  |    3.459(R)|      SLOW  |XLXI_112/XLXN_84  |   0.000|
+rc1         |   -1.936(R)|      FAST  |    4.100(R)|      SLOW  |XLXI_112/XLXN_84  |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
-
-Clock to Setup on destination clock button_m
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-button_m       |         |         |    2.260|    2.260|
----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock button_r
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-button_r       |    2.123|    0.504|         |         |
+button_r       |    2.393|    0.234|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -75,11 +52,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    1.751|         |         |         |
+clk            |    1.749|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Feb 13 21:30:14 2020 
+Analysis completed Tue Feb 18 23:25:25 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:

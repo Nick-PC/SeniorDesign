@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Thu Feb 13 21:30:08 2020">
+  <application stringID="par" timeStamp="Tue Feb 18 23:40:03 2020">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt;C:\Program Files\National Instruments\Shared\OpenVINO\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Rockwell Software\RSCommon;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\IBM\SPSS\Statistics\25\JRE\bin;C:\Program Files\MATLAB\R2019b\bin;C:\Program Files\MATLAB\MATLAB Compiler Runtime\v84\runtime\win64;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files (x86)\National Instruments\Shared\LabVIEW CLI;C:\Program Files (x86)\IVI Foundation\IVI\bin;C:\Program Files\IVI Foundation\IVI\bin;C:\Program Files\nodejs\;C:\Program Files\Agilent\IO Libraries Suite\bin;C:\Program Files\IVI Foundation\VISA\Win64\agvisa;C:\Program Files (x86)\Agilent\IO Libraries Suite\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\agvisa;C:\Program Files\Keysight\IO Libraries Suite\bin;C:\Program Files\IVI Foundation\VISA\Win64\ktvisa;C:\Program Files (x86)\Keysight\IO Libraries Suite\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\ktvisa;C:\Program Files\Git\cmd;C:\Users\h702417680\AppData\Local\Microsoft\WindowsApps"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files\National Instruments\Shared\OpenVINO\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Rockwell Software\RSCommon;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\IBM\SPSS\Statistics\25\JRE\bin;C:\Program Files\MATLAB\R2019b\bin;C:\Program Files\MATLAB\MATLAB Compiler Runtime\v84\runtime\win64;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files (x86)\National Instruments\Shared\LabVIEW CLI;C:\Program Files (x86)\IVI Foundation\IVI\bin;C:\Program Files\IVI Foundation\IVI\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\ktvisa;C:\Program Files (x86)\IVI Foundation\VISA\winnt\agvisa;C:\Program Files\Agilent\IO Libraries Suite\bin;C:\Program Files\IVI Foundation\VISA\Win64\agvisa;C:\Program Files (x86)\Agilent\IO Libraries Suite\bin;C:\Program Files\Keysight\IO Libraries Suite\bin;C:\Program Files\IVI Foundation\VISA\Win64\ktvisa;C:\Program Files (x86)\Keysight\IO Libraries Suite\bin;C:\Program Files\Git\cmd;C:\Users\h702417680\AppData\Local\Microsoft\WindowsApps"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -22,12 +22,24 @@
           <item stringID="variable" value="XILINX"/>
           <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
+        </row>
+        <row stringID="row" value="4">
+          <item stringID="variable" value="XILINX_EDK"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
+        </row>
+        <row stringID="row" value="5">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
+        </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
         <item stringID="User_EnvOsname" value="Microsoft , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="major release  (build 9200)"/>
       </item>
-      <item stringID="User_EnvHost" value="WEED16007"/>
+      <item stringID="User_EnvHost" value="WEED16005"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
@@ -50,8 +62,8 @@
         <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="3 secs "/>
         <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="3 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
-        <item dataType="float" stringID="PAR_TIMING_SCORE" value="331.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="3 secs "/>
+        <item dataType="float" stringID="PAR_TIMING_SCORE" value="600.000000"/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="4 secs "/>
         <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="3 secs "/>
       </section>
     </task>
@@ -242,16 +254,10 @@
           </row>
           <row stringID="row" value="26">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B8"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="button_m"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBM"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L33P_0"/>
-            <item stringID="Direction" value="INPUT"/>
-            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
+            <item stringID="Direction" value="UNUSED"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
-            <item label="IOB&#xA;Delay" stringID="IOB_Delay" value="NONE"/>
-            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
-            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
-            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="27">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B9"/>
@@ -2314,14 +2320,14 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Thu Feb 13 21:30:08 2020">
+  <application stringID="Par" timeStamp="Tue Feb 18 23:40:04 2020">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt;C:\Program Files\National Instruments\Shared\OpenVINO\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Rockwell Software\RSCommon;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\IBM\SPSS\Statistics\25\JRE\bin;C:\Program Files\MATLAB\R2019b\bin;C:\Program Files\MATLAB\MATLAB Compiler Runtime\v84\runtime\win64;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files (x86)\National Instruments\Shared\LabVIEW CLI;C:\Program Files (x86)\IVI Foundation\IVI\bin;C:\Program Files\IVI Foundation\IVI\bin;C:\Program Files\nodejs\;C:\Program Files\Agilent\IO Libraries Suite\bin;C:\Program Files\IVI Foundation\VISA\Win64\agvisa;C:\Program Files (x86)\Agilent\IO Libraries Suite\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\agvisa;C:\Program Files\Keysight\IO Libraries Suite\bin;C:\Program Files\IVI Foundation\VISA\Win64\ktvisa;C:\Program Files (x86)\Keysight\IO Libraries Suite\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\ktvisa;C:\Program Files\Git\cmd;C:\Users\h702417680\AppData\Local\Microsoft\WindowsApps"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files\National Instruments\Shared\OpenVINO\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Rockwell Software\RSCommon;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\IBM\SPSS\Statistics\25\JRE\bin;C:\Program Files\MATLAB\R2019b\bin;C:\Program Files\MATLAB\MATLAB Compiler Runtime\v84\runtime\win64;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files (x86)\National Instruments\Shared\LabVIEW CLI;C:\Program Files (x86)\IVI Foundation\IVI\bin;C:\Program Files\IVI Foundation\IVI\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\ktvisa;C:\Program Files (x86)\IVI Foundation\VISA\winnt\agvisa;C:\Program Files\Agilent\IO Libraries Suite\bin;C:\Program Files\IVI Foundation\VISA\Win64\agvisa;C:\Program Files (x86)\Agilent\IO Libraries Suite\bin;C:\Program Files\Keysight\IO Libraries Suite\bin;C:\Program Files\IVI Foundation\VISA\Win64\ktvisa;C:\Program Files (x86)\Keysight\IO Libraries Suite\bin;C:\Program Files\Git\cmd;C:\Users\h702417680\AppData\Local\Microsoft\WindowsApps"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -2331,12 +2337,24 @@
           <item stringID="variable" value="XILINX"/>
           <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
+        </row>
+        <row stringID="row" value="4">
+          <item stringID="variable" value="XILINX_EDK"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
+        </row>
+        <row stringID="row" value="5">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
+        </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
         <item stringID="User_EnvOsname" value="Microsoft , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="major release  (build 9200)"/>
       </item>
-      <item stringID="User_EnvHost" value="WEED16007"/>
+      <item stringID="User_EnvHost" value="WEED16005"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
@@ -2348,15 +2366,15 @@
     </section>
     <task label="Device Utilization Summary" stringID="PAR_DEVICE_UTLIZATION">
       <section stringID="PAR_SLICE_REPORTING">
-        <item AVAILABLE="18224" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="65">
-          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="56"/>
+        <item AVAILABLE="18224" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="68">
+          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="59"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCH" value="9"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHTHRU" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="0"/>
         </item>
-        <item AVAILABLE="9112" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="47">
+        <item AVAILABLE="9112" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="51">
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="16"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="23"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="26"/>
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="2"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O6ONLY" value="0"/>
@@ -2371,25 +2389,25 @@
           <item dataType="int" stringID="PAR_NUM_SRL_O6ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SRL_O5ANDO6" value="0"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="1"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="5"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="6"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_O5ANDO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="5"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="6"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="1"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="0"/>
         </item>
-        <item AVAILABLE="2278" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="23">
+        <item AVAILABLE="2278" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="21">
           <item AVAILABLE="595" dataType="int" stringID="PAR_NUM_SLICEL" value="5"/>
           <item AVAILABLE="544" dataType="int" stringID="PAR_NUM_SLICEM" value="0"/>
-          <item AVAILABLE="1139" dataType="int" stringID="PAR_NUM_SLICEX" value="18"/>
+          <item AVAILABLE="1139" dataType="int" stringID="PAR_NUM_SLICEX" value="16"/>
         </item>
         <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="65">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="7"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="18"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="40"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="5"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="14"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="46"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">
-        <item AVAILABLE="232" dataType="int" stringID="PAR_AGG_BONDED_IO" value="25"/>
+        <item AVAILABLE="232" dataType="int" stringID="PAR_AGG_BONDED_IO" value="24"/>
         <item AVAILABLE="12" dataType="int" stringID="PAR_AGG_UNBONDED_IO" value="0"/>
         <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_IOB_FF" value="0"/>
         <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_IOB_LATCH" value="1"/>
@@ -2424,7 +2442,7 @@
         <item AVAILABLE="1" dataType="int" stringID="PAR_NUM_SUSPEND_SYNC" value="0"/>
       </section>
       <section stringID="PAR_BUFG_DATA">
-        <item dataType="int" stringID="PAR_NUM_BUFG" value="3"/>
+        <item dataType="int" stringID="PAR_NUM_BUFG" value="2"/>
         <item dataType="int" stringID="PAR_NUM_BUFGMUX" value="0"/>
         <item dataType="int" stringID="PAR_AVAILABLE" value="16"/>
       </section>
