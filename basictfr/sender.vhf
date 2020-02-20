@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sender.vhf
--- /___/   /\     Timestamp : 02/18/2020 23:39:39
+-- /___/   /\     Timestamp : 02/20/2020 13:01:00
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -437,7 +437,6 @@ architecture BEHAVIORAL of sender is
    signal XLXN_260    : std_logic;
    signal XLXN_273    : std_logic;
    signal XLXN_274    : std_logic;
-   signal XLXN_307    : std_logic;
    component BUF
       port ( I : in    std_logic; 
              O : out   std_logic);
@@ -516,9 +515,9 @@ architecture BEHAVIORAL of sender is
              O  : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_18 : label is "XLXI_18_0";
-   attribute HU_SET of XLXI_104 : label is "XLXI_104_1";
-   attribute HU_SET of XLXI_124 : label is "XLXI_124_2";
+   attribute HU_SET of XLXI_18 : label is "XLXI_18_1";
+   attribute HU_SET of XLXI_104 : label is "XLXI_104_2";
+   attribute HU_SET of XLXI_124 : label is "XLXI_124_3";
 begin
    XLXI_1 : BUF
       port map (I=>in_data(0),
@@ -630,15 +629,11 @@ begin
                 I1=>XLXN_274,
                 O=>data_clear);
    
-   XLXI_114 : INV
-      port map (I=>data_out(21),
-                O=>XLXN_307);
-   
    XLXI_115 : VCC
       port map (P=>data(1));
    
    XLXI_124 : NOR6_HXILINX_sender
-      port map (I0=>XLXN_307,
+      port map (I0=>data_out(21),
                 I1=>data_out(20),
                 I2=>data_out(19),
                 I3=>data_out(18),

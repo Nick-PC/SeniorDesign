@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : receiver.vhf
--- /___/   /\     Timestamp : 02/18/2020 17:56:21
+-- /___/   /\     Timestamp : 02/20/2020 13:01:00
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -200,6 +200,8 @@ architecture BEHAVIORAL of receiver is
    signal XLXN_28        : std_logic;
    signal XLXN_72        : std_logic;
    signal XLXN_84        : std_logic;
+   signal XLXN_100       : std_logic;
+   signal XLXN_101       : std_logic;
    signal rec_data_DUMMY : std_logic_vector (15 downto 0);
    component sipo16_MUSER_receiver
       port ( reset        : in    std_logic; 
@@ -240,7 +242,7 @@ architecture BEHAVIORAL of receiver is
    end component;
    attribute BOX_TYPE of AND2 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_102 : label is "XLXI_102_10";
+   attribute HU_SET of XLXI_102 : label is "XLXI_102_0";
 begin
    rec_data(15 downto 0) <= rec_data_DUMMY(15 downto 0);
    XLXI_94 : sipo16_MUSER_receiver
@@ -255,7 +257,7 @@ begin
                 I2=>rec_data_DUMMY(15),
                 I3=>rec_data_DUMMY(13),
                 I4=>rec_data_DUMMY(11),
-                O=>XLXN_28);
+                O=>XLXN_100);
    
    XLXI_102 : FD8CE_HXILINX_receiver
       port map (C=>clk,
@@ -273,6 +275,16 @@ begin
       port map (I0=>clk,
                 I1=>XLXN_72,
                 O=>XLXN_84);
+   
+   XLXI_110 : AND2
+      port map (I0=>XLXN_100,
+                I1=>XLXN_101,
+                O=>XLXN_28);
+   
+   XLXI_117 : AND2
+      port map (I0=>rec_data_DUMMY(1),
+                I1=>rec_data_DUMMY(0),
+                O=>XLXN_101);
    
 end BEHAVIORAL;
 

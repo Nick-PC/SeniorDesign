@@ -36,7 +36,7 @@ Setup/Hold to clock button_r
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-rc1         |   -1.936(R)|      FAST  |    4.100(R)|      SLOW  |XLXI_112/XLXN_84  |   0.000|
+rc1         |   -1.308(R)|      FAST  |    3.133(R)|      SLOW  |XLXI_112/XLXN_84  |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock button_r
@@ -44,7 +44,7 @@ Clock to Setup on destination clock button_r
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-button_r       |    2.393|    0.234|         |         |
+button_r       |    1.458|   -0.115|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -56,14 +56,14 @@ clk            |    1.749|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Feb 18 23:25:25 2020 
+Analysis completed Thu Feb 20 13:04:17 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 173 MB
+Peak Memory Usage: 174 MB
 
 
 

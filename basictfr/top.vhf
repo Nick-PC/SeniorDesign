@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : top.vhf
--- /___/   /\     Timestamp : 02/18/2020 23:39:42
+-- /___/   /\     Timestamp : 02/20/2020 13:01:01
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -542,7 +542,6 @@ architecture BEHAVIORAL of sender_MUSER_top is
    signal XLXN_260    : std_logic;
    signal XLXN_273    : std_logic;
    signal XLXN_274    : std_logic;
-   signal XLXN_307    : std_logic;
    component BUF
       port ( I : in    std_logic; 
              O : out   std_logic);
@@ -621,9 +620,9 @@ architecture BEHAVIORAL of sender_MUSER_top is
              O  : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_18 : label is "XLXI_18_9";
-   attribute HU_SET of XLXI_104 : label is "XLXI_104_10";
-   attribute HU_SET of XLXI_124 : label is "XLXI_124_11";
+   attribute HU_SET of XLXI_18 : label is "XLXI_18_4";
+   attribute HU_SET of XLXI_104 : label is "XLXI_104_5";
+   attribute HU_SET of XLXI_124 : label is "XLXI_124_6";
 begin
    XLXI_1 : BUF
       port map (I=>in_data(0),
@@ -735,15 +734,11 @@ begin
                 I1=>XLXN_274,
                 O=>data_clear);
    
-   XLXI_114 : INV
-      port map (I=>data_out(21),
-                O=>XLXN_307);
-   
    XLXI_115 : VCC
       port map (P=>data(1));
    
    XLXI_124 : NOR6_HXILINX_top
-      port map (I0=>XLXN_307,
+      port map (I0=>data_out(21),
                 I1=>data_out(20),
                 I2=>data_out(19),
                 I3=>data_out(18),
@@ -901,6 +896,8 @@ architecture BEHAVIORAL of receiver_MUSER_top is
    signal XLXN_28        : std_logic;
    signal XLXN_72        : std_logic;
    signal XLXN_84        : std_logic;
+   signal XLXN_100       : std_logic;
+   signal XLXN_101       : std_logic;
    signal rec_data_DUMMY : std_logic_vector (15 downto 0);
    component sipo16_MUSER_top
       port ( reset        : in    std_logic; 
@@ -941,7 +938,7 @@ architecture BEHAVIORAL of receiver_MUSER_top is
    end component;
    attribute BOX_TYPE of AND2 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_102 : label is "XLXI_102_12";
+   attribute HU_SET of XLXI_102 : label is "XLXI_102_7";
 begin
    rec_data(15 downto 0) <= rec_data_DUMMY(15 downto 0);
    XLXI_94 : sipo16_MUSER_top
@@ -956,7 +953,7 @@ begin
                 I2=>rec_data_DUMMY(15),
                 I3=>rec_data_DUMMY(13),
                 I4=>rec_data_DUMMY(11),
-                O=>XLXN_28);
+                O=>XLXN_100);
    
    XLXI_102 : FD8CE_HXILINX_top
       port map (C=>clk,
@@ -974,6 +971,16 @@ begin
       port map (I0=>clk,
                 I1=>XLXN_72,
                 O=>XLXN_84);
+   
+   XLXI_110 : AND2
+      port map (I0=>XLXN_100,
+                I1=>XLXN_101,
+                O=>XLXN_28);
+   
+   XLXI_117 : AND2
+      port map (I0=>rec_data_DUMMY(1),
+                I1=>rec_data_DUMMY(0),
+                O=>XLXN_101);
    
 end BEHAVIORAL;
 
@@ -1069,8 +1076,8 @@ architecture BEHAVIORAL of top is
              send_data   : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_106 : label is "XLXI_106_13";
-   attribute HU_SET of XLXI_113 : label is "XLXI_113_14";
+   attribute HU_SET of XLXI_106 : label is "XLXI_106_8";
+   attribute HU_SET of XLXI_113 : label is "XLXI_113_9";
 begin
    slowclk <= slowclk_DUMMY;
    slowcount <= slowcount_DUMMY;

@@ -1,0 +1,6 @@
+[Inputs]
+clock
+clear
+[Outputs]
+count
+[BiDir]

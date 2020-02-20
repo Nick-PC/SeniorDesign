@@ -1,0 +1,4 @@
+vhdtdtfi -lib work sendcounter.vhd -prj basictfr -o sendcounter.spl -module sendcounter -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w sendcounter.spl C:/Users/h702417680/Downloads/SeniorDesign/basictfr/sendcounter.sym 
+vhdtdtfi -lib work sendcounter.vhd -prj basictfr -o sendcounter.spl -module sendcounter -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w sendcounter.spl C:/Users/h702417680/Downloads/SeniorDesign/basictfr/sendcounter.sym 

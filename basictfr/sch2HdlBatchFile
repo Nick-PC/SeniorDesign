@@ -1,0 +1,3 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,C:/Users/h702417680/Downloads/SeniorDesign/basictfr/receiver.vhf,-w,C:/Users/h702417680/Downloads/SeniorDesign/basictfr/receiver.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,C:/Users/h702417680/Downloads/SeniorDesign/basictfr/sender.vhf,-w,C:/Users/h702417680/Downloads/SeniorDesign/basictfr/sender.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,C:/Users/h702417680/Downloads/SeniorDesign/basictfr/top.vhf,-w,C:/Users/h702417680/Downloads/SeniorDesign/basictfr/top.sch

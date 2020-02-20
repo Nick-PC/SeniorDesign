@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: top.prj
 
@@ -213,9 +213,9 @@ Elaborating entity <NOR6_HXILINX_top> (architecture <NOR6_HXILINX_top_V>) from l
 
 Synthesizing Unit <top>.
     Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\top.vhf".
-    Set property "HU_SET = XLXI_106_13" for instance <XLXI_106>.
-    Set property "HU_SET = XLXI_113_14" for instance <XLXI_113>.
-INFO:Xst:3210 - "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\top.vhf" line 1100: Output port <rec_data> of the instance <XLXI_112> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_106_8" for instance <XLXI_106>.
+    Set property "HU_SET = XLXI_113_9" for instance <XLXI_113>.
+INFO:Xst:3210 - "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\top.vhf" line 1107: Output port <rec_data> of the instance <XLXI_112> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <top> synthesized.
@@ -247,7 +247,7 @@ Unit <LD8CE_HXILINX_top> synthesized.
 
 Synthesizing Unit <receiver_MUSER_top>.
     Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\top.vhf".
-    Set property "HU_SET = XLXI_102_12" for instance <XLXI_102>.
+    Set property "HU_SET = XLXI_102_7" for instance <XLXI_102>.
     Summary:
 	no macro.
 Unit <receiver_MUSER_top> synthesized.
@@ -275,9 +275,9 @@ Unit <FTC_HXILINX_top> synthesized.
 
 Synthesizing Unit <sender_MUSER_top>.
     Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\top.vhf".
-    Set property "HU_SET = XLXI_18_9" for instance <XLXI_18>.
-    Set property "HU_SET = XLXI_104_10" for instance <XLXI_104>.
-    Set property "HU_SET = XLXI_124_11" for instance <XLXI_124>.
+    Set property "HU_SET = XLXI_18_4" for instance <XLXI_18>.
+    Set property "HU_SET = XLXI_104_5" for instance <XLXI_104>.
+    Set property "HU_SET = XLXI_124_6" for instance <XLXI_124>.
     Summary:
 	no macro.
 Unit <sender_MUSER_top> synthesized.
@@ -523,13 +523,13 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 193
-#      AND2                        : 46
+# BELS                             : 194
+#      AND2                        : 48
 #      AND2B1                      : 1
 #      AND5B2                      : 1
 #      BUF                         : 31
 #      GND                         : 1
-#      INV                         : 26
+#      INV                         : 25
 #      LUT1                        : 17
 #      LUT3                        : 2
 #      LUT4                        : 1
@@ -561,14 +561,14 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              74  out of  18224     0%  
- Number of Slice LUTs:                   54  out of   9112     0%  
-    Number used as Logic:                54  out of   9112     0%  
+ Number of Slice LUTs:                   53  out of   9112     0%  
+    Number used as Logic:                53  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    107
-   Number with an unused Flip Flop:      33  out of    107    30%  
-   Number with an unused LUT:            53  out of    107    49%  
-   Number of fully used LUT-FF pairs:    21  out of    107    19%  
+ Number of LUT Flip Flop pairs used:    106
+   Number with an unused Flip Flop:      32  out of    106    30%  
+   Number with an unused LUT:            53  out of    106    50%  
+   Number of fully used LUT-FF pairs:    21  out of    106    19%  
    Number of unique control sets:         7
 
 IO Utilization: 
@@ -861,7 +861,7 @@ Clock to Setup on destination clock XLXI_113/q_tmp
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-XLXI_112/XLXN_84|    2.782|         |         |         |
+XLXI_112/XLXN_84|    3.929|         |         |         |
 XLXI_113/q_tmp  |   12.515|         |         |         |
 XLXN_295        |         |    5.308|         |         |
 ----------------+---------+---------+---------+---------+
@@ -903,11 +903,11 @@ clk            |    2.027|         |         |         |
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.26 secs
+Total CPU time to Xst completion: 4.34 secs
  
 --> 
 
-Total memory usage is 243784 kilobytes
+Total memory usage is 243016 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   90 (   0 filtered)
