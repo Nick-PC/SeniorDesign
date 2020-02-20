@@ -1,6 +1,7 @@
 vhdl work "piso2.vhf"
 vhdl work "buf8.vhf"
 vhdl work "sipo16.vhf"
+vhdl work "sendcounter.vhd"
 vhdl work "piso16_22.vhf"
 vhdl work "sender.vhf"
 vhdl work "receiver.vhf"

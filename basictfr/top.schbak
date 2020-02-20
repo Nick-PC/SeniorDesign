@@ -7,8 +7,6 @@
     </attr>
     <netlist>
         <signal name="LED(7:0)" />
-        <signal name="snVCC" />
-        <signal name="rcGND" />
         <signal name="rc1" />
         <signal name="in_data(7:0)" />
         <signal name="XLXN_236" />
@@ -21,13 +19,10 @@
         <signal name="XLXN_284" />
         <signal name="send" />
         <signal name="XLXN_295" />
-        <signal name="XLXN_297" />
-        <signal name="XLXN_298" />
         <signal name="XLXN_299" />
-        <signal name="XLXN_300" />
+        <signal name="snVCC" />
+        <signal name="rcGND" />
         <port polarity="Output" name="LED(7:0)" />
-        <port polarity="Output" name="snVCC" />
-        <port polarity="Output" name="rcGND" />
         <port polarity="Input" name="rc1" />
         <port polarity="Input" name="in_data(7:0)" />
         <port polarity="Input" name="clk" />
@@ -35,6 +30,8 @@
         <port polarity="Output" name="slowcount" />
         <port polarity="Output" name="slowclk" />
         <port polarity="Output" name="send" />
+        <port polarity="Output" name="snVCC" />
+        <port polarity="Output" name="rcGND" />
         <blockdef name="vcc">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-32" y2="-64" x1="64" />
@@ -122,12 +119,6 @@
             <line x2="64" y1="-32" y2="-64" x1="128" />
             <line x2="64" y1="-64" y2="0" x1="64" />
         </blockdef>
-        <block symbolname="vcc" name="XLXI_87">
-            <blockpin signalname="snVCC" name="P" />
-        </block>
-        <block symbolname="gnd" name="XLXI_88">
-            <blockpin signalname="rcGND" name="G" />
-        </block>
         <block symbolname="ld8ce" name="XLXI_106">
             <blockpin signalname="XLXN_236" name="CLR" />
             <blockpin signalname="in_data(7:0)" name="D(7:0)" />
@@ -175,22 +166,17 @@
             <blockpin signalname="XLXN_295" name="data_clear" />
             <blockpin signalname="send" name="send_data" />
         </block>
+        <block symbolname="vcc" name="XLXI_87">
+            <blockpin signalname="snVCC" name="P" />
+        </block>
+        <block symbolname="gnd" name="XLXI_88">
+            <blockpin signalname="rcGND" name="G" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
         <branch name="LED(7:0)">
             <wire x2="2032" y1="1680" y2="1680" x1="1968" />
         </branch>
-        <instance x="2560" y="1680" name="XLXI_87" orien="R0" />
-        <instance x="2560" y="1936" name="XLXI_88" orien="R0" />
-        <branch name="snVCC">
-            <wire x2="2816" y1="1680" y2="1680" x1="2624" />
-        </branch>
-        <branch name="rcGND">
-            <wire x2="2816" y1="1792" y2="1792" x1="2624" />
-            <wire x2="2624" y1="1792" y2="1808" x1="2624" />
-        </branch>
-        <iomarker fontsize="28" x="2816" y="1680" name="snVCC" orien="R0" />
-        <iomarker fontsize="28" x="2816" y="1792" name="rcGND" orien="R0" />
         <iomarker fontsize="28" x="544" y="1744" name="in_data(7:0)" orien="R180" />
         <branch name="rc1">
             <wire x2="1584" y1="1552" y2="1552" x1="1536" />
@@ -256,7 +242,8 @@
         <branch name="XLXN_234(7:0)">
             <wire x2="1184" y1="1744" y2="1744" x1="1040" />
             <wire x2="1184" y1="1232" y2="1744" x1="1184" />
-            <wire x2="1568" y1="1232" y2="1232" x1="1184" />
+            <wire x2="1552" y1="1232" y2="1232" x1="1184" />
+            <wire x2="1568" y1="1232" y2="1232" x1="1552" />
         </branch>
         <instance x="672" y="1344" name="XLXI_117" orien="R0" />
         <branch name="XLXN_295">
@@ -290,5 +277,16 @@
             <wire x2="656" y1="1744" y2="1744" x1="560" />
         </branch>
         <instance x="656" y="2000" name="XLXI_106" orien="R0" />
+        <instance x="2256" y="1360" name="XLXI_87" orien="R0" />
+        <instance x="2256" y="1616" name="XLXI_88" orien="R0" />
+        <branch name="snVCC">
+            <wire x2="2512" y1="1360" y2="1360" x1="2320" />
+        </branch>
+        <branch name="rcGND">
+            <wire x2="2512" y1="1472" y2="1472" x1="2320" />
+            <wire x2="2320" y1="1472" y2="1488" x1="2320" />
+        </branch>
+        <iomarker fontsize="28" x="2512" y="1360" name="snVCC" orien="R0" />
+        <iomarker fontsize="28" x="2512" y="1472" name="rcGND" orien="R0" />
     </sheet>
 </drawing>

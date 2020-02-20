@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sender.vhf
--- /___/   /\     Timestamp : 02/20/2020 13:01:00
+-- /___/   /\     Timestamp : 02/20/2020 16:17:24
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -18,62 +18,6 @@
 --    This vhdl netlist is translated from an ECS schematic. It can be 
 --    synthesized and simulated, but it should not be modified. 
 --
------ CELL NOR16_HXILINX_sender -----
-  
-library IEEE;
-use IEEE.STD_LOGIC_1164.all;
-
-entity NOR16_HXILINX_sender is
-  
-port(
-    O  : out std_logic;
-
-    I0  : in std_logic;
-    I1  : in std_logic;
-    I2  : in std_logic;
-    I3  : in std_logic;
-    I4  : in std_logic;
-    I5  : in std_logic;
-    I6  : in std_logic;
-    I7  : in std_logic;
-    I8  : in std_logic;
-    I9  : in std_logic;
-    I10 : in std_logic;
-    I11 : in std_logic;
-    I12 : in std_logic;
-    I13 : in std_logic;
-    I14 : in std_logic;
-    I15 : in std_logic
-  );
-end NOR16_HXILINX_sender;
-
-architecture NOR16_HXILINX_sender_V of NOR16_HXILINX_sender is
-begin
-  O <= not (I0 or I1 or I2 or I3 or I4 or I5 or I6 or I7 or I8 or I9 or I10 or I11 or I12 or I13 or I14 or I15);
-end NOR16_HXILINX_sender_V;
------ CELL NOR6_HXILINX_sender -----
-  
-library IEEE;
-use IEEE.STD_LOGIC_1164.all;
-
-entity NOR6_HXILINX_sender is
-  
-port(
-    O  : out std_logic;
-
-    I0  : in std_logic;
-    I1  : in std_logic;
-    I2  : in std_logic;
-    I3  : in std_logic;
-    I4  : in std_logic;
-    I5  : in std_logic
-  );
-end NOR6_HXILINX_sender;
-
-architecture NOR6_HXILINX_sender_V of NOR6_HXILINX_sender is
-begin
-  O <= not (I0 or I1 or I2 or I3 or I4 or I5);
-end NOR6_HXILINX_sender_V;
 ----- CELL XOR8_HXILINX_sender -----
   
 library IEEE;
@@ -430,13 +374,12 @@ end sender;
 architecture BEHAVIORAL of sender is
    attribute BOX_TYPE   : string ;
    attribute HU_SET     : string ;
-   signal data        : std_logic_vector (15 downto 0);
-   signal data_out    : std_logic_vector (21 downto 0);
-   signal XLXN_89     : std_logic;
-   signal XLXN_93     : std_logic;
-   signal XLXN_260    : std_logic;
-   signal XLXN_273    : std_logic;
-   signal XLXN_274    : std_logic;
+   signal data             : std_logic_vector (15 downto 0);
+   signal data_out         : std_logic_vector (21 downto 0);
+   signal XLXN_89          : std_logic;
+   signal XLXN_93          : std_logic;
+   signal XLXN_308         : std_logic;
+   signal data_clear_DUMMY : std_logic;
    component BUF
       port ( I : in    std_logic; 
              O : out   std_logic);
@@ -465,32 +408,6 @@ architecture BEHAVIORAL of sender is
              O  : out   std_logic);
    end component;
    
-   component NOR16_HXILINX_sender
-      port ( I0  : in    std_logic; 
-             I1  : in    std_logic; 
-             I10 : in    std_logic; 
-             I11 : in    std_logic; 
-             I12 : in    std_logic; 
-             I13 : in    std_logic; 
-             I14 : in    std_logic; 
-             I15 : in    std_logic; 
-             I2  : in    std_logic; 
-             I3  : in    std_logic; 
-             I4  : in    std_logic; 
-             I5  : in    std_logic; 
-             I6  : in    std_logic; 
-             I7  : in    std_logic; 
-             I8  : in    std_logic; 
-             I9  : in    std_logic; 
-             O   : out   std_logic);
-   end component;
-   
-   component INV
-      port ( I : in    std_logic; 
-             O : out   std_logic);
-   end component;
-   attribute BOX_TYPE of INV : component is "BLACK_BOX";
-   
    component piso16_22_MUSER_sender
       port ( clk   : in    std_logic; 
              shift : in    std_logic; 
@@ -498,27 +415,22 @@ architecture BEHAVIORAL of sender is
              out22 : out   std_logic_vector (21 downto 0));
    end component;
    
-   component AND2
+   component sendcounter
+      port ( clock : in    std_logic; 
+             clear : in    std_logic; 
+             count : out   std_logic);
+   end component;
+   
+   component OR2
       port ( I0 : in    std_logic; 
              I1 : in    std_logic; 
              O  : out   std_logic);
    end component;
-   attribute BOX_TYPE of AND2 : component is "BLACK_BOX";
+   attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
    
-   component NOR6_HXILINX_sender
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             I2 : in    std_logic; 
-             I3 : in    std_logic; 
-             I4 : in    std_logic; 
-             I5 : in    std_logic; 
-             O  : out   std_logic);
-   end component;
-   
-   attribute HU_SET of XLXI_18 : label is "XLXI_18_1";
-   attribute HU_SET of XLXI_104 : label is "XLXI_104_2";
-   attribute HU_SET of XLXI_124 : label is "XLXI_124_3";
+   attribute HU_SET of XLXI_18 : label is "XLXI_18_0";
 begin
+   data_clear <= data_clear_DUMMY;
    XLXI_1 : BUF
       port map (I=>in_data(0),
                 O=>data(3));
@@ -588,32 +500,9 @@ begin
       port map (I=>XLXN_89,
                 O=>data(15));
    
-   XLXI_104 : NOR16_HXILINX_sender
-      port map (I0=>data_out(15),
-                I1=>data_out(14),
-                I2=>data_out(13),
-                I3=>data_out(12),
-                I4=>data_out(11),
-                I5=>data_out(10),
-                I6=>data_out(9),
-                I7=>data_out(8),
-                I8=>data_out(7),
-                I9=>data_out(6),
-                I10=>data_out(5),
-                I11=>data_out(4),
-                I12=>data_out(3),
-                I13=>data_out(2),
-                I14=>data_out(1),
-                I15=>data_out(0),
-                O=>XLXN_273);
-   
    XLXI_105 : BUF
       port map (I=>data_out(21),
                 O=>send_data);
-   
-   XLXI_106 : INV
-      port map (I=>send_enable,
-                O=>XLXN_260);
    
    XLXI_107 : VCC
       port map (P=>data(0));
@@ -621,25 +510,21 @@ begin
    XLXI_108 : piso16_22_MUSER_sender
       port map (clk=>clk,
                 data(15 downto 0)=>data(15 downto 0),
-                shift=>XLXN_260,
+                shift=>send_enable,
                 out22(21 downto 0)=>data_out(21 downto 0));
-   
-   XLXI_112 : AND2
-      port map (I0=>XLXN_273,
-                I1=>XLXN_274,
-                O=>data_clear);
    
    XLXI_115 : VCC
       port map (P=>data(1));
    
-   XLXI_124 : NOR6_HXILINX_sender
-      port map (I0=>data_out(21),
-                I1=>data_out(20),
-                I2=>data_out(19),
-                I3=>data_out(18),
-                I4=>data_out(17),
-                I5=>data_out(16),
-                O=>XLXN_274);
+   XLXI_125 : sendcounter
+      port map (clear=>XLXN_308,
+                clock=>clk,
+                count=>data_clear_DUMMY);
+   
+   XLXI_126 : OR2
+      port map (I0=>data_clear_DUMMY,
+                I1=>send_enable,
+                O=>XLXN_308);
    
 end BEHAVIORAL;
 
