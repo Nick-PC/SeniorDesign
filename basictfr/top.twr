@@ -36,7 +36,7 @@ Setup/Hold to clock button_r
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-rc1         |   -1.426(R)|      FAST  |    3.306(R)|      SLOW  |XLXI_112/XLXN_84  |   0.000|
+rc1         |   -1.378(R)|      FAST  |    3.224(R)|      SLOW  |XLXI_112/XLXN_84  |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Setup/Hold to clock send_en
@@ -44,30 +44,22 @@ Setup/Hold to clock send_en
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-in_data<0>  |   -0.580(F)|      FAST  |    2.061(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<1>  |   -0.854(F)|      FAST  |    2.371(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<2>  |   -0.796(F)|      FAST  |    2.296(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<3>  |   -0.695(F)|      FAST  |    2.149(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<4>  |   -0.814(F)|      FAST  |    2.322(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<5>  |   -0.840(F)|      FAST  |    2.357(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<6>  |   -0.879(F)|      FAST  |    2.400(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<7>  |   -0.524(F)|      FAST  |    1.913(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<0>  |    2.555(F)|      SLOW  |   -1.391(F)|      FAST  |send_en_IBUF_BUFG |   0.000|
+in_data<1>  |    0.971(F)|      FAST  |   -0.288(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<2>  |    0.906(F)|      FAST  |   -0.192(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<3>  |    1.015(F)|      FAST  |   -0.318(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<4>  |    0.513(F)|      FAST  |    0.424(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<5>  |    0.662(F)|      FAST  |    0.202(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<6>  |    0.535(F)|      FAST  |    0.384(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<7>  |    0.837(F)|      FAST  |   -0.027(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
-
-Clock send_en to Pad
-------------+-----------------+------------+-----------------+------------+-------------------------+--------+
-            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                         | Clock  |
-Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)        | Phase  |
-------------+-----------------+------------+-----------------+------------+-------------------------+--------+
-send_clear  |        14.123(F)|      SLOW  |         8.677(F)|      FAST  |XLXI_118/XLXI_125/count_G|   0.000|
-------------+-----------------+------------+-----------------+------------+-------------------------+--------+
 
 Clock to Setup on destination clock button_r
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-button_r       |    1.813|    0.467|         |         |
+button_r       |    1.588|    0.378|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -83,18 +75,18 @@ Clock to Setup on destination clock send_en
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-send_en        |         |         |    1.698|    6.545|
+send_en        |         |         |    5.765|    5.765|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Feb 20 16:18:25 2020 
+Analysis completed Thu Feb 20 22:24:28 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 172 MB
+Peak Memory Usage: 171 MB
 
 
 

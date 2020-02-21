@@ -1,5 +1,5 @@
-set -tmpdir "E:/Senior Design/Code/SeniorDesign/basictfr/xst/projnav.tmp"
-set -xsthdpdir "E:/Senior Design/Code/SeniorDesign/basictfr/xst"
+set -tmpdir "C:/Users/h702417680/Downloads/SeniorDesign/basictfr/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/h702417680/Downloads/SeniorDesign/basictfr/xst"
 run -compileonly yes
 -p xc6slx16-3-csg324
 -top counter

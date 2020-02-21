@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\h702417680\Downloads\SeniorDesign\mulvib\mv.ncd
+OUTFILE=C:\Users\h702417680\Downloads\SeniorDesign\mulvib\mv.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\h702417680\Downloads\SeniorDesign\mulvib
+LICENSE=WebPack
+USER_INFO=210724264_0_0_200

@@ -11,7 +11,7 @@
 <msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\h702417680\Downloads\SeniorDesign\basictfr\sendcounter.vhd" Line 49: <arg fmt="%s" index="1">cnt</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\h702417680\Downloads\SeniorDesign\basictfr\top.vhf</arg>&quot; line <arg fmt="%s" index="2">989</arg>: Output port &lt;<arg fmt="%s" index="3">rec_data</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_112</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\h702417680\Downloads\SeniorDesign\basictfr\top.vhf</arg>&quot; line <arg fmt="%s" index="2">1032</arg>: Output port &lt;<arg fmt="%s" index="3">rec_data</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_112</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">count</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.

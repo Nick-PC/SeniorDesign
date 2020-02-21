@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sender.vhf
--- /___/   /\     Timestamp : 02/20/2020 16:17:24
+-- /___/   /\     Timestamp : 02/20/2020 22:23:41
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -43,6 +43,35 @@ architecture XOR8_HXILINX_sender_V of XOR8_HXILINX_sender is
 begin
   O <= I0 xor I1 xor I2 xor I3 xor I4 xor I5 xor I6 xor I7;
 end XOR8_HXILINX_sender_V;
+
+library ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.numeric_std.ALL;
+library UNISIM;
+use UNISIM.Vcomponents.ALL;
+
+entity mv_MUSER_sender is
+   port ( A   : in    std_logic; 
+          clk : in    std_logic; 
+          Z   : out   std_logic);
+end mv_MUSER_sender;
+
+architecture BEHAVIORAL of mv_MUSER_sender is
+   component MULTIVIB
+      port ( A   : in    std_logic; 
+             clk : in    std_logic; 
+             Z   : out   std_logic);
+   end component;
+   
+begin
+   XLXI_1 : MULTIVIB
+      port map (A=>A,
+                clk=>clk,
+                Z=>Z);
+   
+end BEHAVIORAL;
+
+
 
 library ieee;
 use ieee.std_logic_1164.ALL;
@@ -374,12 +403,12 @@ end sender;
 architecture BEHAVIORAL of sender is
    attribute BOX_TYPE   : string ;
    attribute HU_SET     : string ;
-   signal data             : std_logic_vector (15 downto 0);
-   signal data_out         : std_logic_vector (21 downto 0);
-   signal XLXN_89          : std_logic;
-   signal XLXN_93          : std_logic;
-   signal XLXN_308         : std_logic;
-   signal data_clear_DUMMY : std_logic;
+   signal data        : std_logic_vector (15 downto 0);
+   signal data_out    : std_logic_vector (21 downto 0);
+   signal XLXN_89     : std_logic;
+   signal XLXN_93     : std_logic;
+   signal XLXN_328    : std_logic;
+   signal XLXN_331    : std_logic;
    component BUF
       port ( I : in    std_logic; 
              O : out   std_logic);
@@ -421,16 +450,20 @@ architecture BEHAVIORAL of sender is
              count : out   std_logic);
    end component;
    
-   component OR2
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             O  : out   std_logic);
+   component INV
+      port ( I : in    std_logic; 
+             O : out   std_logic);
    end component;
-   attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
+   attribute BOX_TYPE of INV : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_18 : label is "XLXI_18_0";
+   component mv_MUSER_sender
+      port ( clk : in    std_logic; 
+             A   : in    std_logic; 
+             Z   : out   std_logic);
+   end component;
+   
+   attribute HU_SET of XLXI_18 : label is "XLXI_18_5";
 begin
-   data_clear <= data_clear_DUMMY;
    XLXI_1 : BUF
       port map (I=>in_data(0),
                 O=>data(3));
@@ -510,21 +543,25 @@ begin
    XLXI_108 : piso16_22_MUSER_sender
       port map (clk=>clk,
                 data(15 downto 0)=>data(15 downto 0),
-                shift=>send_enable,
+                shift=>XLXN_328,
                 out22(21 downto 0)=>data_out(21 downto 0));
    
    XLXI_115 : VCC
       port map (P=>data(1));
    
    XLXI_125 : sendcounter
-      port map (clear=>XLXN_308,
+      port map (clear=>XLXN_331,
                 clock=>clk,
-                count=>data_clear_DUMMY);
+                count=>data_clear);
    
-   XLXI_126 : OR2
-      port map (I0=>data_clear_DUMMY,
-                I1=>send_enable,
-                O=>XLXN_308);
+   XLXI_127 : INV
+      port map (I=>XLXN_331,
+                O=>XLXN_328);
+   
+   XLXI_131 : mv_MUSER_sender
+      port map (A=>send_enable,
+                clk=>clk,
+                Z=>XLXN_331);
    
 end BEHAVIORAL;
 

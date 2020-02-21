@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "C:/Users/h702417680/Downloads/SeniorDesign/mulvib/mv.xst" -ofn "C:/Users/h702417680/Downloads/SeniorDesign/mulvib/mv.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 mv.ngc mv.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mv_map.ncd mv.ngd mv.pcf 
+par -w -intstyle ise -ol high -mt off mv_map.ncd mv.ncd mv.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mv.twx mv.ncd -o mv.twr mv.pcf 
+bitgen -intstyle ise -f mv.ut mv.ncd 
+xst -intstyle ise -ifn "C:/Users/h702417680/Downloads/SeniorDesign/mulvib/mv.xst" -ofn "C:/Users/h702417680/Downloads/SeniorDesign/mulvib/mv.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mv.ucf -p xc6slx16-csg324-3 mv.ngc mv.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mv_map.ncd mv.ngd mv.pcf 
+par -w -intstyle ise -ol high -mt off mv_map.ncd mv.ncd mv.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mv.twx mv.ncd -o mv.twr mv.pcf -ucf mv.ucf 
+bitgen -intstyle ise -f mv.ut mv.ncd 

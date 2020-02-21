@@ -1,0 +1,2 @@
+vhdl work "../basictfr/MULTIVIB.vhd"
+vhdl work "mv.vhf"

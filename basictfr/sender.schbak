@@ -36,33 +36,21 @@
         <signal name="in_data(7:0)" />
         <signal name="data(1)" />
         <signal name="data_out(21:0)" />
-        <signal name="send_enable" />
-        <signal name="XLXN_308" />
         <signal name="data_clear" />
         <signal name="data_out(21)" />
         <signal name="send_data" />
         <signal name="clk" />
-        <signal name="XLXN_327" />
         <signal name="XLXN_328" />
-        <signal name="XLXN_329" />
-        <signal name="XLXN_330" />
         <signal name="XLXN_331" />
-        <signal name="XLXN_332" />
-        <signal name="XLXN_333" />
-        <signal name="XLXN_334" />
-        <signal name="XLXN_335" />
+        <signal name="send_enable" />
         <signal name="XLXN_336" />
         <signal name="XLXN_337" />
         <signal name="XLXN_338" />
-        <signal name="XLXN_339" />
-        <signal name="XLXN_340" />
-        <signal name="XLXN_341" />
-        <signal name="XLXN_342" />
         <port polarity="Input" name="in_data(7:0)" />
-        <port polarity="Input" name="send_enable" />
         <port polarity="Output" name="data_clear" />
         <port polarity="Output" name="send_data" />
         <port polarity="Input" name="clk" />
+        <port polarity="Input" name="send_enable" />
         <blockdef name="buf">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-32" y2="-32" x1="0" />
@@ -106,15 +94,6 @@
             <line x2="48" y1="-64" y2="-240" x1="48" />
             <line x2="48" y1="-336" y2="-512" x1="48" />
         </blockdef>
-        <blockdef name="inv">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-            <line x2="160" y1="-32" y2="-32" x1="224" />
-            <line x2="128" y1="-64" y2="-32" x1="64" />
-            <line x2="64" y1="-32" y2="0" x1="128" />
-            <line x2="64" y1="0" y2="-64" x1="64" />
-            <circle r="16" cx="144" cy="-32" />
-        </blockdef>
         <blockdef name="piso16_22">
             <timestamp>2020-2-19T4:20:7</timestamp>
             <rect width="256" x="64" y="-192" height="192" />
@@ -132,16 +111,21 @@
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="384" y1="-96" y2="-96" x1="320" />
         </blockdef>
-        <blockdef name="or2">
+        <blockdef name="inv">
             <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-64" y2="-64" x1="0" />
-            <line x2="64" y1="-128" y2="-128" x1="0" />
-            <line x2="192" y1="-96" y2="-96" x1="256" />
-            <arc ex="192" ey="-96" sx="112" sy="-48" r="88" cx="116" cy="-136" />
-            <arc ex="48" ey="-144" sx="48" sy="-48" r="56" cx="16" cy="-96" />
-            <line x2="48" y1="-144" y2="-144" x1="112" />
-            <arc ex="112" ey="-144" sx="192" sy="-96" r="88" cx="116" cy="-56" />
-            <line x2="48" y1="-48" y2="-48" x1="112" />
+            <line x2="64" y1="-32" y2="-32" x1="0" />
+            <line x2="160" y1="-32" y2="-32" x1="224" />
+            <line x2="128" y1="-64" y2="-32" x1="64" />
+            <line x2="64" y1="-32" y2="0" x1="128" />
+            <line x2="64" y1="0" y2="-64" x1="64" />
+            <circle r="16" cx="144" cy="-32" />
+        </blockdef>
+        <blockdef name="MULTIVIB">
+            <timestamp>2020-2-21T1:36:44</timestamp>
+            <rect width="256" x="64" y="-128" height="128" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
         </blockdef>
         <block symbolname="buf" name="XLXI_1">
             <blockpin signalname="in_data(0)" name="I" />
@@ -214,13 +198,9 @@
         </block>
         <block symbolname="piso16_22" name="XLXI_108">
             <blockpin signalname="clk" name="clk" />
-            <blockpin signalname="XLXN_327" name="shift" />
+            <blockpin signalname="XLXN_328" name="shift" />
             <blockpin signalname="data(15:0)" name="data(15:0)" />
             <blockpin signalname="data_out(21:0)" name="out22(21:0)" />
-        </block>
-        <block symbolname="inv" name="XLXI_106">
-            <blockpin signalname="send_enable" name="I" />
-            <blockpin signalname="XLXN_327" name="O" />
         </block>
         <block symbolname="vcc" name="XLXI_107">
             <blockpin signalname="data(0)" name="P" />
@@ -230,17 +210,21 @@
         </block>
         <block symbolname="sendcounter" name="XLXI_125">
             <blockpin signalname="clk" name="clock" />
-            <blockpin signalname="XLXN_308" name="clear" />
+            <blockpin signalname="XLXN_331" name="clear" />
             <blockpin signalname="data_clear" name="count" />
         </block>
         <block symbolname="buf" name="XLXI_105">
             <blockpin signalname="data_out(21)" name="I" />
             <blockpin signalname="send_data" name="O" />
         </block>
-        <block symbolname="or2" name="XLXI_126">
-            <blockpin signalname="data_clear" name="I0" />
-            <blockpin signalname="send_enable" name="I1" />
-            <blockpin signalname="XLXN_308" name="O" />
+        <block symbolname="inv" name="XLXI_127">
+            <blockpin signalname="XLXN_331" name="I" />
+            <blockpin signalname="XLXN_328" name="O" />
+        </block>
+        <block symbolname="MULTIVIB" name="XLXI_130">
+            <blockpin signalname="send_enable" name="A" />
+            <blockpin signalname="clk" name="clk" />
+            <blockpin signalname="XLXN_331" name="Ao" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -451,12 +435,6 @@
         </branch>
         <instance x="1728" y="704" name="XLXI_108" orien="R0">
         </instance>
-        <branch name="send_enable">
-            <wire x2="1280" y1="608" y2="608" x1="1088" />
-            <wire x2="1424" y1="608" y2="608" x1="1280" />
-            <wire x2="1280" y1="608" y2="960" x1="1280" />
-            <wire x2="1296" y1="960" y2="960" x1="1280" />
-        </branch>
         <branch name="data(1)">
             <wire x2="1104" y1="1840" y2="1840" x1="1088" />
             <wire x2="1088" y1="1840" y2="2064" x1="1088" />
@@ -464,26 +442,13 @@
         <instance x="688" y="2480" name="XLXI_18" orien="R0" />
         <instance x="1232" y="2064" name="XLXI_107" orien="R180" />
         <instance x="1152" y="2064" name="XLXI_115" orien="R180" />
-        <iomarker fontsize="28" x="1184" y="544" name="clk" orien="R180" />
-        <iomarker fontsize="28" x="1088" y="608" name="send_enable" orien="R180" />
-        <branch name="XLXN_308">
-            <wire x2="1568" y1="992" y2="992" x1="1552" />
-            <wire x2="1568" y1="912" y2="992" x1="1568" />
-            <wire x2="1584" y1="912" y2="912" x1="1568" />
-        </branch>
         <branch name="data_clear">
-            <wire x2="1296" y1="1024" y2="1024" x1="1280" />
-            <wire x2="1280" y1="1024" y2="1120" x1="1280" />
-            <wire x2="1984" y1="1120" y2="1120" x1="1280" />
-            <wire x2="1984" y1="848" y2="848" x1="1968" />
-            <wire x2="1984" y1="848" y2="1008" x1="1984" />
-            <wire x2="2032" y1="1008" y2="1008" x1="1984" />
-            <wire x2="1984" y1="1008" y2="1120" x1="1984" />
+            <wire x2="1984" y1="960" y2="960" x1="1904" />
         </branch>
         <branch name="data_out(21:0)">
             <wire x2="2160" y1="544" y2="544" x1="2112" />
             <wire x2="2160" y1="544" y2="736" x1="2160" />
-            <wire x2="2160" y1="736" y2="800" x1="2160" />
+            <wire x2="2160" y1="736" y2="784" x1="2160" />
         </branch>
         <bustap x2="2256" y1="736" y2="736" x1="2160" />
         <branch name="data_out(21)">
@@ -494,19 +459,38 @@
         </branch>
         <instance x="2304" y="768" name="XLXI_105" orien="R0" />
         <iomarker fontsize="28" x="2544" y="736" name="send_data" orien="R0" />
-        <instance x="1424" y="640" name="XLXI_106" orien="R0" />
-        <branch name="XLXN_327">
-            <wire x2="1728" y1="608" y2="608" x1="1648" />
-        </branch>
-        <iomarker fontsize="28" x="2032" y="1008" name="data_clear" orien="R0" />
-        <instance x="1296" y="1088" name="XLXI_126" orien="R0" />
         <branch name="clk">
-            <wire x2="1328" y1="544" y2="544" x1="1184" />
+            <wire x2="640" y1="624" y2="624" x1="464" />
+            <wire x2="704" y1="384" y2="384" x1="640" />
+            <wire x2="640" y1="384" y2="544" x1="640" />
+            <wire x2="1328" y1="544" y2="544" x1="640" />
             <wire x2="1728" y1="544" y2="544" x1="1328" />
-            <wire x2="1328" y1="544" y2="848" x1="1328" />
-            <wire x2="1584" y1="848" y2="848" x1="1328" />
+            <wire x2="1328" y1="544" y2="960" x1="1328" />
+            <wire x2="1520" y1="960" y2="960" x1="1328" />
+            <wire x2="640" y1="544" y2="624" x1="640" />
         </branch>
-        <instance x="1584" y="944" name="XLXI_125" orien="R0">
+        <instance x="1456" y="640" name="XLXI_127" orien="R0" />
+        <branch name="XLXN_328">
+            <wire x2="1728" y1="608" y2="608" x1="1680" />
+        </branch>
+        <branch name="XLXN_331">
+            <wire x2="1280" y1="384" y2="384" x1="1088" />
+            <wire x2="1280" y1="384" y2="608" x1="1280" />
+            <wire x2="1456" y1="608" y2="608" x1="1280" />
+            <wire x2="1280" y1="608" y2="1024" x1="1280" />
+            <wire x2="1520" y1="1024" y2="1024" x1="1280" />
+        </branch>
+        <instance x="1520" y="1056" name="XLXI_125" orien="R0">
         </instance>
+        <iomarker fontsize="28" x="1984" y="960" name="data_clear" orien="R0" />
+        <iomarker fontsize="28" x="464" y="624" name="clk" orien="R180" />
+        <branch name="send_enable">
+            <wire x2="592" y1="384" y2="384" x1="576" />
+            <wire x2="592" y1="384" y2="448" x1="592" />
+            <wire x2="704" y1="448" y2="448" x1="592" />
+        </branch>
+        <instance x="704" y="480" name="XLXI_130" orien="R0">
+        </instance>
+        <iomarker fontsize="28" x="576" y="384" name="send_enable" orien="R180" />
     </sheet>
 </drawing>

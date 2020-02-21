@@ -1,12 +1,12 @@
 Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to E:/Senior Design/Code/SeniorDesign/basictfr/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/h702417680/Downloads/SeniorDesign/basictfr/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
---> Parameter xsthdpdir set to E:/Senior Design/Code/SeniorDesign/basictfr/xst
+--> Parameter xsthdpdir set to C:/Users/h702417680/Downloads/SeniorDesign/basictfr/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -39,17 +39,17 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\counter.vhd" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\counter.vhd" into library work
 Parsing entity <counter>.
 Parsing architecture <Behavioral> of entity <counter>.
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.10 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.46 secs
  
 --> 
 
-Total memory usage is 204624 kilobytes
+Total memory usage is 195880 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

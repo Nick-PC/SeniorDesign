@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Feb 20 16:18:17 2020
+Thu Feb 20 22:24:21 2020
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -45,7 +45,7 @@ Pinout by Pin Number:
 |B5        |           |         |VCCO_0                       |         |           |0             |          |         |           |         |3.30     |          |           |                |
 |B6        |           |IOBM     |IO_L8P_0                     |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B7        |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
-|B8        |send_en    |IOB      |IO_L33P_0                    |INPUT    |LVCMOS33   |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|B8        |in_data<0> |IOB      |IO_L33P_0                    |INPUT    |LVCMOS33   |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |B9        |           |IOBM     |IO_L35P_GCLK17_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B10       |           |         |VCCO_0                       |         |           |0             |          |         |           |         |3.30     |          |           |                |
 |B11       |           |IOBM     |IO_L39P_0                    |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
@@ -245,7 +245,7 @@ Pinout by Pin Number:
 |N7        |           |IOBM     |IO_L44P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |N8        |in_data<4> |IOB      |IO_L40N_2                    |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |N9        |           |IOBS     |IO_L22N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|N10       |           |IOBM     |IO_L20P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
+|N10       |MVIB       |IOB      |IO_L20P_2                    |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |N11       |LED<5>     |IOB      |IO_L15N_2                    |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |N12       |           |IOBM     |IO_L13P_M1_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |N13       |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
@@ -299,7 +299,7 @@ Pinout by Pin Number:
 |T7        |           |IOBS     |IO_L46N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T8        |           |IOBS     |IO_L31N_GCLK30_D15_2         |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T9        |in_data<1> |IOB      |IO_L32P_GCLK29_2             |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|T10       |in_data<0> |IOB      |IO_L29N_GCLK2_2              |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|T10       |send_en    |IOB      |IO_L29N_GCLK2_2              |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |T11       |LED<7>     |IOB      |IO_L16N_VREF_2               |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |T12       |           |IOBM     |IO_L19P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T13       |           |IOBS     |IO_L3N_MOSI_CSI_B_MISO0_2    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
