@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-WEED16005::  Thu Feb 20 22:24:14 2020
+WEED16005::  Thu Feb 20 22:38:39 2020
 
 par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
 
@@ -103,11 +103,11 @@ Starting Router
 
 Phase  1  : 305 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 234 unrouted;      REAL time: 4 secs 
+Phase  2  : 235 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 38 unrouted;      REAL time: 5 secs 
+Phase  3  : 34 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 38 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  4  : 34 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
 Updating file: top.ncd with current fully routed design.
 
@@ -146,11 +146,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Autotimespec constraint for clock net XLX | SETUP       |         N/A|     1.588ns|     N/A|           0
   I_112/XLXN_84                             | HOLD        |     0.268ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net slo | SETUP       |         N/A|     3.275ns|     N/A|           0
-  wclk_OBUF                                 | HOLD        |     0.429ns|            |       0|           0
+  Autotimespec constraint for clock net slo | SETUP       |         N/A|     2.873ns|     N/A|           0
+  wclk_OBUF                                 | HOLD        |     0.509ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     0.898ns|     N/A|           0
-  I_74/count                                | HOLD        |     0.456ns|            |       0|           0
+  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     0.967ns|     N/A|           0
+  I_74/count                                | HOLD        |     0.498ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.800ns|     N/A|           0
   _BUFGP                                    | HOLD        |     0.534ns|            |       0|           0
@@ -170,9 +170,9 @@ Generating Pad Report.
 All signals are completely routed.
 
 Total REAL time to PAR completion: 6 secs 
-Total CPU time to PAR completion: 4 secs 
+Total CPU time to PAR completion: 3 secs 
 
-Peak Memory Usage:  271 MB
+Peak Memory Usage:  273 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

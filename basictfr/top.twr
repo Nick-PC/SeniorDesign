@@ -44,14 +44,14 @@ Setup/Hold to clock send_en
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-in_data<0>  |    2.555(F)|      SLOW  |   -1.391(F)|      FAST  |send_en_IBUF_BUFG |   0.000|
-in_data<1>  |    0.971(F)|      FAST  |   -0.288(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<2>  |    0.906(F)|      FAST  |   -0.192(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<3>  |    1.015(F)|      FAST  |   -0.318(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<4>  |    0.513(F)|      FAST  |    0.424(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<5>  |    0.662(F)|      FAST  |    0.202(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<6>  |    0.535(F)|      FAST  |    0.384(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
-in_data<7>  |    0.837(F)|      FAST  |   -0.027(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<0>  |   -0.817(F)|      FAST  |    2.407(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<1>  |   -0.781(F)|      FAST  |    2.256(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<2>  |   -1.082(F)|      FAST  |    2.696(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<3>  |   -0.851(F)|      FAST  |    2.386(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<4>  |   -0.915(F)|      FAST  |    2.478(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<5>  |   -1.058(F)|      FAST  |    2.652(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<6>  |   -1.087(F)|      FAST  |    2.701(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<7>  |   -0.738(F)|      FAST  |    2.237(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock button_r
@@ -75,18 +75,18 @@ Clock to Setup on destination clock send_en
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-send_en        |         |         |    5.765|    5.765|
+send_en        |         |         |    1.557|    1.557|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Feb 20 22:24:28 2020 
+Analysis completed Thu Feb 20 22:38:53 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 171 MB
+Peak Memory Usage: 173 MB
 
 
 

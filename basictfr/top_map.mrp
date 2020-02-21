@@ -10,12 +10,12 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Feb 20 22:24:04 2020
+Mapped Date    : Thu Feb 20 22:38:28 2020
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    5
+Number of warnings:    6
 Slice Logic Utilization:
   Number of Slice Registers:                    93 out of  18,224    1%
     Number used as Flip Flops:                  83
@@ -85,8 +85,8 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.13
 
-Peak Memory Usage:  279 MB
-Total REAL time to MAP completion:  7 secs 
+Peak Memory Usage:  290 MB
+Total REAL time to MAP completion:  6 secs 
 Total CPU time to MAP completion:   4 secs 
 
 Table of Contents
@@ -137,6 +137,18 @@ WARNING:Place:1137 - This design is not guaranteed to be routable! This design
    CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
    <XLXI_113/q_tmp_BUFG.O> allowing your design to continue. This constraint
    disables all clock placer rules related to the specified COMP.PIN.
+WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
+   that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
+   IOB component <send_en> is placed at site <B8>. The corresponding BUFG
+   component <send_en_IBUF_BUFG> is placed at site <BUFGMUX_X2Y1>. There is only
+   a select set of IOBs that can use the fast path to the Clocker buffer, and
+   they are not being used. You may want to analyze why this problem exists and
+   correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE
+   constraint was applied on COMP.PIN <send_en.PAD> allowing your design to
+   continue. This constraint disables all clock placer rules related to the
+   specified COMP.PIN. The use of this override is highly discouraged as it may
+   lead to very poor timing results. It is recommended that this error condition
+   be corrected in the design.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_112/XLXN_84 is sourced
    by a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
