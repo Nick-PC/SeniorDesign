@@ -8,5 +8,14 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/h702417680/Downloads/SeniorDesign/basictfr/MULTIVIB.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/h702417680/Downloads/SeniorDesign/basictfr/counter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/h702417680/Downloads/SeniorDesign/basictfr/sendcounter.vhd&quot; into library work</arg>
+</msg>
+
 </messages>
 
