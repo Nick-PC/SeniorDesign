@@ -1,0 +1,10 @@
+select figure at 1329 1877 8 -wires -sn=1
+select figure at 1185 1895 8 -wires -sn=1
+select figure at 1102 1750 8 -branches -sn=1
+select figure at 2004 1678 8 -branches -sn=1
+select figure at 1977 1684 8 -branches -sn=1
+select figure at 1912 1793 8 -branches -sn=1
+select figure at 1829 1646 8 -branches -sn=1
+select figure at 2003 1657 8 -branches -sn=1
+select figure at 1883 1868 8 -branches -sn=1
+select figure at 1173 1842 8 -branches -sn=1

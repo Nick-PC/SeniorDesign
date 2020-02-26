@@ -1,0 +1,93 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml mainproj.twx mainproj.ncd -o mainproj.twr mainproj.pcf -ucf
+constraints.ucf
+
+Design file:              mainproj.ncd
+Physical constraint file: mainproj.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock rec_reset
+------------+------------+------------+------------+------------+-------------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                         | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)        | Phase  |
+------------+------------+------------+------------+------------+-------------------------+--------+
+rec_in      |   -0.550(R)|      FAST  |    1.507(R)|      SLOW  |XLXI_120/XLXI_119/XLXN_84|   0.000|
+------------+------------+------------+------------+------------+-------------------------+--------+
+
+Setup/Hold to clock send_en
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+in_data<0>  |   -0.684(F)|      FAST  |    2.169(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<1>  |   -0.894(F)|      FAST  |    2.390(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<2>  |   -0.919(F)|      FAST  |    2.443(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<3>  |   -0.850(F)|      FAST  |    2.360(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<4>  |   -0.959(F)|      FAST  |    2.562(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<5>  |   -0.863(F)|      FAST  |    2.430(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<6>  |   -0.892(F)|      FAST  |    2.479(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+in_data<7>  |   -0.623(F)|      FAST  |    2.077(F)|      SLOW  |send_en_IBUF_BUFG |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.816|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rec_reset
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rec_reset      |    2.494|    0.802|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock send_en
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+send_en        |         |         |    1.778|    1.778|
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Feb 25 22:20:07 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 174 MB
+
+
+

@@ -18,11 +18,10 @@
         <signal name="reset" />
         <signal name="XLXN_100" />
         <signal name="clk" />
-        <signal name="rdata(15:0)" />
-        <signal name="XLXN_107" />
         <signal name="XLXN_108" />
         <signal name="rec_data(1)" />
         <signal name="rec_data(0)" />
+        <signal name="rdata(15:0)" />
         <port polarity="Input" name="rc1" />
         <port polarity="Input" name="reset" />
         <port polarity="Input" name="clk" />
@@ -123,18 +122,18 @@
             <blockpin signalname="XLXN_72" name="I1" />
             <blockpin signalname="XLXN_84" name="O" />
         </block>
-        <block symbolname="fd16ce" name="XLXI_110">
-            <blockpin signalname="clk" name="C" />
-            <blockpin signalname="XLXN_100" name="CE" />
-            <blockpin signalname="reset" name="CLR" />
-            <blockpin signalname="rec_data(15:0)" name="D(15:0)" />
-            <blockpin signalname="rdata(15:0)" name="Q(15:0)" />
-        </block>
         <block symbolname="and3" name="XLXI_111">
             <blockpin signalname="XLXN_108" name="I0" />
             <blockpin signalname="rec_data(1)" name="I1" />
             <blockpin signalname="rec_data(0)" name="I2" />
             <blockpin signalname="XLXN_100" name="O" />
+        </block>
+        <block symbolname="fd16ce" name="XLXI_110">
+            <blockpin signalname="clk" name="C" />
+            <blockpin signalname="XLXN_100" name="CE" />
+            <blockpin signalname="reset" name="CLR" />
+            <blockpin signalname="rec_data(15:0)" name="D(15:0)" />
+            <blockpin name="Q(15:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -189,7 +188,6 @@
         </branch>
         <iomarker fontsize="28" x="240" y="1136" name="rc1" orien="R180" />
         <iomarker fontsize="28" x="240" y="1072" name="clk" orien="R180" />
-        <iomarker fontsize="28" x="256" y="896" name="reset" orien="R180" />
         <instance x="432" y="560" name="XLXI_99" orien="R90" />
         <branch name="clk">
             <wire x2="720" y1="1072" y2="1072" x1="240" />
@@ -207,11 +205,6 @@
             <wire x2="1024" y1="896" y2="1008" x1="1024" />
             <wire x2="1040" y1="1008" y2="1008" x1="1024" />
         </branch>
-        <instance x="1680" y="1392" name="XLXI_110" orien="R0" />
-        <branch name="rdata(15:0)">
-            <wire x2="2144" y1="1136" y2="1136" x1="2064" />
-        </branch>
-        <iomarker fontsize="28" x="2144" y="1136" name="rdata(15:0)" orien="R0" />
         <branch name="XLXN_100">
             <wire x2="1024" y1="864" y2="864" x1="368" />
             <wire x2="368" y1="864" y2="1008" x1="368" />
@@ -235,5 +228,12 @@
         <branch name="rec_data(0)">
             <wire x2="1088" y1="544" y2="560" x1="1088" />
         </branch>
+        <branch name="rdata(15:0)">
+            <wire x2="2496" y1="816" y2="816" x1="2480" />
+            <wire x2="2560" y1="816" y2="816" x1="2496" />
+        </branch>
+        <iomarker fontsize="28" x="2560" y="816" name="rdata(15:0)" orien="R0" />
+        <instance x="1680" y="1392" name="XLXI_110" orien="R0" />
+        <iomarker fontsize="28" x="256" y="896" name="reset" orien="R180" />
     </sheet>
 </drawing>

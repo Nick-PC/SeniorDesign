@@ -48,3 +48,5 @@ par -w -intstyle ise -ol high -mt off tfr_map.ncd tfr.ncd tfr.pcf
 par -w -intstyle ise -ol high -mt off tfr_map.ncd tfr.ncd tfr.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml tfr.twx tfr.ncd -o tfr.twr tfr.pcf -ucf constraints.ucf 
 bitgen -intstyle ise -f tfr.ut tfr.ncd 
+sch2sym -intstyle ise -family spartan6 -w -refsym tfr C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym tfr C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.sym 

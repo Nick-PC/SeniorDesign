@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : tfr.vhf
--- /___/   /\     Timestamp : 02/25/2020 21:15:25
+-- /___/   /\     Timestamp : 02/25/2020 22:03:25
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -148,62 +148,6 @@ architecture XOR8_HXILINX_tfr_V of XOR8_HXILINX_tfr is
 begin
   O <= I0 xor I1 xor I2 xor I3 xor I4 xor I5 xor I6 xor I7;
 end XOR8_HXILINX_tfr_V;
-
-library ieee;
-use ieee.std_logic_1164.ALL;
-use ieee.numeric_std.ALL;
-library UNISIM;
-use UNISIM.Vcomponents.ALL;
-
-entity buf8_MUSER_tfr is
-   port ( inputs  : in    std_logic_vector (7 downto 0); 
-          outputs : out   std_logic_vector (7 downto 0));
-end buf8_MUSER_tfr;
-
-architecture BEHAVIORAL of buf8_MUSER_tfr is
-   attribute BOX_TYPE   : string ;
-   component BUF
-      port ( I : in    std_logic; 
-             O : out   std_logic);
-   end component;
-   attribute BOX_TYPE of BUF : component is "BLACK_BOX";
-   
-begin
-   XLXI_2 : BUF
-      port map (I=>inputs(7),
-                O=>outputs(7));
-   
-   XLXI_3 : BUF
-      port map (I=>inputs(6),
-                O=>outputs(6));
-   
-   XLXI_4 : BUF
-      port map (I=>inputs(5),
-                O=>outputs(5));
-   
-   XLXI_5 : BUF
-      port map (I=>inputs(4),
-                O=>outputs(4));
-   
-   XLXI_6 : BUF
-      port map (I=>inputs(3),
-                O=>outputs(3));
-   
-   XLXI_7 : BUF
-      port map (I=>inputs(2),
-                O=>outputs(2));
-   
-   XLXI_8 : BUF
-      port map (I=>inputs(1),
-                O=>outputs(1));
-   
-   XLXI_9 : BUF
-      port map (I=>inputs(0),
-                O=>outputs(0));
-   
-end BEHAVIORAL;
-
-
 
 library ieee;
 use ieee.std_logic_1164.ALL;
@@ -399,7 +343,7 @@ architecture BEHAVIORAL of receiver_MUSER_tfr is
    end component;
    attribute BOX_TYPE of AND3 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_110 : label is "XLXI_110_5";
+   attribute HU_SET of XLXI_110 : label is "XLXI_110_0";
 begin
    XLXI_94 : sipo16_MUSER_tfr
       port map (clk=>XLXN_84,
@@ -486,7 +430,7 @@ architecture BEHAVIORAL of stn_MUSER_tfr is
              O  : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_16 : label is "XLXI_16_6";
+   attribute HU_SET of XLXI_16 : label is "XLXI_16_1";
 begin
    XLXI_1 : BUF
       port map (I=>in_data(0),
@@ -591,6 +535,62 @@ begin
       port map (A=>A,
                 clk=>clk,
                 Z=>Z);
+   
+end BEHAVIORAL;
+
+
+
+library ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.numeric_std.ALL;
+library UNISIM;
+use UNISIM.Vcomponents.ALL;
+
+entity buf8_MUSER_tfr is
+   port ( inputs  : in    std_logic_vector (7 downto 0); 
+          outputs : out   std_logic_vector (7 downto 0));
+end buf8_MUSER_tfr;
+
+architecture BEHAVIORAL of buf8_MUSER_tfr is
+   attribute BOX_TYPE   : string ;
+   component BUF
+      port ( I : in    std_logic; 
+             O : out   std_logic);
+   end component;
+   attribute BOX_TYPE of BUF : component is "BLACK_BOX";
+   
+begin
+   XLXI_2 : BUF
+      port map (I=>inputs(7),
+                O=>outputs(7));
+   
+   XLXI_3 : BUF
+      port map (I=>inputs(6),
+                O=>outputs(6));
+   
+   XLXI_4 : BUF
+      port map (I=>inputs(5),
+                O=>outputs(5));
+   
+   XLXI_5 : BUF
+      port map (I=>inputs(4),
+                O=>outputs(4));
+   
+   XLXI_6 : BUF
+      port map (I=>inputs(3),
+                O=>outputs(3));
+   
+   XLXI_7 : BUF
+      port map (I=>inputs(2),
+                O=>outputs(2));
+   
+   XLXI_8 : BUF
+      port map (I=>inputs(1),
+                O=>outputs(1));
+   
+   XLXI_9 : BUF
+      port map (I=>inputs(0),
+                O=>outputs(0));
    
 end BEHAVIORAL;
 
@@ -949,19 +949,18 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity tfr is
-   port ( button_r : in    std_logic; 
-          clk      : in    std_logic; 
+   port ( C        : in    std_logic; 
           in_data  : in    std_logic_vector (7 downto 0); 
-          rc1      : in    std_logic; 
-          send_en  : in    std_logic; 
-          LED      : out   std_logic_vector (7 downto 0); 
-          send     : out   std_logic);
+          rec_in   : in    std_logic; 
+          RR       : in    std_logic; 
+          SE       : in    std_logic; 
+          out_data : out   std_logic_vector (15 downto 0); 
+          send_out : out   std_logic);
 end tfr;
 
 architecture BEHAVIORAL of tfr is
    attribute HU_SET     : string ;
    attribute BOX_TYPE   : string ;
-   signal data_out   : std_logic_vector (15 downto 0);
    signal send_clear : std_logic;
    signal slowclk    : std_logic;
    signal slowcount  : std_logic;
@@ -1022,28 +1021,23 @@ architecture BEHAVIORAL of tfr is
              rdata : out   std_logic_vector (15 downto 0));
    end component;
    
-   component buf8_MUSER_tfr
-      port ( inputs  : in    std_logic_vector (7 downto 0); 
-             outputs : out   std_logic_vector (7 downto 0));
-   end component;
-   
-   attribute HU_SET of XLXI_106 : label is "XLXI_106_7";
-   attribute HU_SET of XLXI_113 : label is "XLXI_113_8";
+   attribute HU_SET of XLXI_106 : label is "XLXI_106_2";
+   attribute HU_SET of XLXI_113 : label is "XLXI_113_3";
 begin
    XLXI_74 : counter
       port map (clear=>slowcount,
-                clock=>clk,
+                clock=>C,
                 count=>slowcount);
    
    XLXI_106 : LD8CE_HXILINX_tfr
       port map (CLR=>XLXN_236,
                 D(7 downto 0)=>in_data(7 downto 0),
-                G=>send_en,
-                GE=>send_en,
+                G=>SE,
+                GE=>SE,
                 Q(7 downto 0)=>XLXN_234(7 downto 0));
    
    XLXI_107 : AND2B1
-      port map (I0=>send_en,
+      port map (I0=>SE,
                 I1=>send_clear,
                 O=>XLXN_236);
    
@@ -1062,19 +1056,15 @@ begin
    XLXI_118 : sender_MUSER_tfr
       port map (clk=>slowclk,
                 in_data(7 downto 0)=>XLXN_234(7 downto 0),
-                send_enable=>send_en,
+                send_enable=>SE,
                 data_clear=>send_clear,
-                send_data=>send);
+                send_data=>send_out);
    
    XLXI_119 : receiver_MUSER_tfr
       port map (clk=>slowclk,
-                rc1=>rc1,
-                reset=>button_r,
-                rdata(15 downto 0)=>data_out(15 downto 0));
-   
-   XLXI_120 : buf8_MUSER_tfr
-      port map (inputs(7 downto 0)=>data_out(10 downto 3),
-                outputs(7 downto 0)=>LED(7 downto 0));
+                rc1=>rec_in,
+                reset=>RR,
+                rdata(15 downto 0)=>out_data(15 downto 0));
    
 end BEHAVIORAL;
 
