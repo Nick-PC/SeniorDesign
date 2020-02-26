@@ -13,29 +13,23 @@
         <signal name="XLXN_234(7:0)" />
         <signal name="clk" />
         <signal name="button_r" />
-        <signal name="slowcount" />
-        <signal name="slowclk" />
-        <signal name="XLXN_283" />
+        <signal name="slowcount">
+        </signal>
+        <signal name="slowclk">
+        </signal>
         <signal name="XLXN_284" />
         <signal name="send" />
         <signal name="send_clear" />
         <signal name="send_en" />
-        <signal name="snVCC" />
-        <signal name="rcGND" />
-        <signal name="MVIB" />
+        <signal name="XLXN_283" />
         <port polarity="Output" name="LED(7:0)" />
         <port polarity="Input" name="rc1" />
         <port polarity="Input" name="in_data(7:0)" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="button_r" />
-        <port polarity="Output" name="slowcount" />
-        <port polarity="Output" name="slowclk" />
         <port polarity="Output" name="send" />
         <port polarity="Output" name="send_clear" />
         <port polarity="Input" name="send_en" />
-        <port polarity="Output" name="snVCC" />
-        <port polarity="Output" name="rcGND" />
-        <port polarity="Output" name="MVIB" />
         <blockdef name="vcc">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-32" y2="-64" x1="64" />
@@ -115,13 +109,6 @@
             <line x2="64" y1="-32" y2="-32" x1="0" />
             <line x2="64" y1="-128" y2="-128" x1="0" />
         </blockdef>
-        <blockdef name="mv">
-            <timestamp>2020-2-21T3:20:29</timestamp>
-            <line x2="0" y1="32" y2="32" x1="64" />
-            <line x2="384" y1="32" y2="32" x1="320" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="256" x="64" y="-128" height="320" />
-        </blockdef>
         <block symbolname="ld8ce" name="XLXI_106">
             <blockpin signalname="XLXN_236" name="CLR" />
             <blockpin signalname="in_data(7:0)" name="D(7:0)" />
@@ -165,17 +152,6 @@
             <blockpin signalname="send_clear" name="data_clear" />
             <blockpin signalname="send" name="send_data" />
         </block>
-        <block symbolname="vcc" name="XLXI_87">
-            <blockpin signalname="snVCC" name="P" />
-        </block>
-        <block symbolname="gnd" name="XLXI_88">
-            <blockpin signalname="rcGND" name="G" />
-        </block>
-        <block symbolname="mv" name="XLXI_119">
-            <blockpin signalname="slowclk" name="clk" />
-            <blockpin signalname="send_en" name="A" />
-            <blockpin signalname="MVIB" name="Z" />
-        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
         <branch name="LED(7:0)">
@@ -202,40 +178,15 @@
         <branch name="clk">
             <wire x2="1072" y1="1984" y2="1984" x1="992" />
         </branch>
-        <branch name="slowclk">
-            <wire x2="928" y1="752" y2="752" x1="912" />
-            <wire x2="912" y1="752" y2="1104" x1="912" />
-            <wire x2="1392" y1="1104" y2="1104" x1="912" />
-            <wire x2="1392" y1="1104" y2="1680" x1="1392" />
-            <wire x2="1536" y1="1680" y2="1680" x1="1392" />
-            <wire x2="1584" y1="1680" y2="1680" x1="1536" />
-            <wire x2="1536" y1="1680" y2="1968" x1="1536" />
-            <wire x2="2176" y1="1968" y2="1968" x1="1536" />
-            <wire x2="2176" y1="1968" y2="2112" x1="2176" />
-            <wire x2="2368" y1="2112" y2="2112" x1="2176" />
-            <wire x2="1568" y1="1104" y2="1104" x1="1392" />
-            <wire x2="2176" y1="2112" y2="2112" x1="2064" />
-        </branch>
         <instance x="1680" y="2368" name="XLXI_113" orien="R0" />
-        <branch name="XLXN_283">
-            <wire x2="2176" y1="1920" y2="1920" x1="1664" />
-            <wire x2="1664" y1="1920" y2="2112" x1="1664" />
-            <wire x2="1680" y1="2112" y2="2112" x1="1664" />
-            <wire x2="2176" y1="1888" y2="1920" x1="2176" />
-        </branch>
-        <instance x="2112" y="1888" name="XLXI_115" orien="R0" />
         <branch name="XLXN_284">
             <wire x2="1680" y1="2336" y2="2368" x1="1680" />
         </branch>
-        <instance x="1616" y="2496" name="XLXI_116" orien="R0" />
-        <iomarker fontsize="28" x="2368" y="2112" name="slowclk" orien="R0" />
         <branch name="slowcount">
             <wire x2="1072" y1="2048" y2="2048" x1="1056" />
             <wire x2="1056" y1="2048" y2="2240" x1="1056" />
             <wire x2="1520" y1="2240" y2="2240" x1="1056" />
             <wire x2="1680" y1="2240" y2="2240" x1="1520" />
-            <wire x2="1056" y1="2240" y2="2320" x1="1056" />
-            <wire x2="1200" y1="2320" y2="2320" x1="1056" />
             <wire x2="1520" y1="2112" y2="2112" x1="1456" />
             <wire x2="1520" y1="2112" y2="2240" x1="1520" />
         </branch>
@@ -262,21 +213,25 @@
             <wire x2="656" y1="1744" y2="1744" x1="512" />
         </branch>
         <instance x="656" y="2000" name="XLXI_106" orien="R0" />
-        <instance x="2256" y="1360" name="XLXI_87" orien="R0" />
-        <instance x="2256" y="1616" name="XLXI_88" orien="R0" />
-        <branch name="snVCC">
-            <wire x2="2512" y1="1360" y2="1360" x1="2320" />
-        </branch>
-        <branch name="rcGND">
-            <wire x2="2512" y1="1472" y2="1472" x1="2320" />
-            <wire x2="2320" y1="1472" y2="1488" x1="2320" />
-        </branch>
-        <iomarker fontsize="28" x="2512" y="1360" name="snVCC" orien="R0" />
-        <iomarker fontsize="28" x="2512" y="1472" name="rcGND" orien="R0" />
         <iomarker fontsize="28" x="2048" y="1296" name="send_clear" orien="R0" />
-        <iomarker fontsize="28" x="1200" y="2320" name="slowcount" orien="R0" />
         <iomarker fontsize="28" x="736" y="1168" name="send_en" orien="R180" />
         <iomarker fontsize="28" x="512" y="1744" name="in_data(7:0)" orien="R180" />
+        <instance x="1584" y="2096" name="XLXI_115" orien="R0" />
+        <instance x="1616" y="2496" name="XLXI_116" orien="R0" />
+        <branch name="XLXN_283">
+            <wire x2="1648" y1="2096" y2="2112" x1="1648" />
+            <wire x2="1680" y1="2112" y2="2112" x1="1648" />
+        </branch>
+        <branch name="slowclk">
+            <wire x2="1392" y1="1104" y2="1680" x1="1392" />
+            <wire x2="1536" y1="1680" y2="1680" x1="1392" />
+            <wire x2="1584" y1="1680" y2="1680" x1="1536" />
+            <wire x2="1536" y1="1680" y2="1968" x1="1536" />
+            <wire x2="2176" y1="1968" y2="1968" x1="1536" />
+            <wire x2="2176" y1="1968" y2="2112" x1="2176" />
+            <wire x2="1568" y1="1104" y2="1104" x1="1392" />
+            <wire x2="2176" y1="2112" y2="2112" x1="2064" />
+        </branch>
         <branch name="send_en">
             <wire x2="304" y1="1552" y2="1936" x1="304" />
             <wire x2="384" y1="1936" y2="1936" x1="304" />
@@ -290,14 +245,6 @@
             <wire x2="864" y1="1168" y2="1552" x1="864" />
             <wire x2="880" y1="1168" y2="1168" x1="864" />
             <wire x2="1568" y1="1168" y2="1168" x1="880" />
-            <wire x2="928" y1="880" y2="880" x1="880" />
-            <wire x2="880" y1="880" y2="1168" x1="880" />
         </branch>
-        <instance x="928" y="848" name="XLXI_119" orien="R0">
-        </instance>
-        <branch name="MVIB">
-            <wire x2="1392" y1="880" y2="880" x1="1312" />
-        </branch>
-        <iomarker fontsize="28" x="1392" y="880" name="MVIB" orien="R0" />
     </sheet>
 </drawing>

@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : piso2.vhf
--- /___/   /\     Timestamp : 02/18/2020 17:56:18
+-- /___/   /\     Timestamp : 02/25/2020 18:35:30
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/h702417680/Downloads/SeniorDesign/basictfr/piso2.vhf -w C:/Users/h702417680/Downloads/SeniorDesign/basictfr/piso2.sch
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/SeniorDesign/basictfr/piso2.vhf" -w "E:/Senior Design/Code/SeniorDesign/basictfr/piso2.sch"
 --Design Name: piso2
 --Device: spartan6
 --Purpose:

@@ -1,0 +1,954 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: tfr.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tfr.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tfr"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : tfr
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\piso2.vhf" into library work
+Parsing entity <piso2>.
+Parsing architecture <BEHAVIORAL> of entity <piso2>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\MULTIVIB.vhd" into library work
+Parsing entity <MULTIVIB>.
+Parsing architecture <Behavioral> of entity <multivib>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\buf8.vhf" into library work
+Parsing entity <buf8>.
+Parsing architecture <BEHAVIORAL> of entity <buf8>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\stn.vhf" into library work
+Parsing entity <XOR8_HXILINX_stn>.
+Parsing architecture <XOR8_HXILINX_stn_V> of entity <xor8_hxilinx_stn>.
+Parsing entity <stn>.
+Parsing architecture <BEHAVIORAL> of entity <stn>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\sipo16.vhf" into library work
+Parsing entity <sipo16>.
+Parsing architecture <BEHAVIORAL> of entity <sipo16>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\sendcounter.vhd" into library work
+Parsing entity <sendcounter>.
+Parsing architecture <Behavioral> of entity <sendcounter>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\piso16_22.vhf" into library work
+Parsing entity <buf8_MUSER_piso16_22>.
+Parsing architecture <BEHAVIORAL> of entity <buf8_muser_piso16_22>.
+Parsing entity <piso2_MUSER_piso16_22>.
+Parsing architecture <BEHAVIORAL> of entity <piso2_muser_piso16_22>.
+Parsing entity <piso16_22>.
+Parsing architecture <BEHAVIORAL> of entity <piso16_22>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\mv.vhf" into library work
+Parsing entity <mv>.
+Parsing architecture <BEHAVIORAL> of entity <mv>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\sender.vhf" into library work
+Parsing entity <XOR8_HXILINX_sender>.
+Parsing architecture <XOR8_HXILINX_sender_V> of entity <xor8_hxilinx_sender>.
+Parsing entity <stn_MUSER_sender>.
+Parsing architecture <BEHAVIORAL> of entity <stn_muser_sender>.
+Parsing entity <mv_MUSER_sender>.
+Parsing architecture <BEHAVIORAL> of entity <mv_muser_sender>.
+Parsing entity <buf8_MUSER_sender>.
+Parsing architecture <BEHAVIORAL> of entity <buf8_muser_sender>.
+Parsing entity <piso2_MUSER_sender>.
+Parsing architecture <BEHAVIORAL> of entity <piso2_muser_sender>.
+Parsing entity <piso16_22_MUSER_sender>.
+Parsing architecture <BEHAVIORAL> of entity <piso16_22_muser_sender>.
+Parsing entity <sender>.
+Parsing architecture <BEHAVIORAL> of entity <sender>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\receiver.vhf" into library work
+Parsing entity <FD16CE_HXILINX_receiver>.
+Parsing architecture <Behavioral> of entity <fd16ce_hxilinx_receiver>.
+Parsing entity <sipo16_MUSER_receiver>.
+Parsing architecture <BEHAVIORAL> of entity <sipo16_muser_receiver>.
+Parsing entity <receiver>.
+Parsing architecture <BEHAVIORAL> of entity <receiver>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\counter.vhd" into library work
+Parsing entity <counter>.
+Parsing architecture <Behavioral> of entity <counter>.
+Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf" into library work
+Parsing entity <FD16CE_HXILINX_tfr>.
+Parsing architecture <Behavioral> of entity <fd16ce_hxilinx_tfr>.
+Parsing entity <LD8CE_HXILINX_tfr>.
+Parsing architecture <Behavioral> of entity <ld8ce_hxilinx_tfr>.
+Parsing entity <FTC_HXILINX_tfr>.
+Parsing architecture <Behavioral> of entity <ftc_hxilinx_tfr>.
+Parsing entity <XOR8_HXILINX_tfr>.
+Parsing architecture <XOR8_HXILINX_tfr_V> of entity <xor8_hxilinx_tfr>.
+Parsing entity <buf8_MUSER_tfr>.
+Parsing architecture <BEHAVIORAL> of entity <buf8_muser_tfr>.
+Parsing entity <sipo16_MUSER_tfr>.
+Parsing architecture <BEHAVIORAL> of entity <sipo16_muser_tfr>.
+Parsing entity <receiver_MUSER_tfr>.
+Parsing architecture <BEHAVIORAL> of entity <receiver_muser_tfr>.
+Parsing entity <stn_MUSER_tfr>.
+Parsing architecture <BEHAVIORAL> of entity <stn_muser_tfr>.
+Parsing entity <mv_MUSER_tfr>.
+Parsing architecture <BEHAVIORAL> of entity <mv_muser_tfr>.
+Parsing entity <piso2_MUSER_tfr>.
+Parsing architecture <BEHAVIORAL> of entity <piso2_muser_tfr>.
+Parsing entity <piso16_22_MUSER_tfr>.
+Parsing architecture <BEHAVIORAL> of entity <piso16_22_muser_tfr>.
+Parsing entity <sender_MUSER_tfr>.
+Parsing architecture <BEHAVIORAL> of entity <sender_muser_tfr>.
+Parsing entity <tfr>.
+Parsing architecture <BEHAVIORAL> of entity <tfr>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <tfr> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <counter> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "E:\Senior Design\Code\SeniorDesign\basictfr\counter.vhd" Line 49: cnt should be on the sensitivity list of the process
+
+Elaborating entity <LD8CE_HXILINX_tfr> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <FTC_HXILINX_tfr> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <sender_MUSER_tfr> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <piso16_22_MUSER_tfr> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <piso2_MUSER_tfr> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <buf8_MUSER_tfr> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <sendcounter> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "E:\Senior Design\Code\SeniorDesign\basictfr\sendcounter.vhd" Line 49: cnt should be on the sensitivity list of the process
+
+Elaborating entity <mv_MUSER_tfr> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <MULTIVIB> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <stn_MUSER_tfr> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <XOR8_HXILINX_tfr> (architecture <XOR8_HXILINX_tfr_V>) from library <work>.
+
+Elaborating entity <receiver_MUSER_tfr> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <sipo16_MUSER_tfr> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <FD16CE_HXILINX_tfr> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Set property "HU_SET = XLXI_106_7" for instance <XLXI_106>.
+    Set property "HU_SET = XLXI_113_8" for instance <XLXI_113>.
+    Summary:
+	no macro.
+Unit <tfr> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\counter.vhd".
+    Found 18-bit register for signal <cnt>.
+    Found 18-bit adder for signal <cnt[17]_GND_8_o_add_0_OUT> created at line 47.
+WARNING:Xst:737 - Found 1-bit latch for signal <count>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Latch(s).
+Unit <counter> synthesized.
+
+Synthesizing Unit <LD8CE_HXILINX_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   8 Latch(s).
+Unit <LD8CE_HXILINX_tfr> synthesized.
+
+Synthesizing Unit <FTC_HXILINX_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+        INIT = '0'
+    Found 1-bit register for signal <q_tmp>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FTC_HXILINX_tfr> synthesized.
+
+Synthesizing Unit <sender_MUSER_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Summary:
+	no macro.
+Unit <sender_MUSER_tfr> synthesized.
+
+Synthesizing Unit <piso16_22_MUSER_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Summary:
+	no macro.
+Unit <piso16_22_MUSER_tfr> synthesized.
+
+Synthesizing Unit <piso2_MUSER_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Summary:
+	no macro.
+Unit <piso2_MUSER_tfr> synthesized.
+
+Synthesizing Unit <buf8_MUSER_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Summary:
+	no macro.
+Unit <buf8_MUSER_tfr> synthesized.
+
+Synthesizing Unit <sendcounter>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\sendcounter.vhd".
+    Found 18-bit register for signal <cnt>.
+    Found 18-bit adder for signal <cnt[17]_GND_24_o_add_0_OUT> created at line 47.
+WARNING:Xst:737 - Found 1-bit latch for signal <count>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Latch(s).
+Unit <sendcounter> synthesized.
+
+Synthesizing Unit <mv_MUSER_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Summary:
+	no macro.
+Unit <mv_MUSER_tfr> synthesized.
+
+Synthesizing Unit <MULTIVIB>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\MULTIVIB.vhd".
+    Found 1-bit register for signal <Az_A_DFF_20_q>.
+    Found 1-bit register for signal <Az>.
+    Found 1-bit register for signal <Z>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <MULTIVIB> synthesized.
+
+Synthesizing Unit <stn_MUSER_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Set property "HU_SET = XLXI_16_6" for instance <XLXI_16>.
+    Summary:
+	no macro.
+Unit <stn_MUSER_tfr> synthesized.
+
+Synthesizing Unit <XOR8_HXILINX_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Summary:
+Unit <XOR8_HXILINX_tfr> synthesized.
+
+Synthesizing Unit <receiver_MUSER_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Set property "HU_SET = XLXI_110_5" for instance <XLXI_110>.
+    Summary:
+	no macro.
+Unit <receiver_MUSER_tfr> synthesized.
+
+Synthesizing Unit <sipo16_MUSER_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Summary:
+	no macro.
+Unit <sipo16_MUSER_tfr> synthesized.
+
+Synthesizing Unit <FD16CE_HXILINX_tfr>.
+    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Found 16-bit register for signal <Q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <FD16CE_HXILINX_tfr> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 18-bit adder                                          : 2
+# Registers                                            : 7
+ 1-bit register                                        : 4
+ 16-bit register                                       : 1
+ 18-bit register                                       : 2
+# Latches                                              : 10
+ 1-bit latch                                           : 10
+# Multiplexers                                         : 1
+ 1-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <Q_0> of sequential type is unconnected in block <XLXI_110>.
+WARNING:Xst:2677 - Node <Q_1> of sequential type is unconnected in block <XLXI_110>.
+WARNING:Xst:2677 - Node <Q_2> of sequential type is unconnected in block <XLXI_110>.
+WARNING:Xst:2677 - Node <Q_11> of sequential type is unconnected in block <XLXI_110>.
+WARNING:Xst:2677 - Node <Q_12> of sequential type is unconnected in block <XLXI_110>.
+WARNING:Xst:2677 - Node <Q_13> of sequential type is unconnected in block <XLXI_110>.
+WARNING:Xst:2677 - Node <Q_14> of sequential type is unconnected in block <XLXI_110>.
+WARNING:Xst:2677 - Node <Q_15> of sequential type is unconnected in block <XLXI_110>.
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sendcounter>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <sendcounter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 18-bit up counter                                     : 2
+# Registers                                            : 58
+ Flip-Flops                                            : 58
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    XLXI_118/XLXI_125/count in unit <tfr>
+    XLXI_74/count in unit <tfr>
+
+
+Optimizing unit <LD8CE_HXILINX_tfr> ...
+
+Optimizing unit <FD16CE_HXILINX_tfr> ...
+
+Optimizing unit <sipo16_MUSER_tfr> ...
+
+Optimizing unit <stn_MUSER_tfr> ...
+
+Optimizing unit <piso16_22_MUSER_tfr> ...
+
+Optimizing unit <piso2_MUSER_tfr> ...
+
+Optimizing unit <buf8_MUSER_tfr> ...
+
+Optimizing unit <tfr> ...
+
+Optimizing unit <XOR8_HXILINX_tfr> ...
+
+Optimizing unit <FTC_HXILINX_tfr> ...
+WARNING:Xst:2677 - Node <Q_0> of sequential type is unconnected in block <XLXI_119/XLXI_110>.
+WARNING:Xst:2677 - Node <Q_1> of sequential type is unconnected in block <XLXI_119/XLXI_110>.
+WARNING:Xst:2677 - Node <Q_2> of sequential type is unconnected in block <XLXI_119/XLXI_110>.
+WARNING:Xst:2677 - Node <Q_11> of sequential type is unconnected in block <XLXI_119/XLXI_110>.
+WARNING:Xst:2677 - Node <Q_12> of sequential type is unconnected in block <XLXI_119/XLXI_110>.
+WARNING:Xst:2677 - Node <Q_13> of sequential type is unconnected in block <XLXI_119/XLXI_110>.
+WARNING:Xst:2677 - Node <Q_14> of sequential type is unconnected in block <XLXI_119/XLXI_110>.
+WARNING:Xst:2677 - Node <Q_15> of sequential type is unconnected in block <XLXI_119/XLXI_110>.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block tfr, actual ratio is 1.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2957 - There are clock and non-clock loads on clock signal XLXI_113/q_tmp_BUFG. This is not a recommended design practice, that may cause excessive delay, skew or unroutable situations.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 86
+ Flip-Flops                                            : 86
+
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_34/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_33/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_15> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_118/XLXI_108/XLXI_32/XLXI_3> has a constant value of 0 in block <tfr>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : tfr.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 252
+#      AND2                        : 45
+#      AND2B1                      : 1
+#      AND5B2                      : 1
+#      BUF                         : 38
+#      GND                         : 1
+#      INV                         : 26
+#      LUT1                        : 34
+#      LUT3                        : 3
+#      LUT4                        : 2
+#      LUT6                        : 7
+#      MUXCY                       : 34
+#      OR2                         : 22
+#      OR2B1                       : 1
+#      VCC                         : 1
+#      XORCY                       : 36
+# FlipFlops/Latches                : 96
+#      FD                          : 24
+#      FDC                         : 37
+#      FDCE                        : 9
+#      FDR                         : 16
+#      LD                          : 2
+#      LDCE                        : 8
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 11
+#      OBUF                        : 9
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              96  out of  18224     0%  
+ Number of Slice LUTs:                   72  out of   9112     0%  
+    Number used as Logic:                72  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    127
+   Number with an unused Flip Flop:      31  out of    127    24%  
+   Number with an unused LUT:            55  out of    127    43%  
+   Number of fully used LUT-FF pairs:    41  out of    127    32%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    232     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------+----------------------------------+-------+
+Clock Signal                                          | Clock buffer(FF name)            | Load  |
+------------------------------------------------------+----------------------------------+-------+
+XLXI_113/q_tmp                                        | BUFG                             | 50    |
+send_en                                               | IBUF+BUFG                        | 9     |
+clk                                                   | BUFGP                            | 18    |
+XLXI_119/XLXN_84(XLXI_119/XLXI_109:O)                 | NONE(*)(XLXI_119/XLXI_94/XLXI_34)| 16    |
+XLXI_74/count                                         | NONE(XLXI_113/q_tmp)             | 1     |
+XLXI_74/count_G(XLXI_74/count_G:O)                    | NONE(*)(XLXI_74/count)           | 1     |
+XLXI_118/XLXI_125/count_G(XLXI_118/XLXI_125/count_G:O)| NONE(*)(XLXI_118/XLXI_125/count) | 1     |
+------------------------------------------------------+----------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.112ns (Maximum Frequency: 140.617MHz)
+   Minimum input arrival time before clock: 3.850ns
+   Maximum output required time after clock: 5.891ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_113/q_tmp'
+  Clock period: 7.112ns (frequency: 140.617MHz)
+  Total number of paths / destination ports: 255 / 59
+-------------------------------------------------------------------------
+Delay:               7.112ns (Levels of Logic = 4)
+  Source:            XLXI_118/XLXI_131/XLXI_1/Z (FF)
+  Destination:       XLXI_118/XLXI_108/XLXI_34/XLXI_15 (FF)
+  Source Clock:      XLXI_113/q_tmp rising
+  Destination Clock: XLXI_113/q_tmp rising
+
+  Data Path: XLXI_118/XLXI_131/XLXI_1/Z to XLXI_118/XLXI_108/XLXI_34/XLXI_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              20   0.447   1.092  XLXI_118/XLXI_131/XLXI_1/Z (XLXI_118/XLXI_131/XLXI_1/Z)
+     INV:I->O             44   0.568   1.462  XLXI_118/XLXI_127 (XLXI_118/XLXN_328)
+     INV:I->O              1   0.568   0.944  XLXI_118/XLXI_108/XLXI_34/XLXI_5 (XLXI_118/XLXI_108/XLXI_34/XLXN_7)
+     AND2:I0->O            1   0.203   0.924  XLXI_118/XLXI_108/XLXI_34/XLXI_1 (XLXI_118/XLXI_108/XLXI_34/XLXN_1)
+     OR2:I1->O             1   0.223   0.579  XLXI_118/XLXI_108/XLXI_34/XLXI_4 (XLXI_118/XLXI_108/XLXI_34/XLXN_6)
+     FD:D                      0.102          XLXI_118/XLXI_108/XLXI_34/XLXI_3
+    ----------------------------------------
+    Total                      7.112ns (2.111ns logic, 5.001ns route)
+                                       (29.7% logic, 70.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.027ns (frequency: 493.279MHz)
+  Total number of paths / destination ports: 171 / 18
+-------------------------------------------------------------------------
+Delay:               2.027ns (Levels of Logic = 19)
+  Source:            XLXI_74/cnt_0 (FF)
+  Destination:       XLXI_74/cnt_17 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: XLXI_74/cnt_0 to XLXI_74/cnt_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  XLXI_74/cnt_0 (XLXI_74/cnt_0)
+     INV:I->O              1   0.206   0.000  XLXI_74/Mcount_cnt_lut<0>_INV_0 (XLXI_74/Mcount_cnt_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  XLXI_74/Mcount_cnt_cy<0> (XLXI_74/Mcount_cnt_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<1> (XLXI_74/Mcount_cnt_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<2> (XLXI_74/Mcount_cnt_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<3> (XLXI_74/Mcount_cnt_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<4> (XLXI_74/Mcount_cnt_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<5> (XLXI_74/Mcount_cnt_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<6> (XLXI_74/Mcount_cnt_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<7> (XLXI_74/Mcount_cnt_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<8> (XLXI_74/Mcount_cnt_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<9> (XLXI_74/Mcount_cnt_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<10> (XLXI_74/Mcount_cnt_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<11> (XLXI_74/Mcount_cnt_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<12> (XLXI_74/Mcount_cnt_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<13> (XLXI_74/Mcount_cnt_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<14> (XLXI_74/Mcount_cnt_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_74/Mcount_cnt_cy<15> (XLXI_74/Mcount_cnt_cy<15>)
+     MUXCY:CI->O           0   0.019   0.000  XLXI_74/Mcount_cnt_cy<16> (XLXI_74/Mcount_cnt_cy<16>)
+     XORCY:CI->O           1   0.180   0.000  XLXI_74/Mcount_cnt_xor<17> (Result<17>)
+     FDC:D                     0.102          XLXI_74/cnt_17
+    ----------------------------------------
+    Total                      2.027ns (1.411ns logic, 0.616ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_119/XLXN_84'
+  Clock period: 1.165ns (frequency: 858.185MHz)
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Delay:               1.165ns (Levels of Logic = 0)
+  Source:            XLXI_119/XLXI_94/XLXI_33 (FF)
+  Destination:       XLXI_119/XLXI_94/XLXI_34 (FF)
+  Source Clock:      XLXI_119/XLXN_84 rising
+  Destination Clock: XLXI_119/XLXN_84 rising
+
+  Data Path: XLXI_119/XLXI_94/XLXI_33 to XLXI_119/XLXI_94/XLXI_34
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  XLXI_119/XLXI_94/XLXI_33 (XLXI_119/rec_data<14>)
+     FDR:D                     0.102          XLXI_119/XLXI_94/XLXI_34
+    ----------------------------------------
+    Total                      1.165ns (0.549ns logic, 0.616ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_74/count'
+  Clock period: 1.913ns (frequency: 522.821MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.913ns (Levels of Logic = 1)
+  Source:            XLXI_113/q_tmp (FF)
+  Destination:       XLXI_113/q_tmp (FF)
+  Source Clock:      XLXI_74/count rising
+  Destination Clock: XLXI_74/count rising
+
+  Data Path: XLXI_113/q_tmp to XLXI_113/q_tmp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.447   0.579  q_tmp (q_tmp)
+     INV:I->O              1   0.206   0.579  q_tmp_INV_3_o1_INV_0 (q_tmp_INV_3_o)
+     FDCE:D                    0.102          q_tmp
+    ----------------------------------------
+    Total                      1.913ns (0.755ns logic, 1.158ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'send_en'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              3.850ns (Levels of Logic = 3)
+  Source:            send_en (PAD)
+  Destination:       XLXI_106/Q_6 (LATCH)
+  Destination Clock: send_en falling
+
+  Data Path: send_en to XLXI_106/Q_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   1.194  send_en_IBUF (send_en_IBUF)
+     AND2B1:I0->O          8   0.203   0.802  XLXI_107 (XLXN_236)
+     begin scope: 'XLXI_106:CLR'
+     LDCE:CLR                  0.430          Q_6
+    ----------------------------------------
+    Total                      3.850ns (1.855ns logic, 1.995ns route)
+                                       (48.2% logic, 51.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_113/q_tmp'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.844ns (Levels of Logic = 2)
+  Source:            button_r (PAD)
+  Destination:       XLXI_119/XLXI_110/Q_3 (FF)
+  Destination Clock: XLXI_113/q_tmp rising
+
+  Data Path: button_r to XLXI_119/XLXI_110/Q_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   1.222   1.192  button_r_IBUF (button_r_IBUF)
+     begin scope: 'XLXI_119/XLXI_110:CLR'
+     FDCE:CLR                  0.430          Q_3
+    ----------------------------------------
+    Total                      2.844ns (1.652ns logic, 1.192ns route)
+                                       (58.1% logic, 41.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_119/XLXN_84'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              2.844ns (Levels of Logic = 1)
+  Source:            button_r (PAD)
+  Destination:       XLXI_119/XLXI_94/XLXI_34 (FF)
+  Destination Clock: XLXI_119/XLXN_84 rising
+
+  Data Path: button_r to XLXI_119/XLXI_94/XLXI_34
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   1.222   1.192  button_r_IBUF (button_r_IBUF)
+     FDR:R                     0.430          XLXI_119/XLXI_94/XLXI_1
+    ----------------------------------------
+    Total                      2.844ns (1.652ns logic, 1.192ns route)
+                                       (58.1% logic, 41.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_113/q_tmp'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              5.891ns (Levels of Logic = 3)
+  Source:            XLXI_118/XLXI_108/XLXI_16/XLXI_15 (FF)
+  Destination:       send (PAD)
+  Source Clock:      XLXI_113/q_tmp rising
+
+  Data Path: XLXI_118/XLXI_108/XLXI_16/XLXI_15 to send
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  XLXI_118/XLXI_108/XLXI_16/XLXI_15 (XLXI_118/XLXI_108/data_out<15>)
+     BUF:I->O              1   0.568   0.579  XLXI_118/XLXI_108/XLXI_46/XLXI_2 (XLXI_118/data_out<21>)
+     BUF:I->O              1   0.568   0.579  XLXI_118/XLXI_105 (send_OBUF)
+     OBUF:I->O                 2.571          send_OBUF (send)
+    ----------------------------------------
+    Total                      5.891ns (4.154ns logic, 1.737ns route)
+                                       (70.5% logic, 29.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock XLXI_113/q_tmp
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+XLXI_113/q_tmp  |    7.112|         |         |         |
+XLXI_119/XLXN_84|    2.782|         |         |         |
+send_en         |    1.128|    5.308|         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_118/XLXI_125/count_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_113/q_tmp |         |         |    4.846|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_119/XLXN_84
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+XLXI_119/XLXN_84|    1.165|         |         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_74/count
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_74/count  |    1.913|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_74/count_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.866|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_74/count_G|         |    2.020|         |         |
+clk            |    2.027|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock send_en
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+XLXI_113/q_tmp           |    1.493|         |         |         |
+XLXI_118/XLXI_125/count_G|         |         |    2.876|         |
+-------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.34 secs
+ 
+--> 
+
+Total memory usage is 242756 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  108 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
