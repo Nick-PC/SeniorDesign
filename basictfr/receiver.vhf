@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : receiver.vhf
--- /___/   /\     Timestamp : 02/25/2020 19:15:42
+-- /___/   /\     Timestamp : 02/25/2020 21:15:25
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/SeniorDesign/basictfr/receiver.vhf" -w "E:/Senior Design/Code/SeniorDesign/basictfr/receiver.sch"
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/h702417680/Downloads/SeniorDesign/basictfr/receiver.vhf -w C:/Users/h702417680/Downloads/SeniorDesign/basictfr/receiver.sch
 --Design Name: receiver
 --Device: spartan6
 --Purpose:
@@ -200,6 +200,7 @@ architecture BEHAVIORAL of receiver is
    signal XLXN_72  : std_logic;
    signal XLXN_84  : std_logic;
    signal XLXN_100 : std_logic;
+   signal XLXN_108 : std_logic;
    component sipo16_MUSER_receiver
       port ( reset        : in    std_logic; 
              clk          : in    std_logic; 
@@ -239,6 +240,14 @@ architecture BEHAVIORAL of receiver is
              Q   : out   std_logic_vector (15 downto 0));
    end component;
    
+   component AND3
+      port ( I0 : in    std_logic; 
+             I1 : in    std_logic; 
+             I2 : in    std_logic; 
+             O  : out   std_logic);
+   end component;
+   attribute BOX_TYPE of AND3 : component is "BLACK_BOX";
+   
    attribute HU_SET of XLXI_110 : label is "XLXI_110_4";
 begin
    XLXI_94 : sipo16_MUSER_receiver
@@ -253,7 +262,7 @@ begin
                 I2=>rec_data(15),
                 I3=>rec_data(13),
                 I4=>rec_data(11),
-                O=>XLXN_100);
+                O=>XLXN_108);
    
    XLXI_103 : OR2B1
       port map (I0=>XLXN_100,
@@ -271,6 +280,12 @@ begin
                 CLR=>reset,
                 D(15 downto 0)=>rec_data(15 downto 0),
                 Q(15 downto 0)=>rdata(15 downto 0));
+   
+   XLXI_111 : AND3
+      port map (I0=>XLXN_108,
+                I1=>rec_data(1),
+                I2=>rec_data(0),
+                O=>XLXN_100);
    
 end BEHAVIORAL;
 

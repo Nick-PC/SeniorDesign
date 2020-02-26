@@ -21,7 +21,6 @@
         <signal name="data_out(10:3)" />
         <signal name="rc1" />
         <signal name="data_out(15:0)" />
-        <signal name="XLXN_292" />
         <signal name="LED(7:0)" />
         <port polarity="Input" name="in_data(7:0)" />
         <port polarity="Input" name="clk" />
@@ -192,11 +191,11 @@
             <wire x2="1184" y1="1232" y2="1744" x1="1184" />
         </branch>
         <branch name="send_clear">
-            <wire x2="224" y1="1424" y2="2000" x1="224" />
+            <wire x2="2000" y1="1376" y2="1376" x1="224" />
+            <wire x2="224" y1="1376" y2="2000" x1="224" />
             <wire x2="384" y1="2000" y2="2000" x1="224" />
-            <wire x2="2000" y1="1424" y2="1424" x1="224" />
             <wire x2="2000" y1="1296" y2="1296" x1="1952" />
-            <wire x2="2000" y1="1296" y2="1424" x1="2000" />
+            <wire x2="2000" y1="1296" y2="1376" x1="2000" />
         </branch>
         <instance x="1568" y="1264" name="XLXI_118" orien="R0">
         </instance>
@@ -237,8 +236,7 @@
         </branch>
         <bustap x2="2176" y1="1648" y2="1648" x1="2080" />
         <branch name="data_out(10:3)">
-            <wire x2="2192" y1="1648" y2="1648" x1="2176" />
-            <wire x2="2240" y1="1648" y2="1648" x1="2192" />
+            <wire x2="2240" y1="1648" y2="1648" x1="2176" />
         </branch>
         <branch name="clk">
             <wire x2="1072" y1="1984" y2="1984" x1="992" />
@@ -253,16 +251,15 @@
             <wire x2="1584" y1="1504" y2="1504" x1="1536" />
         </branch>
         <iomarker fontsize="28" x="1536" y="1504" name="rc1" orien="R180" />
-        <branch name="data_out(15:0)">
-            <wire x2="2000" y1="1824" y2="1824" x1="1968" />
-            <wire x2="2080" y1="1648" y2="1648" x1="2000" />
-            <wire x2="2000" y1="1648" y2="1824" x1="2000" />
-        </branch>
         <branch name="LED(7:0)">
             <wire x2="2656" y1="1648" y2="1648" x1="2624" />
         </branch>
         <instance x="2240" y="1680" name="XLXI_120" orien="R0">
         </instance>
         <iomarker fontsize="28" x="2656" y="1648" name="LED(7:0)" orien="R0" />
+        <branch name="data_out(15:0)">
+            <wire x2="2080" y1="1824" y2="1824" x1="1968" />
+            <wire x2="2080" y1="1552" y2="1824" x1="2080" />
+        </branch>
     </sheet>
 </drawing>

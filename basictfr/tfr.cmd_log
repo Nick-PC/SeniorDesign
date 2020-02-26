@@ -31,3 +31,20 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off tfr_map.ncd tfr.ncd tfr.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml tfr.twx tfr.ncd -o tfr.twr tfr.pcf -ucf constraints.ucf 
 bitgen -intstyle ise -f tfr.ut tfr.ncd 
+xst -intstyle ise -ifn "C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.xst" -ofn "C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.syr" 
+xst -intstyle ise -ifn "C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.xst" -ofn "C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx16-csg324-3 tfr.ngc tfr.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tfr_map.ncd tfr.ngd tfr.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tfr_map.ncd tfr.ngd tfr.pcf 
+par -w -intstyle ise -ol high -mt off tfr_map.ncd tfr.ncd tfr.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml tfr.twx tfr.ncd -o tfr.twr tfr.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f tfr.ut tfr.ncd 
+xst -intstyle ise -ifn "C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.xst" -ofn "C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx16-csg324-3 tfr.ngc tfr.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tfr_map.ncd tfr.ngd tfr.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tfr_map.ncd tfr.ngd tfr.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tfr_map.ncd tfr.ngd tfr.pcf 
+par -w -intstyle ise -ol high -mt off tfr_map.ncd tfr.ncd tfr.pcf 
+par -w -intstyle ise -ol high -mt off tfr_map.ncd tfr.ncd tfr.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml tfr.twx tfr.ncd -o tfr.twr tfr.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f tfr.ut tfr.ncd 

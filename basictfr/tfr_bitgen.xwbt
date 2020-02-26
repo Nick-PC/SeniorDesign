@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=E:\Senior Design\Code\SeniorDesign\basictfr\tfr.ncd
-OUTFILE=E:\Senior Design\Code\SeniorDesign\basictfr\tfr.bit
+INFILE=C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.ncd
+OUTFILE=C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=E:\Senior Design\Code\SeniorDesign\basictfr
+WORKINGDIR=C:\Users\h702417680\Downloads\SeniorDesign\basictfr
 LICENSE=WebPack
-USER_INFO=211744720_0_0_711
+USER_INFO=210724264_0_0_200

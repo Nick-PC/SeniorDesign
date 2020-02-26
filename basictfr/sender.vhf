@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sender.vhf
--- /___/   /\     Timestamp : 02/25/2020 18:35:35
+-- /___/   /\     Timestamp : 02/25/2020 21:04:11
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/SeniorDesign/basictfr/sender.vhf" -w "E:/Senior Design/Code/SeniorDesign/basictfr/sender.sch"
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/h702417680/Downloads/SeniorDesign/basictfr/sender.vhf -w C:/Users/h702417680/Downloads/SeniorDesign/basictfr/sender.sch
 --Design Name: sender
 --Device: spartan6
 --Purpose:
@@ -88,7 +88,7 @@ architecture BEHAVIORAL of stn_MUSER_sender is
              O  : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_16 : label is "XLXI_16_5";
+   attribute HU_SET of XLXI_16 : label is "XLXI_16_11";
 begin
    XLXI_1 : BUF
       port map (I=>in_data(0),

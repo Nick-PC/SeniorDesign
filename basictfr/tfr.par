@@ -1,13 +1,13 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-RAGNAROK::  Tue Feb 25 19:16:16 2020
+WEED16002::  Tue Feb 25 21:20:16 2020
 
 par -w -intstyle ise -ol high -mt off tfr_map.ncd tfr.ncd tfr.pcf 
 
 
 Constraints file: tfr.pcf.
-Loading device for application Rf_Device from file '6slx16.nph' in environment E:\Xilinx\14.7\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '6slx16.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
    "tfr" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
@@ -32,24 +32,24 @@ Slice Logic Utilization:
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
   Number of Slice LUTs:                         69 out of   9,112    1%
-    Number used as logic:                       63 out of   9,112    1%
-      Number using O6 output only:              27
+    Number used as logic:                       64 out of   9,112    1%
+      Number using O6 output only:              28
       Number using O5 output only:              32
       Number using O5 and O6:                    4
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
-    Number used exclusively as route-thrus:      6
-      Number with same-slice register load:      4
+    Number used exclusively as route-thrus:      5
+      Number with same-slice register load:      3
       Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    29 out of   2,278    1%
+  Number of occupied Slices:                    28 out of   2,278    1%
   Number of MUXCYs used:                        40 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:           94
-    Number with an unused Flip Flop:            10 out of      94   10%
-    Number with an unused LUT:                  25 out of      94   26%
-    Number of fully used LUT-FF pairs:          59 out of      94   62%
+  Number of LUT Flip Flop pairs used:           92
+    Number with an unused Flip Flop:             8 out of      92    8%
+    Number with an unused LUT:                  23 out of      92   25%
+    Number of fully used LUT-FF pairs:          61 out of      92   66%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -92,35 +92,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 4 secs 
-Finished initial Timing Analysis.  REAL time: 4 secs 
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
 
 Starting Router
 
 
-Phase  1  : 281 unrouted;      REAL time: 4 secs 
+Phase  1  : 284 unrouted;      REAL time: 2 secs 
 
-Phase  2  : 221 unrouted;      REAL time: 5 secs 
+Phase  2  : 223 unrouted;      REAL time: 2 secs 
 
-Phase  3  : 48 unrouted;      REAL time: 5 secs 
+Phase  3  : 46 unrouted;      REAL time: 3 secs 
 
-Phase  4  : 48 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  4  : 46 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
 Updating file: tfr.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
-Total REAL time to Router completion: 6 secs 
-Total CPU time to Router completion: 6 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Total REAL time to Router completion: 3 secs 
+Total CPU time to Router completion: 3 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -131,7 +131,7 @@ Partition Implementation Status
 
 Generating "PAR" statistics.
 INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
-Timing Score: 0 (Setup: 0, Hold: 0)
+Timing Score: 38 (Setup: 38, Hold: 0)
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -143,18 +143,18 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Autotimespec constraint for clock net slo | SETUP       |         N/A|     2.492ns|     N/A|           0
   wclk                                      | HOLD        |     0.503ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.818ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.534ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.767ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.509ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   Autotimespec constraint for clock net XLX | SETUP       |         N/A|     0.898ns|     N/A|           0
   I_74/count                                | HOLD        |     0.456ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     2.086ns|     N/A|           0
-  I_119/XLXN_84                             | HOLD        |     0.433ns|            |       0|           0
+  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     1.873ns|     N/A|          38
+  I_119/XLXN_84                             | HOLD        |     0.393ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraint not met.
 INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
    constraint is not analyzed due to the following: No paths covered by this 
    constraint; Other constraints intersect with this constraint; or This 
@@ -166,10 +166,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 8 secs 
-Total CPU time to PAR completion: 7 secs 
+Total REAL time to PAR completion: 4 secs 
+Total CPU time to PAR completion: 4 secs 
 
-Peak Memory Usage:  289 MB
+Peak Memory Usage:  274 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

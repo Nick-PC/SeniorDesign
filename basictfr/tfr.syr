@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.12 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: tfr.prj
 
@@ -105,37 +105,37 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\piso2.vhf" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\piso2.vhf" into library work
 Parsing entity <piso2>.
 Parsing architecture <BEHAVIORAL> of entity <piso2>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\MULTIVIB.vhd" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\MULTIVIB.vhd" into library work
 Parsing entity <MULTIVIB>.
 Parsing architecture <Behavioral> of entity <multivib>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\buf8.vhf" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\buf8.vhf" into library work
 Parsing entity <buf8>.
 Parsing architecture <BEHAVIORAL> of entity <buf8>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\stn.vhf" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\stn.vhf" into library work
 Parsing entity <XOR8_HXILINX_stn>.
 Parsing architecture <XOR8_HXILINX_stn_V> of entity <xor8_hxilinx_stn>.
 Parsing entity <stn>.
 Parsing architecture <BEHAVIORAL> of entity <stn>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\sipo16.vhf" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\sipo16.vhf" into library work
 Parsing entity <sipo16>.
 Parsing architecture <BEHAVIORAL> of entity <sipo16>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\sendcounter.vhd" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\sendcounter.vhd" into library work
 Parsing entity <sendcounter>.
 Parsing architecture <Behavioral> of entity <sendcounter>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\piso16_22.vhf" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\piso16_22.vhf" into library work
 Parsing entity <buf8_MUSER_piso16_22>.
 Parsing architecture <BEHAVIORAL> of entity <buf8_muser_piso16_22>.
 Parsing entity <piso2_MUSER_piso16_22>.
 Parsing architecture <BEHAVIORAL> of entity <piso2_muser_piso16_22>.
 Parsing entity <piso16_22>.
 Parsing architecture <BEHAVIORAL> of entity <piso16_22>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\mv.vhf" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\mv.vhf" into library work
 Parsing entity <mv>.
 Parsing architecture <BEHAVIORAL> of entity <mv>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\sender.vhf" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\sender.vhf" into library work
 Parsing entity <XOR8_HXILINX_sender>.
 Parsing architecture <XOR8_HXILINX_sender_V> of entity <xor8_hxilinx_sender>.
 Parsing entity <stn_MUSER_sender>.
@@ -150,17 +150,17 @@ Parsing entity <piso16_22_MUSER_sender>.
 Parsing architecture <BEHAVIORAL> of entity <piso16_22_muser_sender>.
 Parsing entity <sender>.
 Parsing architecture <BEHAVIORAL> of entity <sender>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\receiver.vhf" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\receiver.vhf" into library work
 Parsing entity <FD16CE_HXILINX_receiver>.
 Parsing architecture <Behavioral> of entity <fd16ce_hxilinx_receiver>.
 Parsing entity <sipo16_MUSER_receiver>.
 Parsing architecture <BEHAVIORAL> of entity <sipo16_muser_receiver>.
 Parsing entity <receiver>.
 Parsing architecture <BEHAVIORAL> of entity <receiver>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\counter.vhd" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\counter.vhd" into library work
 Parsing entity <counter>.
 Parsing architecture <Behavioral> of entity <counter>.
-Parsing VHDL file "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf" into library work
+Parsing VHDL file "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf" into library work
 Parsing entity <FD16CE_HXILINX_tfr>.
 Parsing architecture <Behavioral> of entity <fd16ce_hxilinx_tfr>.
 Parsing entity <LD8CE_HXILINX_tfr>.
@@ -195,7 +195,7 @@ Parsing architecture <BEHAVIORAL> of entity <tfr>.
 Elaborating entity <tfr> (architecture <BEHAVIORAL>) from library <work>.
 
 Elaborating entity <counter> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "E:\Senior Design\Code\SeniorDesign\basictfr\counter.vhd" Line 49: cnt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\counter.vhd" Line 49: cnt should be on the sensitivity list of the process
 
 Elaborating entity <LD8CE_HXILINX_tfr> (architecture <Behavioral>) from library <work>.
 
@@ -210,7 +210,7 @@ Elaborating entity <piso2_MUSER_tfr> (architecture <BEHAVIORAL>) from library <w
 Elaborating entity <buf8_MUSER_tfr> (architecture <BEHAVIORAL>) from library <work>.
 
 Elaborating entity <sendcounter> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "E:\Senior Design\Code\SeniorDesign\basictfr\sendcounter.vhd" Line 49: cnt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\sendcounter.vhd" Line 49: cnt should be on the sensitivity list of the process
 
 Elaborating entity <mv_MUSER_tfr> (architecture <BEHAVIORAL>) from library <work>.
 
@@ -231,7 +231,7 @@ Elaborating entity <FD16CE_HXILINX_tfr> (architecture <Behavioral>) from library
 =========================================================================
 
 Synthesizing Unit <tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Set property "HU_SET = XLXI_106_7" for instance <XLXI_106>.
     Set property "HU_SET = XLXI_113_8" for instance <XLXI_113>.
     Summary:
@@ -239,7 +239,7 @@ Synthesizing Unit <tfr>.
 Unit <tfr> synthesized.
 
 Synthesizing Unit <counter>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\counter.vhd".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\counter.vhd".
     Found 18-bit register for signal <cnt>.
     Found 18-bit adder for signal <cnt[17]_GND_8_o_add_0_OUT> created at line 47.
 WARNING:Xst:737 - Found 1-bit latch for signal <count>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -250,7 +250,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <count>. Latches may be generated
 Unit <counter> synthesized.
 
 Synthesizing Unit <LD8CE_HXILINX_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
 WARNING:Xst:737 - Found 1-bit latch for signal <Q<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <Q<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <Q<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -264,7 +264,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <Q<7>>. Latches may be generated 
 Unit <LD8CE_HXILINX_tfr> synthesized.
 
 Synthesizing Unit <FTC_HXILINX_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
         INIT = '0'
     Found 1-bit register for signal <q_tmp>.
     Summary:
@@ -272,31 +272,31 @@ Synthesizing Unit <FTC_HXILINX_tfr>.
 Unit <FTC_HXILINX_tfr> synthesized.
 
 Synthesizing Unit <sender_MUSER_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Summary:
 	no macro.
 Unit <sender_MUSER_tfr> synthesized.
 
 Synthesizing Unit <piso16_22_MUSER_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Summary:
 	no macro.
 Unit <piso16_22_MUSER_tfr> synthesized.
 
 Synthesizing Unit <piso2_MUSER_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Summary:
 	no macro.
 Unit <piso2_MUSER_tfr> synthesized.
 
 Synthesizing Unit <buf8_MUSER_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Summary:
 	no macro.
 Unit <buf8_MUSER_tfr> synthesized.
 
 Synthesizing Unit <sendcounter>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\sendcounter.vhd".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\sendcounter.vhd".
     Found 18-bit register for signal <cnt>.
     Found 18-bit adder for signal <cnt[17]_GND_24_o_add_0_OUT> created at line 47.
 WARNING:Xst:737 - Found 1-bit latch for signal <count>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -307,13 +307,13 @@ WARNING:Xst:737 - Found 1-bit latch for signal <count>. Latches may be generated
 Unit <sendcounter> synthesized.
 
 Synthesizing Unit <mv_MUSER_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Summary:
 	no macro.
 Unit <mv_MUSER_tfr> synthesized.
 
 Synthesizing Unit <MULTIVIB>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\MULTIVIB.vhd".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\MULTIVIB.vhd".
     Found 1-bit register for signal <Az_A_DFF_20_q>.
     Found 1-bit register for signal <Az>.
     Found 1-bit register for signal <Z>.
@@ -323,32 +323,32 @@ Synthesizing Unit <MULTIVIB>.
 Unit <MULTIVIB> synthesized.
 
 Synthesizing Unit <stn_MUSER_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Set property "HU_SET = XLXI_16_6" for instance <XLXI_16>.
     Summary:
 	no macro.
 Unit <stn_MUSER_tfr> synthesized.
 
 Synthesizing Unit <XOR8_HXILINX_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Summary:
 Unit <XOR8_HXILINX_tfr> synthesized.
 
 Synthesizing Unit <receiver_MUSER_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Set property "HU_SET = XLXI_110_5" for instance <XLXI_110>.
     Summary:
 	no macro.
 Unit <receiver_MUSER_tfr> synthesized.
 
 Synthesizing Unit <sipo16_MUSER_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Summary:
 	no macro.
 Unit <sipo16_MUSER_tfr> synthesized.
 
 Synthesizing Unit <FD16CE_HXILINX_tfr>.
-    Related source file is "E:\Senior Design\Code\SeniorDesign\basictfr\tfr.vhf".
+    Related source file is "C:\Users\h702417680\Downloads\SeniorDesign\basictfr\tfr.vhf".
     Found 16-bit register for signal <Q>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -578,9 +578,10 @@ Top Level Output File Name         : tfr.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 252
+# BELS                             : 253
 #      AND2                        : 45
 #      AND2B1                      : 1
+#      AND3                        : 1
 #      AND5B2                      : 1
 #      BUF                         : 38
 #      GND                         : 1
@@ -884,7 +885,7 @@ Clock to Setup on destination clock XLXI_113/q_tmp
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
 XLXI_113/q_tmp  |    7.112|         |         |         |
-XLXI_119/XLXN_84|    2.782|         |         |         |
+XLXI_119/XLXN_84|    3.929|         |         |         |
 send_en         |    1.128|    5.308|         |         |
 ----------------+---------+---------+---------+---------+
 
@@ -941,12 +942,12 @@ XLXI_118/XLXI_125/count_G|         |         |    2.876|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.34 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.97 secs
  
 --> 
 
-Total memory usage is 242756 kilobytes
+Total memory usage is 243784 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  108 (   0 filtered)

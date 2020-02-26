@@ -2,7 +2,7 @@
 Release 14.7 Trace  (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-E:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
 3 -fastpaths -xml tfr.twx tfr.ncd -o tfr.twr tfr.pcf -ucf constraints.ucf
 
 Design file:              tfr.ncd
@@ -36,7 +36,7 @@ Setup/Hold to clock button_r
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-rc1         |   -1.126(R)|      FAST  |    2.653(R)|      SLOW  |XLXI_119/XLXN_84  |   0.000|
+rc1         |   -0.656(R)|      FAST  |    1.740(R)|      SLOW  |XLXI_119/XLXN_84  |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Setup/Hold to clock send_en
@@ -59,7 +59,7 @@ Clock to Setup on destination clock button_r
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-button_r       |    2.086|    0.613|         |         |
+button_r       |    1.873|    0.810|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -67,7 +67,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    1.818|         |         |         |
+clk            |    1.767|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock send_en
@@ -79,14 +79,14 @@ send_en        |         |         |    1.875|    1.875|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Feb 25 19:16:31 2020 
+Analysis completed Tue Feb 25 21:20:24 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 174 MB
+Peak Memory Usage: 175 MB
 
 
 
