@@ -1,1 +1,5 @@
 MODULE stn
+	SUBMODULE hamming_enc
+		INSTANCE XLXI_226
+	SUBMODULE encryptor
+		INSTANCE XLXI_228
