@@ -8,7 +8,11 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/buf16 E:|Senior Design|Code|SeniorDesign|basictfr|buf16.sch</ClosedNode>
+         <ClosedNode>/mainproj E:|Senior Design|Code|SeniorDesign|basictfr|mainproj.sch/XLXI_120 - tfr/XLXI_118 - sender/XLXI_133 - piso16</ClosedNode>
+         <ClosedNode>/mainproj E:|Senior Design|Code|SeniorDesign|basictfr|mainproj.sch/XLXI_120 - tfr/XLXI_118 - sender/XLXI_134 - piso16</ClosedNode>
          <ClosedNode>/piso16_22 C:|Users|h702417680|Downloads|SeniorDesign|basictfr|piso16_22.sch</ClosedNode>
+         <ClosedNode>/piso16_22 E:|Senior Design|Code|SeniorDesign|basictfr|piso16_22.sch</ClosedNode>
+         <ClosedNode>/rtn E:|Senior Design|Code|SeniorDesign|basictfr|rtn.sch</ClosedNode>
          <ClosedNode>/tfr E:|Senior Design|Code|SeniorDesign|basictfr|tfr.sch/XLXI_112 - receiver</ClosedNode>
          <ClosedNode>/tfr E:|Senior Design|Code|SeniorDesign|basictfr|tfr.sch/XLXI_118 - sender</ClosedNode>
          <ClosedNode>/tfr E:|Senior Design|Code|SeniorDesign|basictfr|tfr.sch/XLXI_119 - receiver</ClosedNode>
@@ -19,13 +23,13 @@
          <ClosedNode>/top E:|Senior Design|Code|SeniorDesign|basictfr|top.sch/XLXI_4 - piso16</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>mainproj (C:/Users/h702417680/Downloads/SeniorDesign/basictfr/mainproj.sch)</SelectedItem>
+         <SelectedItem>mainproj (E:/Senior Design/Code/SeniorDesign/basictfr/mainproj.sch)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >9</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a1000000020000000000000000000000000200000064ffffffff000000810000000300000002000001a10000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>mainproj (C:/Users/h702417680/Downloads/SeniorDesign/basictfr/mainproj.sch)</CurrentItem>
+      <CurrentItem>mainproj (E:/Senior Design/Code/SeniorDesign/basictfr/mainproj.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -36,7 +40,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000fc000000010000000100000000000000000000000064ffffffff000000810000000000000001000000fc0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -58,7 +62,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000f8000000010001000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000fc000000010001000100000000000000000000000064ffffffff000000810000000000000001000000fc0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -79,7 +83,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000eb000000010000000100000000000000000000000064ffffffff000000810000000000000001000000eb0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -102,13 +106,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_BMM" guiview="Process" >
       <ClosedNodes>
@@ -117,8 +121,8 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" ></ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" />
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
 </Project>

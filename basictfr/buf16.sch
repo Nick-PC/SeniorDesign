@@ -8,9 +8,6 @@
     <netlist>
         <signal name="inD(15:0)" />
         <signal name="outD(15:0)" />
-        <signal name="XLXN_9" />
-        <signal name="XLXN_10" />
-        <signal name="XLXN_11" />
         <signal name="inD(7:0)" />
         <signal name="inD(15:8)" />
         <signal name="outD(15:8)" />
@@ -18,12 +15,17 @@
         <port polarity="Input" name="inD(15:0)" />
         <port polarity="Output" name="outD(15:0)" />
         <blockdef name="buf8">
-            <timestamp>2020-2-25T22:39:29</timestamp>
-            <rect width="256" x="64" y="-64" height="64" />
+            <timestamp>2020-3-8T22:4:57</timestamp>
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <rect width="64" x="320" y="-44" height="24" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
+            <line x2="160" y1="-64" y2="0" x1="160" />
+            <line x2="160" y1="-32" y2="-64" x1="224" />
+            <line x2="160" y1="-32" y2="0" x1="224" />
+            <rect width="256" x="64" y="-64" height="64" />
+            <line x2="224" y1="-32" y2="-32" x1="320" />
+            <line x2="64" y1="-32" y2="-32" x1="160" />
         </blockdef>
         <block symbolname="buf8" name="XLXI_1">
             <blockpin signalname="inD(7:0)" name="inputs(7:0)" />
@@ -35,10 +37,8 @@
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
-        <instance x="1392" y="928" name="XLXI_1" orien="R0">
-        </instance>
-        <instance x="1392" y="1072" name="XLXI_2" orien="R0">
-        </instance>
+        <instance x="1392" y="928" name="XLXI_1" orien="R0" />
+        <instance x="1392" y="1072" name="XLXI_2" orien="R0" />
         <branch name="inD(15:0)">
             <wire x2="1232" y1="848" y2="848" x1="1200" />
             <wire x2="1232" y1="848" y2="896" x1="1232" />

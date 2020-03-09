@@ -29,6 +29,7 @@
         <port polarity="Input" name="reset" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="serial_in" />
+        <port polarity="Output" name="parallel_out(15)" />
         <port polarity="Output" name="parallel_out(15:0)" />
         <blockdef name="fdr">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -365,6 +366,7 @@
         <iomarker fontsize="28" x="32" y="256" name="clk" orien="R270" />
         <branch name="parallel_out(15)">
             <wire x2="3456" y1="1024" y2="1024" x1="3440" />
+            <wire x2="3456" y1="1024" y2="1184" x1="3456" />
             <wire x2="3456" y1="336" y2="1024" x1="3456" />
         </branch>
         <branch name="parallel_out(15:0)">
@@ -405,5 +407,6 @@
         <bustap x2="3456" y1="240" y2="336" x1="3456" />
         <iomarker fontsize="28" x="384" y="240" name="parallel_out(15:0)" orien="R180" />
         <iomarker fontsize="28" x="160" y="1344" name="reset" orien="R180" />
+        <iomarker fontsize="28" x="3456" y="1184" name="parallel_out(15)" orien="R90" />
     </sheet>
 </drawing>
