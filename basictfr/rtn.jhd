@@ -1,5 +1,5 @@
 MODULE rtn
-	SUBMODULE decryptor
-		INSTANCE XLXI_2
 	SUBMODULE hamming_dec
 		INSTANCE XLXI_3
+	SUBMODULE decryptor
+		INSTANCE XLXI_4

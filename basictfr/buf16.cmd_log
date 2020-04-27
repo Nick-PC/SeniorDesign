@@ -1,1 +1,2 @@
 sch2sym -intstyle ise -family spartan6 -w -refsym buf16 {E:/Senior Design/Code/SeniorDesign/basictfr/buf16.sch} {E:/Senior Design/Code/SeniorDesign/basictfr/buf16.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym buf16 {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/buf16.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/buf16.sym} 

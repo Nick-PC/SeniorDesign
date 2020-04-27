@@ -15,16 +15,8 @@
         <port polarity="Input" name="clk" />
         <port polarity="Output" name="out_data(15:0)" />
         <port polarity="Output" name="valid" />
-        <blockdef name="decryptor">
-            <timestamp>2020-3-8T23:21:55</timestamp>
-            <rect width="304" x="64" y="-64" height="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="368" y="-44" height="24" />
-            <line x2="432" y1="-32" y2="-32" x1="368" />
-        </blockdef>
         <blockdef name="hamming_dec">
-            <timestamp>2020-3-9T0:47:4</timestamp>
+            <timestamp>2020-4-27T1:20:34</timestamp>
             <rect width="304" x="64" y="-128" height="128" />
             <rect width="64" x="0" y="-108" height="24" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
@@ -33,20 +25,26 @@
             <rect width="64" x="368" y="-44" height="24" />
             <line x2="432" y1="-32" y2="-32" x1="368" />
         </blockdef>
-        <block symbolname="decryptor" name="XLXI_2">
-            <blockpin signalname="in_data(31:0)" name="in_data(31:0)" />
-            <blockpin signalname="XLXN_2(31:0)" name="out_data(31:0)" />
-        </block>
+        <blockdef name="decryptor">
+            <timestamp>2020-4-27T1:16:29</timestamp>
+            <rect width="304" x="64" y="-64" height="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="368" y="-44" height="24" />
+            <line x2="432" y1="-32" y2="-32" x1="368" />
+        </blockdef>
         <block symbolname="hamming_dec" name="XLXI_3">
             <blockpin signalname="XLXN_2(31:0)" name="in_data(31:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="valid" name="valid" />
             <blockpin signalname="out_data(15:0)" name="out_data(15:0)" />
         </block>
+        <block symbolname="decryptor" name="XLXI_4">
+            <blockpin signalname="in_data(31:0)" name="in_data(31:0)" />
+            <blockpin signalname="XLXN_2(31:0)" name="out_data(31:0)" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
-        <instance x="720" y="1008" name="XLXI_2" orien="R0">
-        </instance>
         <branch name="in_data(31:0)">
             <wire x2="720" y1="976" y2="976" x1="640" />
         </branch>
@@ -69,5 +67,7 @@
             <wire x2="1696" y1="976" y2="976" x1="1664" />
         </branch>
         <iomarker fontsize="28" x="1696" y="976" name="valid" orien="R0" />
+        <instance x="720" y="1008" name="XLXI_4" orien="R0">
+        </instance>
     </sheet>
 </drawing>

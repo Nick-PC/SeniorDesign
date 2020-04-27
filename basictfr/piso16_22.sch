@@ -54,7 +54,7 @@
         <port polarity="Input" name="data(15:0)" />
         <port polarity="Output" name="out22(21:0)" />
         <blockdef name="piso2">
-            <timestamp>2020-2-5T0:12:26</timestamp>
+            <timestamp>2020-4-27T1:13:38</timestamp>
             <line x2="384" y1="32" y2="32" x1="320" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <rect width="64" x="0" y="-172" height="24" />
@@ -74,12 +74,17 @@
             <line x2="64" y1="-128" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="buf8">
-            <timestamp>2020-2-18T22:49:10</timestamp>
-            <rect width="256" x="64" y="-64" height="64" />
+            <timestamp>2020-4-27T1:10:58</timestamp>
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <rect width="64" x="320" y="-44" height="24" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
+            <line x2="160" y1="-64" y2="0" x1="160" />
+            <line x2="160" y1="-32" y2="-64" x1="224" />
+            <line x2="160" y1="-32" y2="0" x1="224" />
+            <rect width="256" x="64" y="-64" height="64" />
+            <line x2="224" y1="-32" y2="-32" x1="320" />
+            <line x2="64" y1="-32" y2="-32" x1="160" />
         </blockdef>
         <block symbolname="gnd" name="XLXI_35">
             <blockpin signalname="in0(1)" name="G" />
@@ -92,88 +97,88 @@
             <blockpin signalname="in0(1:0)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="out22(3)" name="SI" />
-            <blockpin signalname="out22(5)" name="SO" />
             <blockpin signalname="out22(4)" name="SM" />
+            <blockpin signalname="out22(5)" name="SO" />
         </block>
         <block symbolname="piso2" name="XLXI_33">
             <blockpin signalname="shift" name="shift" />
             <blockpin signalname="in0(1:0)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="out22(1)" name="SI" />
-            <blockpin signalname="out22(3)" name="SO" />
             <blockpin signalname="out22(2)" name="SM" />
+            <blockpin signalname="out22(3)" name="SO" />
         </block>
         <block symbolname="piso2" name="XLXI_32">
             <blockpin signalname="shift" name="shift" />
             <blockpin signalname="in0(1:0)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="XLXN_5" name="SI" />
-            <blockpin signalname="out22(1)" name="SO" />
             <blockpin signalname="out22(0)" name="SM" />
+            <blockpin signalname="out22(1)" name="SO" />
         </block>
         <block symbolname="piso2" name="XLXI_1">
             <blockpin signalname="shift" name="shift" />
             <blockpin signalname="data(1:0)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="out22(5)" name="SI" />
-            <blockpin signalname="data_out(1)" name="SO" />
             <blockpin signalname="data_out(0)" name="SM" />
+            <blockpin signalname="data_out(1)" name="SO" />
         </block>
         <block symbolname="piso2" name="XLXI_16">
             <blockpin signalname="shift" name="shift" />
             <blockpin signalname="data(15:14)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="data_out(13)" name="SI" />
-            <blockpin signalname="data_out(15)" name="SO" />
             <blockpin signalname="data_out(14)" name="SM" />
+            <blockpin signalname="data_out(15)" name="SO" />
         </block>
         <block symbolname="piso2" name="XLXI_4">
             <blockpin signalname="shift" name="shift" />
             <blockpin signalname="data(7:6)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="data_out(5)" name="SI" />
-            <blockpin signalname="data_out(7)" name="SO" />
             <blockpin signalname="data_out(6)" name="SM" />
+            <blockpin signalname="data_out(7)" name="SO" />
         </block>
         <block symbolname="piso2" name="XLXI_17">
             <blockpin signalname="shift" name="shift" />
             <blockpin signalname="data(9:8)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="data_out(7)" name="SI" />
-            <blockpin signalname="data_out(9)" name="SO" />
             <blockpin signalname="data_out(8)" name="SM" />
+            <blockpin signalname="data_out(9)" name="SO" />
         </block>
         <block symbolname="piso2" name="XLXI_15">
             <blockpin signalname="shift" name="shift" />
             <blockpin signalname="data(13:12)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="data_out(11)" name="SI" />
-            <blockpin signalname="data_out(13)" name="SO" />
             <blockpin signalname="data_out(12)" name="SM" />
+            <blockpin signalname="data_out(13)" name="SO" />
         </block>
         <block symbolname="piso2" name="XLXI_3">
             <blockpin signalname="shift" name="shift" />
             <blockpin signalname="data(5:4)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="data_out(3)" name="SI" />
-            <blockpin signalname="data_out(5)" name="SO" />
             <blockpin signalname="data_out(4)" name="SM" />
+            <blockpin signalname="data_out(5)" name="SO" />
         </block>
         <block symbolname="piso2" name="XLXI_14">
             <blockpin signalname="shift" name="shift" />
             <blockpin signalname="data(11:10)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="data_out(9)" name="SI" />
-            <blockpin signalname="data_out(11)" name="SO" />
             <blockpin signalname="data_out(10)" name="SM" />
+            <blockpin signalname="data_out(11)" name="SO" />
         </block>
         <block symbolname="piso2" name="XLXI_2">
             <blockpin signalname="shift" name="shift" />
             <blockpin signalname="data(3:2)" name="data(1:0)" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="data_out(1)" name="SI" />
-            <blockpin signalname="data_out(3)" name="SO" />
             <blockpin signalname="data_out(2)" name="SM" />
+            <blockpin signalname="data_out(3)" name="SO" />
         </block>
         <block symbolname="buf8" name="XLXI_46">
             <blockpin signalname="data_out(15:8)" name="inputs(7:0)" />
@@ -498,10 +503,8 @@
             <wire x2="3408" y1="752" y2="816" x1="3408" />
             <wire x2="3408" y1="816" y2="864" x1="3408" />
         </branch>
-        <instance x="3040" y="352" name="XLXI_46" orien="R90">
-        </instance>
-        <instance x="3168" y="352" name="XLXI_47" orien="R90">
-        </instance>
+        <instance x="3040" y="352" name="XLXI_46" orien="R90" />
+        <instance x="3168" y="352" name="XLXI_47" orien="R90" />
         <bustap x2="3072" y1="160" y2="256" x1="3072" />
         <bustap x2="3200" y1="160" y2="256" x1="3200" />
         <branch name="data_out(15:8)">

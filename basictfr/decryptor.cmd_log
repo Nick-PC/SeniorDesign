@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym decryptor {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/decryptor.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/decryptor.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym decryptor {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/decryptor.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/decryptor.sym} 

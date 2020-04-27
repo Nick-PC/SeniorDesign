@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : mv.vhf
--- /___/   /\     Timestamp : 02/25/2020 18:35:25
+-- /___/   /\     Timestamp : 04/26/2020 21:18:47
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/SeniorDesign/basictfr/mv.vhf" -w "E:/Senior Design/Code/SeniorDesign/basictfr/mv.sch"
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mv.vhf" -w "E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mv.sch"
 --Design Name: mv
 --Device: spartan6
 --Purpose:

@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sipo16.vhf
--- /___/   /\     Timestamp : 02/25/2020 18:35:29
+-- /___/   /\     Timestamp : 04/27/2020 01:53:25
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code/SeniorDesign/basictfr/sipo16.vhf" -w "E:/Senior Design/Code/SeniorDesign/basictfr/sipo16.sch"
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl "E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/sipo16.vhf" -w "E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/sipo16.sch"
 --Design Name: sipo16
 --Device: spartan6
 --Purpose:

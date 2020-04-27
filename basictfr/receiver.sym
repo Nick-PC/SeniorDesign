@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="receiver">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2020-2-26T0:10:31</timestamp>
+    <timestamp>2020-4-27T1:17:24</timestamp>
     <pin polarity="Input" x="0" y="-160" name="rc1" />
     <pin polarity="Input" x="0" y="32" name="reset" />
     <pin polarity="Input" x="0" y="-32" name="clk" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="piso16">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2020-2-26T4:28:8</timestamp>
+    <timestamp>2020-4-27T1:13:56</timestamp>
     <pin polarity="Input" x="0" y="32" name="SI" />
     <pin polarity="Input" x="0" y="-160" name="data(15:0)" />
     <pin polarity="Input" x="0" y="-96" name="clk" />

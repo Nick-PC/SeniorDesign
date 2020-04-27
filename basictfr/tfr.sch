@@ -6,9 +6,9 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="in_data(7:0)" />
+        <signal name="in_data(15:0)" />
         <signal name="XLXN_236" />
-        <signal name="XLXN_234(7:0)" />
+        <signal name="XLXN_234(15:0)" />
         <signal name="C" />
         <signal name="RR" />
         <signal name="slowcount" />
@@ -20,7 +20,7 @@
         <signal name="XLXN_283" />
         <signal name="rec_in" />
         <signal name="out_data(15:0)" />
-        <port polarity="Input" name="in_data(7:0)" />
+        <port polarity="Input" name="in_data(15:0)" />
         <port polarity="Input" name="C" />
         <port polarity="Input" name="RR" />
         <port polarity="Output" name="send_out" />
@@ -43,7 +43,7 @@
             <line x2="64" y1="-128" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="sender">
-            <timestamp>2020-2-25T23:8:34</timestamp>
+            <timestamp>2020-4-27T5:59:32</timestamp>
             <line x2="384" y1="32" y2="32" x1="320" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
@@ -51,19 +51,6 @@
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="384" y1="-160" y2="-160" x1="320" />
             <rect width="256" x="64" y="-192" height="256" />
-        </blockdef>
-        <blockdef name="ld8ce">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <rect width="64" x="0" y="-268" height="24" />
-            <rect width="64" x="320" y="-268" height="24" />
-            <line x2="64" y1="-32" y2="-32" x1="192" />
-            <line x2="192" y1="-64" y2="-32" x1="192" />
-            <line x2="320" y1="-256" y2="-256" x1="384" />
-            <line x2="64" y1="-256" y2="-256" x1="0" />
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-            <line x2="64" y1="-192" y2="-192" x1="0" />
-            <line x2="64" y1="-128" y2="-128" x1="0" />
-            <rect width="256" x="64" y="-320" height="256" />
         </blockdef>
         <blockdef name="and2b1">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -77,7 +64,7 @@
             <circle r="12" cx="52" cy="-64" />
         </blockdef>
         <blockdef name="counter">
-            <timestamp>2020-2-21T1:6:18</timestamp>
+            <timestamp>2020-4-27T1:17:32</timestamp>
             <line x2="384" y1="32" y2="32" x1="320" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
@@ -96,7 +83,7 @@
             <line x2="64" y1="-128" y2="-128" x1="0" />
         </blockdef>
         <blockdef name="receiver">
-            <timestamp>2020-2-26T0:10:31</timestamp>
+            <timestamp>2020-4-27T1:17:24</timestamp>
             <rect width="64" x="320" y="148" height="24" />
             <line x2="384" y1="160" y2="160" x1="320" />
             <line x2="0" y1="32" y2="32" x1="64" />
@@ -104,13 +91,19 @@
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <rect width="256" x="64" y="-192" height="384" />
         </blockdef>
-        <block symbolname="ld8ce" name="XLXI_106">
-            <blockpin signalname="XLXN_236" name="CLR" />
-            <blockpin signalname="in_data(7:0)" name="D(7:0)" />
-            <blockpin signalname="SE" name="G" />
-            <blockpin signalname="SE" name="GE" />
-            <blockpin signalname="XLXN_234(7:0)" name="Q(7:0)" />
-        </block>
+        <blockdef name="ld16ce">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-192" y2="-192" x1="0" />
+            <line x2="64" y1="-32" y2="-32" x1="0" />
+            <line x2="64" y1="-256" y2="-256" x1="0" />
+            <line x2="64" y1="-128" y2="-128" x1="0" />
+            <line x2="320" y1="-256" y2="-256" x1="384" />
+            <line x2="64" y1="-32" y2="-32" x1="192" />
+            <line x2="192" y1="-64" y2="-32" x1="192" />
+            <rect width="64" x="0" y="-268" height="24" />
+            <rect width="64" x="320" y="-268" height="24" />
+            <rect width="256" x="64" y="-320" height="256" />
+        </blockdef>
         <block symbolname="and2b1" name="XLXI_107">
             <blockpin signalname="SE" name="I0" />
             <blockpin signalname="send_clear" name="I1" />
@@ -136,7 +129,7 @@
         <block symbolname="sender" name="XLXI_118">
             <blockpin signalname="slowclk" name="clk" />
             <blockpin signalname="SE" name="send_enable" />
-            <blockpin signalname="XLXN_234(7:0)" name="in_data(7:0)" />
+            <blockpin signalname="XLXN_234(15:0)" name="in_data(15:0)" />
             <blockpin signalname="send_clear" name="data_clear" />
             <blockpin signalname="send_out" name="send_data" />
         </block>
@@ -145,6 +138,13 @@
             <blockpin signalname="RR" name="reset" />
             <blockpin signalname="slowclk" name="clk" />
             <blockpin signalname="out_data(15:0)" name="rdata(15:0)" />
+        </block>
+        <block symbolname="ld16ce" name="XLXI_120">
+            <blockpin signalname="XLXN_236" name="CLR" />
+            <blockpin signalname="in_data(15:0)" name="D(15:0)" />
+            <blockpin signalname="SE" name="G" />
+            <blockpin signalname="SE" name="GE" />
+            <blockpin signalname="XLXN_234(15:0)" name="Q(15:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -171,7 +171,7 @@
             <wire x2="2064" y1="1104" y2="1104" x1="1952" />
         </branch>
         <iomarker fontsize="28" x="2064" y="1104" name="send_out" orien="R0" />
-        <branch name="XLXN_234(7:0)">
+        <branch name="XLXN_234(15:0)">
             <wire x2="1184" y1="1744" y2="1744" x1="1040" />
             <wire x2="1568" y1="1232" y2="1232" x1="1184" />
             <wire x2="1184" y1="1232" y2="1744" x1="1184" />
@@ -185,10 +185,6 @@
         </branch>
         <instance x="1568" y="1264" name="XLXI_118" orien="R0">
         </instance>
-        <branch name="in_data(7:0)">
-            <wire x2="656" y1="1744" y2="1744" x1="560" />
-        </branch>
-        <instance x="656" y="2000" name="XLXI_106" orien="R0" />
         <iomarker fontsize="28" x="736" y="1168" name="SE" orien="R180" />
         <instance x="1584" y="2096" name="XLXI_115" orien="R0" />
         <instance x="1616" y="2496" name="XLXI_116" orien="R0" />
@@ -232,11 +228,14 @@
         </branch>
         <iomarker fontsize="28" x="1536" y="1504" name="rec_in" orien="R180" />
         <branch name="out_data(15:0)">
-            <wire x2="1984" y1="1824" y2="1824" x1="1968" />
-            <wire x2="2032" y1="1824" y2="1824" x1="1984" />
+            <wire x2="2032" y1="1824" y2="1824" x1="1968" />
         </branch>
         <iomarker fontsize="28" x="1424" y="1696" name="RR" orien="R180" />
         <iomarker fontsize="28" x="2032" y="1824" name="out_data(15:0)" orien="R0" />
-        <iomarker fontsize="28" x="560" y="1744" name="in_data(7:0)" orien="R180" />
+        <branch name="in_data(15:0)">
+            <wire x2="656" y1="1744" y2="1744" x1="560" />
+        </branch>
+        <instance x="656" y="2000" name="XLXI_120" orien="R0" />
+        <iomarker fontsize="28" x="560" y="1744" name="in_data(15:0)" orien="R180" />
     </sheet>
 </drawing>

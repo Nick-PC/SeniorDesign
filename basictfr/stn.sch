@@ -12,7 +12,7 @@
         <port polarity="Input" name="in_data(15:0)" />
         <port polarity="Output" name="out_data(31:0)" />
         <blockdef name="hamming_enc">
-            <timestamp>2020-3-6T22:4:16</timestamp>
+            <timestamp>2020-4-27T1:14:8</timestamp>
             <rect width="256" x="64" y="-64" height="64" />
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
@@ -20,7 +20,7 @@
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="encryptor">
-            <timestamp>2020-3-6T23:13:26</timestamp>
+            <timestamp>2020-4-27T1:13:8</timestamp>
             <rect width="304" x="64" y="-64" height="64" />
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />

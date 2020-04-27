@@ -9,10 +9,6 @@
         <signal name="in_data(31:0)" />
         <signal name="in_data(31:24)" />
         <signal name="out_data(31:24)" />
-        <signal name="XLXN_71(7:0)" />
-        <signal name="XLXN_74" />
-        <signal name="XLXN_79" />
-        <signal name="XLXN_80" />
         <signal name="in_data(18)" />
         <signal name="in_data(12)" />
         <signal name="in_data(16)" />
@@ -51,12 +47,17 @@
         <port polarity="Input" name="in_data(31:0)" />
         <port polarity="Output" name="out_data(31:0)" />
         <blockdef name="buf8">
-            <timestamp>2020-2-26T2:26:13</timestamp>
-            <rect width="256" x="64" y="-64" height="64" />
+            <timestamp>2020-4-27T1:10:58</timestamp>
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <rect width="64" x="320" y="-44" height="24" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
+            <line x2="160" y1="-64" y2="0" x1="160" />
+            <line x2="160" y1="-32" y2="-64" x1="224" />
+            <line x2="160" y1="-32" y2="0" x1="224" />
+            <rect width="256" x="64" y="-64" height="64" />
+            <line x2="224" y1="-32" y2="-32" x1="320" />
+            <line x2="64" y1="-32" y2="-32" x1="160" />
         </blockdef>
         <blockdef name="inv">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -195,8 +196,7 @@
             <wire x2="528" y1="1072" y2="1072" x1="512" />
             <wire x2="624" y1="1072" y2="1072" x1="528" />
         </branch>
-        <instance x="544" y="848" name="XLXI_1" orien="R0">
-        </instance>
+        <instance x="544" y="848" name="XLXI_1" orien="R0" />
         <branch name="out_data(31:24)">
             <wire x2="960" y1="816" y2="816" x1="928" />
         </branch>
@@ -359,8 +359,7 @@
             <wire x2="960" y1="1840" y2="1840" x1="848" />
         </branch>
         <bustap x2="960" y1="1984" y2="1984" x1="1056" />
-        <instance x="544" y="2016" name="XLXI_4" orien="R0">
-        </instance>
+        <instance x="544" y="2016" name="XLXI_4" orien="R0" />
         <iomarker fontsize="28" x="1056" y="768" name="out_data(31:0)" orien="R270" />
         <iomarker fontsize="28" x="416" y="752" name="in_data(31:0)" orien="R270" />
     </sheet>

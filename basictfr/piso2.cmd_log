@@ -1,3 +1,4 @@
 sch2sym -intstyle ise -family spartan6 -refsym piso2 {E:/Senior Design/Code/basictfr/piso2.sch} {E:/Senior Design/Code/basictfr/piso2.sym} 
 sch2sym -intstyle ise -family spartan6 -w -refsym piso2 {E:/Senior Design/Code/SeniorDesign/basictfr/piso2.sch} {E:/Senior Design/Code/SeniorDesign/basictfr/piso2.sym} 
 sch2sym -intstyle ise -family spartan6 -w -refsym piso2 {E:/Senior Design/Code/SeniorDesign/basictfr/piso2.sch} {E:/Senior Design/Code/SeniorDesign/basictfr/piso2.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym piso2 {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/piso2.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/piso2.sym} 

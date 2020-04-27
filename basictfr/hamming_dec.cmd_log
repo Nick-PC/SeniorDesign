@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym hamming_dec {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/hamming_dec.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/hamming_dec.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym hamming_dec {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/hamming_dec.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/hamming_dec.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym hamming_dec {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/hamming_dec.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/hamming_dec.sym} 

@@ -7,3 +7,5 @@ sch2sym -intstyle ise -family spartan6 -w -refsym piso16 C:/Users/h702417680/Dow
 sch2sym -intstyle ise -family spartan6 -w -refsym piso16 C:/Users/h702417680/Downloads/SeniorDesign/basictfr/piso16.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/piso16.sym 
 sch2sym -intstyle ise -family spartan6 -w -refsym piso16 C:/Users/h702417680/Downloads/SeniorDesign/basictfr/piso16.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/piso16.sym 
 sch2sym -intstyle ise -family spartan6 -w -refsym piso16 C:/Users/h702417680/Downloads/SeniorDesign/basictfr/piso16.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/piso16.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym piso16 {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/piso16.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/piso16.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym piso16 {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/piso16.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/piso16.sym} 

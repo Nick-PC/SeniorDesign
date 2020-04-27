@@ -50,3 +50,7 @@ trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml tfr.twx tfr.ncd -o tfr.twr tfr
 bitgen -intstyle ise -f tfr.ut tfr.ncd 
 sch2sym -intstyle ise -family spartan6 -w -refsym tfr C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.sym 
 sch2sym -intstyle ise -family spartan6 -w -refsym tfr C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/tfr.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym tfr {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym tfr {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym tfr {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym tfr {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.sym} 

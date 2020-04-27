@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\h702417680\Downloads\SeniorDesign\basictfr\mainproj.ncd
-OUTFILE=C:\Users\h702417680\Downloads\SeniorDesign\basictfr\mainproj.bit
+INFILE=E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.ncd
+OUTFILE=E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=C:\Users\h702417680\Downloads\SeniorDesign\basictfr
+WORKINGDIR=E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr
 LICENSE=WebPack
-USER_INFO=210724264_0_0_200
+USER_INFO=211744720_0_0_711

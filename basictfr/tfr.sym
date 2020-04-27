@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="tfr">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2020-2-26T2:43:43</timestamp>
-    <pin polarity="Input" x="0" y="-288" name="in_data(7:0)" />
+    <timestamp>2020-4-27T6:2:23</timestamp>
+    <pin polarity="Input" x="0" y="-288" name="in_data(15:0)" />
     <pin polarity="Input" x="0" y="-224" name="C" />
     <pin polarity="Input" x="0" y="-160" name="RR" />
     <pin polarity="Input" x="0" y="-96" name="SE" />
-    <pin polarity="Output" x="432" y="-288" name="out_data(15:0)" />
-    <pin polarity="Output" x="272" y="64" name="send_out" />
     <pin polarity="Input" x="176" y="64" name="rec_in" />
+    <pin polarity="Output" x="272" y="64" name="send_out" />
+    <pin polarity="Output" x="432" y="-288" name="out_data(15:0)" />
     <graph>
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="216" y="-328" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin in_data(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="92" y="-224" type="pin C" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin RR" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin SE" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="144" y="-24" type="pin rec_in" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="324" y="-24" type="pin send_out" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="368" y="-288" type="pin out_data(15:0)" />
         <rect width="64" x="0" y="-300" height="24" />
         <line x2="0" y1="-288" y2="-288" x1="64" />
         <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -21,14 +26,9 @@
         <rect width="304" x="64" y="-320" height="320" />
         <rect width="64" x="368" y="-300" height="24" />
         <line x2="368" y1="-288" y2="-288" x1="432" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="368" y="-288" type="pin out_data(15:0)" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin in_data(7:0)" />
         <line x2="272" y1="0" y2="64" x1="272" />
         <line x2="176" y1="64" y2="0" x1="176" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="324" y="-24" type="pin send_out" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="144" y="-24" type="pin rec_in" />
         <line x2="88" y1="-236" y2="-224" x1="64" />
         <line x2="88" y1="-216" y2="-224" x1="64" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="92" y="-224" type="pin C" />
     </graph>
 </symbol>

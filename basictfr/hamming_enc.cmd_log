@@ -1,1 +1,2 @@
 sch2sym -intstyle ise -family spartan6 -w -refsym hamming_enc C:/Users/h702417680/Downloads/SeniorDesign/basictfr/hamming_enc.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/hamming_enc.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym hamming_enc {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/hamming_enc.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/hamming_enc.sym} 

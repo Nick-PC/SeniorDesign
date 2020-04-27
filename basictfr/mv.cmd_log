@@ -2,3 +2,5 @@ sch2sym -intstyle ise -family spartan6 -w -refsym mv C:/Users/h702417680/Downloa
 sch2sym -intstyle ise -family spartan6 -w -refsym mv C:/Users/h702417680/Downloads/SeniorDesign/basictfr/mv.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/mv.sym 
 sch2sym -intstyle ise -family spartan6 -w -refsym mv C:/Users/h702417680/Downloads/SeniorDesign/basictfr/mv.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/mv.sym 
 sch2sym -intstyle ise -family spartan6 -w -refsym mv C:/Users/h702417680/Downloads/SeniorDesign/basictfr/mv.sch C:/Users/h702417680/Downloads/SeniorDesign/basictfr/mv.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym mv {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mv.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mv.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym mv {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mv.sch} {E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mv.sym} 
