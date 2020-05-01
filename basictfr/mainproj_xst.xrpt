@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Mon Apr 27 02:08:38 2020">
+  <application stringID="Xst" timeStamp="Fri May 01 14:27:02 2020">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -129,7 +129,7 @@
         <item stringID="XST_TOP_LEVEL_OUTPUT_FILE_NAME" value="mainproj.ngc"/>
       </section>
       <section stringID="XST_PRIMITIVE_AND_BLACK_BOX_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="409">
+        <item dataType="int" stringID="XST_BELS" value="408">
           <item dataType="int" stringID="XST_AND2" value="65"/>
           <item dataType="int" stringID="XST_AND2B1" value="1"/>
           <item dataType="int" stringID="XST_AND3" value="1"/>
@@ -142,7 +142,7 @@
           <item dataType="int" stringID="XST_LUT4" value="6"/>
           <item dataType="int" stringID="XST_LUT6" value="12"/>
           <item dataType="int" stringID="XST_MUXCY" value="34"/>
-          <item dataType="int" stringID="XST_OR2" value="33"/>
+          <item dataType="int" stringID="XST_OR2" value="32"/>
           <item dataType="int" stringID="XST_VCC" value="1"/>
           <item dataType="int" stringID="XST_XOR2" value="2"/>
           <item dataType="int" stringID="XST_XORCY" value="36"/>
@@ -183,7 +183,7 @@
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="24"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="3"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="4"/>
     </section>
   </application>
 

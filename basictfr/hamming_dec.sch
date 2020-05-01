@@ -358,9 +358,6 @@
         <instance x="1952" y="1168" name="p4" orien="R0">
             <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="128" y="-184" type="instance" />
         </instance>
-        <instance x="2288" y="1840" name="p0" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="128" y="-104" type="instance" />
-        </instance>
         <instance x="2752" y="2672" name="p2" orien="R0">
             <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="128" y="-328" type="instance" />
         </instance>
@@ -427,12 +424,9 @@
             <wire x2="2288" y1="1776" y2="1776" x1="2272" />
             <wire x2="2272" y1="1776" y2="2048" x1="2272" />
         </branch>
-        <branch name="XLXN_96">
-            <wire x2="2288" y1="1712" y2="1712" x1="2240" />
-        </branch>
         <branch name="testp0">
-            <wire x2="2688" y1="1280" y2="1280" x1="2544" />
             <wire x2="2544" y1="1280" y2="1744" x1="2544" />
+            <wire x2="2688" y1="1280" y2="1280" x1="2544" />
         </branch>
         <branch name="in_data(26:23)">
             <wire x2="576" y1="496" y2="496" x1="480" />
@@ -811,5 +805,12 @@
         <iomarker fontsize="28" x="1712" y="368" name="clk" orien="R180" />
         <iomarker fontsize="28" x="2400" y="496" name="out_data(15:0)" orien="R0" />
         <iomarker fontsize="28" x="3296" y="992" name="valid" orien="R0" />
+        <branch name="XLXN_96">
+            <wire x2="2256" y1="1712" y2="1712" x1="2240" />
+            <wire x2="2288" y1="1712" y2="1712" x1="2256" />
+        </branch>
+        <instance x="2288" y="1840" name="p0" orien="R0">
+            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="128" y="-104" type="instance" />
+        </instance>
     </sheet>
 </drawing>

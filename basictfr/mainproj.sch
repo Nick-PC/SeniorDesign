@@ -12,10 +12,9 @@
         <signal name="rec_reset" />
         <signal name="clk" />
         <signal name="data_out(15:0)" />
-        <signal name="data_out(10:3)" />
+        <signal name="data_out(7:0)" />
         <signal name="LED(7:0)" />
         <signal name="tfr_data(15:0)" />
-        <signal name="XLXN_2" />
         <signal name="tfr_data(15:8)" />
         <signal name="in_data(7:0)" />
         <signal name="tfr_data(7:0)" />
@@ -56,7 +55,7 @@
             <line x2="88" y1="-216" y2="-224" x1="64" />
         </blockdef>
         <block symbolname="buf8" name="XLXI_128">
-            <blockpin signalname="data_out(10:3)" name="inputs(7:0)" />
+            <blockpin signalname="data_out(7:0)" name="inputs(7:0)" />
             <blockpin signalname="LED(7:0)" name="outputs(7:0)" />
         </block>
         <block symbolname="tfr" name="XLXI_129">
@@ -87,7 +86,7 @@
         <iomarker fontsize="28" x="1600" y="1888" name="send_out" orien="R90" />
         <iomarker fontsize="28" x="1504" y="1904" name="rec_in" orien="R90" />
         <bustap x2="1824" y1="1504" y2="1600" x1="1824" />
-        <branch name="data_out(10:3)">
+        <branch name="data_out(7:0)">
             <wire x2="1824" y1="1600" y2="1664" x1="1824" />
             <wire x2="1872" y1="1664" y2="1664" x1="1824" />
         </branch>

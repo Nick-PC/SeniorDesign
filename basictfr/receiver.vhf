@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : receiver.vhf
--- /___/   /\     Timestamp : 04/27/2020 01:53:25
+-- /___/   /\     Timestamp : 05/01/2020 14:26:56
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -443,10 +443,10 @@ architecture BEHAVIORAL of hamming_dec_MUSER_receiver is
    end component;
    attribute BOX_TYPE of INV : component is "BLACK_BOX";
    
-   attribute HU_SET of p1 : label is "p1_11";
-   attribute HU_SET of p2 : label is "p2_10";
-   attribute HU_SET of p3 : label is "p3_13";
-   attribute HU_SET of XLXI_163 : label is "XLXI_163_12";
+   attribute HU_SET of p1 : label is "p1_48";
+   attribute HU_SET of p2 : label is "p2_47";
+   attribute HU_SET of p3 : label is "p3_50";
+   attribute HU_SET of XLXI_163 : label is "XLXI_163_49";
 begin
    valid <= valid_DUMMY;
    p0 : XOR2
@@ -789,8 +789,6 @@ architecture BEHAVIORAL of receiver is
    signal XLXN_84  : std_logic;
    signal XLXN_108 : std_logic;
    signal XLXN_113 : std_logic;
-   signal XLXN_168 : std_logic;
-   signal XLXN_169 : std_logic;
    signal XLXN_170 : std_logic_vector (15 downto 0);
    component sipo16_MUSER_receiver
       port ( reset        : in    std_logic; 
@@ -846,14 +844,7 @@ architecture BEHAVIORAL of receiver is
              valid    : out   std_logic);
    end component;
    
-   component OR2
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             O  : out   std_logic);
-   end component;
-   attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
-   
-   attribute HU_SET of XLXI_110 : label is "XLXI_110_14";
+   attribute HU_SET of XLXI_110 : label is "XLXI_110_51";
 begin
    XLXI_94 : sipo16_MUSER_receiver
       port map (clk=>XLXN_84,
@@ -882,7 +873,7 @@ begin
    XLXI_110 : FD16CE_HXILINX_receiver
       port map (C=>clk,
                 CE=>XLXN_113,
-                CLR=>XLXN_169,
+                CLR=>reset,
                 D(15 downto 0)=>XLXN_170(15 downto 0),
                 Q(15 downto 0)=>rdata(15 downto 0));
    
@@ -902,12 +893,7 @@ begin
       port map (clk=>clk,
                 in_data(31 downto 0)=>rec_data(31 downto 0),
                 out_data(15 downto 0)=>XLXN_170(15 downto 0),
-                valid=>XLXN_168);
-   
-   XLXI_114 : OR2
-      port map (I0=>reset,
-                I1=>XLXN_168,
-                O=>XLXN_169);
+                valid=>open);
    
 end BEHAVIORAL;
 

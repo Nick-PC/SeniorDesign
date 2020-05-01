@@ -1,2 +1,8 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/hamming_dec.vhf,-w,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/hamming_dec.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/rtn.vhf,-w,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/rtn.sch
 sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.vhf,-w,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/receiver.vhf,-w,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/receiver.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/rtn.vhf,-w,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/rtn.sch
 sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mainproj.vhf,-w,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mainproj.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.vhf,-w,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/tfr.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/receiver.vhf,-w,E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/receiver.sch

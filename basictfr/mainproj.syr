@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.87 secs
+Total CPU time to Xst completion: 0.34 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.87 secs
+Total CPU time to Xst completion: 0.34 secs
  
 --> Reading design: mainproj.prj
 
@@ -408,8 +408,8 @@ Unit <buf8_MUSER_mainproj> synthesized.
 
 Synthesizing Unit <tfr_MUSER_mainproj>.
     Related source file is "E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.vhf".
-    Set property "HU_SET = XLXI_113_18" for instance <XLXI_113>.
-    Set property "HU_SET = XLXI_120_19" for instance <XLXI_120>.
+    Set property "HU_SET = XLXI_113_35" for instance <XLXI_113>.
+    Set property "HU_SET = XLXI_120_36" for instance <XLXI_120>.
     Summary:
 	no macro.
 Unit <tfr_MUSER_mainproj> synthesized.
@@ -435,8 +435,8 @@ Unit <FTC_HXILINX_mainproj> synthesized.
 
 Synthesizing Unit <sender_MUSER_mainproj>.
     Related source file is "E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.vhf".
-INFO:Xst:3210 - "E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.vhf" line 1715: Output port <data_out> of the instance <XLXI_133> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.vhf" line 1723: Output port <data_out> of the instance <XLXI_134> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.vhf" line 1701: Output port <data_out> of the instance <XLXI_133> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.vhf" line 1709: Output port <data_out> of the instance <XLXI_134> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <sender_MUSER_mainproj> synthesized.
@@ -476,9 +476,9 @@ Unit <stn_MUSER_mainproj> synthesized.
 
 Synthesizing Unit <hamming_enc_MUSER_mainproj>.
     Related source file is "E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.vhf".
-    Set property "HU_SET = P1_15" for instance <p1>.
-    Set property "HU_SET = P2_16" for instance <p2>.
-    Set property "HU_SET = P3_17" for instance <p3>.
+    Set property "HU_SET = P1_32" for instance <p1>.
+    Set property "HU_SET = P2_33" for instance <p2>.
+    Set property "HU_SET = P3_34" for instance <p3>.
     Summary:
 	no macro.
 Unit <hamming_enc_MUSER_mainproj> synthesized.
@@ -513,7 +513,8 @@ Unit <piso2_MUSER_mainproj> synthesized.
 
 Synthesizing Unit <receiver_MUSER_mainproj>.
     Related source file is "E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.vhf".
-    Set property "HU_SET = XLXI_110_14" for instance <XLXI_110>.
+    Set property "HU_SET = XLXI_110_31" for instance <XLXI_110>.
+INFO:Xst:3210 - "E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.vhf" line 962: Output port <valid> of the instance <XLXI_113> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <receiver_MUSER_mainproj> synthesized.
@@ -539,10 +540,10 @@ Unit <rtn_MUSER_mainproj> synthesized.
 
 Synthesizing Unit <hamming_dec_MUSER_mainproj>.
     Related source file is "E:\Senior Design\Code after Apocalypse\SeniorDesign\basictfr\mainproj.vhf".
-    Set property "HU_SET = P1_11" for instance <p1>.
-    Set property "HU_SET = P2_10" for instance <p2>.
-    Set property "HU_SET = P3_13" for instance <p3>.
-    Set property "HU_SET = XLXI_163_12" for instance <XLXI_163>.
+    Set property "HU_SET = P1_28" for instance <p1>.
+    Set property "HU_SET = P2_27" for instance <p2>.
+    Set property "HU_SET = P3_30" for instance <p3>.
+    Set property "HU_SET = XLXI_163_29" for instance <XLXI_163>.
 WARNING:Xst:647 - Input <in_data<5:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <in_data<31:27>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
@@ -733,7 +734,7 @@ Top Level Output File Name         : mainproj.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 409
+# BELS                             : 408
 #      AND2                        : 65
 #      AND2B1                      : 1
 #      AND3                        : 1
@@ -748,7 +749,7 @@ Primitive and Black Box Usage:
 #      LUT4                        : 6
 #      LUT6                        : 12
 #      MUXCY                       : 34
-#      OR2                         : 33
+#      OR2                         : 32
 #      OR2B1                       : 1
 #      VCC                         : 1
 #      XNOR2                       : 5
@@ -837,7 +838,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 7.289ns (Maximum Frequency: 137.190MHz)
-   Minimum input arrival time before clock: 4.543ns
+   Minimum input arrival time before clock: 4.251ns
    Maximum output required time after clock: 5.891ns
    Maximum combinational path delay: No path found
 
@@ -978,7 +979,7 @@ Offset:              4.251ns (Levels of Logic = 3)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_129/XLXI_113/q_tmp'
   Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
-Offset:              4.543ns (Levels of Logic = 3)
+Offset:              3.185ns (Levels of Logic = 2)
   Source:            rec_reset (PAD)
   Destination:       XLXI_129/XLXI_119/XLXI_110/Q_0 (FF)
   Destination Clock: XLXI_129/XLXI_113/q_tmp rising
@@ -987,19 +988,18 @@ Offset:              4.543ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            34   1.222   1.685  rec_reset_IBUF (rec_reset_IBUF)
-     OR2:I0->O            16   0.203   1.004  XLXI_129/XLXI_119/XLXI_114 (XLXI_129/XLXI_119/XLXN_169)
+     IBUF:I->O            49   1.222   1.533  rec_reset_IBUF (rec_reset_IBUF)
      begin scope: 'XLXI_129/XLXI_119/XLXI_110:CLR'
      FDCE:CLR                  0.430          Q_0
     ----------------------------------------
-    Total                      4.543ns (1.855ns logic, 2.688ns route)
-                                       (40.8% logic, 59.2% route)
+    Total                      3.185ns (1.652ns logic, 1.533ns route)
+                                       (51.9% logic, 48.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_129/XLXI_119/XLXN_84'
   Total number of paths / destination ports: 33 / 33
 -------------------------------------------------------------------------
-Offset:              2.972ns (Levels of Logic = 1)
+Offset:              3.185ns (Levels of Logic = 1)
   Source:            rec_reset (PAD)
   Destination:       XLXI_129/XLXI_119/XLXI_112/XLXI_34 (FF)
   Destination Clock: XLXI_129/XLXI_119/XLXN_84 rising
@@ -1008,11 +1008,11 @@ Offset:              2.972ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            34   1.222   1.320  rec_reset_IBUF (rec_reset_IBUF)
+     IBUF:I->O            49   1.222   1.533  rec_reset_IBUF (rec_reset_IBUF)
      FDR:R                     0.430          XLXI_129/XLXI_119/XLXI_112/XLXI_1
     ----------------------------------------
-    Total                      2.972ns (1.652ns logic, 1.320ns route)
-                                       (55.6% logic, 44.4% route)
+    Total                      3.185ns (1.652ns logic, 1.533ns route)
+                                       (51.9% logic, 48.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_129/XLXI_113/q_tmp'
@@ -1046,7 +1046,7 @@ Clock to Setup on destination clock XLXI_129/XLXI_113/q_tmp
 Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------+---------+---------+---------+---------+
 XLXI_129/XLXI_113/q_tmp  |    7.289|         |         |         |
-XLXI_129/XLXI_119/XLXN_84|    9.385|         |         |         |
+XLXI_129/XLXI_119/XLXN_84|    9.362|         |         |         |
 send_en                  |    1.128|    7.028|         |         |
 -------------------------+---------+---------+---------+---------+
 
@@ -1103,14 +1103,14 @@ XLXI_129/XLXI_118/XLXI_125/count_G|         |         |    3.079|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 14.73 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.54 secs
  
 --> 
 
-Total memory usage is 244264 kilobytes
+Total memory usage is 245620 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   24 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

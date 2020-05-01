@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : rtn.vhf
--- /___/   /\     Timestamp : 04/26/2020 21:21:18
+-- /___/   /\     Timestamp : 05/01/2020 14:26:48
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -443,10 +443,10 @@ architecture BEHAVIORAL of hamming_dec_MUSER_rtn is
    end component;
    attribute BOX_TYPE of INV : component is "BLACK_BOX";
    
-   attribute HU_SET of p1 : label is "p1_9";
-   attribute HU_SET of p2 : label is "p2_8";
-   attribute HU_SET of p3 : label is "p3_11";
-   attribute HU_SET of XLXI_163 : label is "XLXI_163_10";
+   attribute HU_SET of p1 : label is "p1_24";
+   attribute HU_SET of p2 : label is "p2_23";
+   attribute HU_SET of p3 : label is "p3_26";
+   attribute HU_SET of XLXI_163 : label is "XLXI_163_25";
 begin
    valid <= valid_DUMMY;
    p0 : XOR2

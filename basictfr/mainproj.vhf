@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : mainproj.vhf
--- /___/   /\     Timestamp : 04/27/2020 02:08:25
+-- /___/   /\     Timestamp : 05/01/2020 14:26:49
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -513,10 +513,10 @@ architecture BEHAVIORAL of hamming_dec_MUSER_mainproj is
    end component;
    attribute BOX_TYPE of INV : component is "BLACK_BOX";
    
-   attribute HU_SET of p1 : label is "p1_11";
-   attribute HU_SET of p2 : label is "p2_10";
-   attribute HU_SET of p3 : label is "p3_13";
-   attribute HU_SET of XLXI_163 : label is "XLXI_163_12";
+   attribute HU_SET of p1 : label is "p1_28";
+   attribute HU_SET of p2 : label is "p2_27";
+   attribute HU_SET of p3 : label is "p3_30";
+   attribute HU_SET of XLXI_163 : label is "XLXI_163_29";
 begin
    valid <= valid_DUMMY;
    p0 : XOR2
@@ -859,8 +859,6 @@ architecture BEHAVIORAL of receiver_MUSER_mainproj is
    signal XLXN_84  : std_logic;
    signal XLXN_108 : std_logic;
    signal XLXN_113 : std_logic;
-   signal XLXN_168 : std_logic;
-   signal XLXN_169 : std_logic;
    signal XLXN_170 : std_logic_vector (15 downto 0);
    component sipo16_MUSER_mainproj
       port ( reset        : in    std_logic; 
@@ -916,14 +914,7 @@ architecture BEHAVIORAL of receiver_MUSER_mainproj is
              valid    : out   std_logic);
    end component;
    
-   component OR2
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             O  : out   std_logic);
-   end component;
-   attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
-   
-   attribute HU_SET of XLXI_110 : label is "XLXI_110_14";
+   attribute HU_SET of XLXI_110 : label is "XLXI_110_31";
 begin
    XLXI_94 : sipo16_MUSER_mainproj
       port map (clk=>XLXN_84,
@@ -952,7 +943,7 @@ begin
    XLXI_110 : FD16CE_HXILINX_mainproj
       port map (C=>clk,
                 CE=>XLXN_113,
-                CLR=>XLXN_169,
+                CLR=>reset,
                 D(15 downto 0)=>XLXN_170(15 downto 0),
                 Q(15 downto 0)=>rdata(15 downto 0));
    
@@ -972,12 +963,7 @@ begin
       port map (clk=>clk,
                 in_data(31 downto 0)=>rec_data(31 downto 0),
                 out_data(15 downto 0)=>XLXN_170(15 downto 0),
-                valid=>XLXN_168);
-   
-   XLXI_114 : OR2
-      port map (I0=>reset,
-                I1=>XLXN_168,
-                O=>XLXN_169);
+                valid=>open);
    
 end BEHAVIORAL;
 
@@ -1165,9 +1151,9 @@ architecture BEHAVIORAL of hamming_enc_MUSER_mainproj is
    end component;
    attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
-   attribute HU_SET of p1 : label is "p1_15";
-   attribute HU_SET of p2 : label is "p2_16";
-   attribute HU_SET of p3 : label is "p3_17";
+   attribute HU_SET of p1 : label is "p1_32";
+   attribute HU_SET of p2 : label is "p2_33";
+   attribute HU_SET of p3 : label is "p3_34";
 begin
    p0 : XOR2
       port map (I0=>XLXN_97,
@@ -1814,8 +1800,8 @@ architecture BEHAVIORAL of tfr_MUSER_mainproj is
              Q   : out   std_logic_vector (15 downto 0));
    end component;
    
-   attribute HU_SET of XLXI_113 : label is "XLXI_113_18";
-   attribute HU_SET of XLXI_120 : label is "XLXI_120_19";
+   attribute HU_SET of XLXI_113 : label is "XLXI_113_35";
+   attribute HU_SET of XLXI_120 : label is "XLXI_120_36";
 begin
    XLXI_74 : counter
       port map (clear=>slowcount,
@@ -1901,7 +1887,7 @@ architecture BEHAVIORAL of mainproj is
 begin
    data_out(15 downto 0) <= data_out_DUMMY(15 downto 0);
    XLXI_128 : buf8_MUSER_mainproj
-      port map (inputs(7 downto 0)=>data_out_DUMMY(10 downto 3),
+      port map (inputs(7 downto 0)=>data_out_DUMMY(7 downto 0),
                 outputs(7 downto 0)=>LED(7 downto 0));
    
    XLXI_129 : tfr_MUSER_mainproj

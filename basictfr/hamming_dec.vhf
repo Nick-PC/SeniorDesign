@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : hamming_dec.vhf
--- /___/   /\     Timestamp : 04/26/2020 21:21:13
+-- /___/   /\     Timestamp : 05/01/2020 14:26:40
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

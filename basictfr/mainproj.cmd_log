@@ -30,3 +30,15 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off mainproj_map.ncd mainproj.ncd mainproj.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mainproj.twx mainproj.ncd -o mainproj.twr mainproj.pcf -ucf constraints.ucf 
 bitgen -intstyle ise -f mainproj.ut mainproj.ncd 
+xst -intstyle ise -ifn "E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mainproj.xst" -ofn "E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mainproj.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx16-csg324-3 "mainproj.ngc" mainproj.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mainproj_map.ncd mainproj.ngd mainproj.pcf 
+par -w -intstyle ise -ol high -mt off mainproj_map.ncd mainproj.ncd mainproj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mainproj.twx mainproj.ncd -o mainproj.twr mainproj.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f mainproj.ut mainproj.ncd 
+xst -intstyle ise -ifn "E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mainproj.xst" -ofn "E:/Senior Design/Code after Apocalypse/SeniorDesign/basictfr/mainproj.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx16-csg324-3 "mainproj.ngc" mainproj.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mainproj_map.ncd mainproj.ngd mainproj.pcf 
+par -w -intstyle ise -ol high -mt off mainproj_map.ncd mainproj.ncd mainproj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mainproj.twx mainproj.ncd -o mainproj.twr mainproj.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f mainproj.ut mainproj.ncd 

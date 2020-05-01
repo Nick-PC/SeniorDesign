@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : tfr.vhf
--- /___/   /\     Timestamp : 04/27/2020 02:08:21
+-- /___/   /\     Timestamp : 05/01/2020 14:26:53
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -513,10 +513,10 @@ architecture BEHAVIORAL of hamming_dec_MUSER_tfr is
    end component;
    attribute BOX_TYPE of INV : component is "BLACK_BOX";
    
-   attribute HU_SET of p1 : label is "p1_1";
-   attribute HU_SET of p2 : label is "p2_0";
-   attribute HU_SET of p3 : label is "p3_3";
-   attribute HU_SET of XLXI_163 : label is "XLXI_163_2";
+   attribute HU_SET of p1 : label is "p1_38";
+   attribute HU_SET of p2 : label is "p2_37";
+   attribute HU_SET of p3 : label is "p3_40";
+   attribute HU_SET of XLXI_163 : label is "XLXI_163_39";
 begin
    valid <= valid_DUMMY;
    p0 : XOR2
@@ -859,8 +859,6 @@ architecture BEHAVIORAL of receiver_MUSER_tfr is
    signal XLXN_84  : std_logic;
    signal XLXN_108 : std_logic;
    signal XLXN_113 : std_logic;
-   signal XLXN_168 : std_logic;
-   signal XLXN_169 : std_logic;
    signal XLXN_170 : std_logic_vector (15 downto 0);
    component sipo16_MUSER_tfr
       port ( reset        : in    std_logic; 
@@ -916,14 +914,7 @@ architecture BEHAVIORAL of receiver_MUSER_tfr is
              valid    : out   std_logic);
    end component;
    
-   component OR2
-      port ( I0 : in    std_logic; 
-             I1 : in    std_logic; 
-             O  : out   std_logic);
-   end component;
-   attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
-   
-   attribute HU_SET of XLXI_110 : label is "XLXI_110_4";
+   attribute HU_SET of XLXI_110 : label is "XLXI_110_41";
 begin
    XLXI_94 : sipo16_MUSER_tfr
       port map (clk=>XLXN_84,
@@ -952,7 +943,7 @@ begin
    XLXI_110 : FD16CE_HXILINX_tfr
       port map (C=>clk,
                 CE=>XLXN_113,
-                CLR=>XLXN_169,
+                CLR=>reset,
                 D(15 downto 0)=>XLXN_170(15 downto 0),
                 Q(15 downto 0)=>rdata(15 downto 0));
    
@@ -972,12 +963,7 @@ begin
       port map (clk=>clk,
                 in_data(31 downto 0)=>rec_data(31 downto 0),
                 out_data(15 downto 0)=>XLXN_170(15 downto 0),
-                valid=>XLXN_168);
-   
-   XLXI_114 : OR2
-      port map (I0=>reset,
-                I1=>XLXN_168,
-                O=>XLXN_169);
+                valid=>open);
    
 end BEHAVIORAL;
 
@@ -1165,9 +1151,9 @@ architecture BEHAVIORAL of hamming_enc_MUSER_tfr is
    end component;
    attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
-   attribute HU_SET of p1 : label is "p1_5";
-   attribute HU_SET of p2 : label is "p2_6";
-   attribute HU_SET of p3 : label is "p3_7";
+   attribute HU_SET of p1 : label is "p1_42";
+   attribute HU_SET of p2 : label is "p2_43";
+   attribute HU_SET of p3 : label is "p3_44";
 begin
    p0 : XOR2
       port map (I0=>XLXN_97,
@@ -1814,8 +1800,8 @@ architecture BEHAVIORAL of tfr is
              Q   : out   std_logic_vector (15 downto 0));
    end component;
    
-   attribute HU_SET of XLXI_113 : label is "XLXI_113_8";
-   attribute HU_SET of XLXI_120 : label is "XLXI_120_9";
+   attribute HU_SET of XLXI_113 : label is "XLXI_113_45";
+   attribute HU_SET of XLXI_120 : label is "XLXI_120_46";
 begin
    XLXI_74 : counter
       port map (clear=>slowcount,
